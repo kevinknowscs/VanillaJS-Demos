@@ -1,0 +1,10 @@
+[ {
+    name: 'a',
+    desc: 'Defines a hyperlink',
+    sample: '<a href="url_here">This is an anchor link</a>'
+  }, {
+    name: 'abbr',
+    desc: 'Defines an abbreviation or acronym',
+    sample: '<abbr>HTML</abbr> is an acronym'
+  }
+];

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Stylesheet References -->
+    <!-- <link rel="stylesheet" type="text/css" href="/path/to/css/file/here" /> -->
+    
+    <!-- JavaScript References -->
+    <!-- <script type="text/javascript" src="/path/to/js/file/here" /> -->
+    
+    <style type="text/css">
+      html, body {
+        /*
+         * In order for the two nested divs to have the intended height (50% each),
+         * BOTH the html and body tags must have their height set to 100%. Otherwise, the
+         * height over everything collapses.
+         */
+        height: 100%;
+        width: 100%;
+        
+        /*
+         * Whenever I'm doing a splitter pane arrangement, I always set overflow: hidden;
+         * otherwise I always seem to get scrollbars. I've never really figured out why
+         * the browsers give me scrollbars, but overflow: hidden; always seems to be a good
+         * idea when doing split panes. That way if you're calculations are off by a pixel or
+         * two it doesn't matter.
+         */
+        overflow: hidden;
+        
+        margin: 5px;
+        padding: 0px;
+        border: 0;
+        box-sizing: border-box:
+      }
+      
+      div.pane {
+        /* Note: When using border-box, the size of the box includes the border and the
+           padding, but not the margin, so we have to subtract off the margins */
+        width: calc(50% - 10px);
+        
+        height: calc(100% - 20px);
+        
+        border-collapse: collapse;
+        box-sizing: border-box;
+        padding: 5px;
+        display: inline-block;
+        float: left;
+        margin: 0;
+      }
+      
+      div.pane-left {
+        /* 
+         * If you don't want a 50/50 arrangement, remove the height setting from div.pane
+         * and set each pane independently. Subtract off the margins in both panes.
+         */         
+        /* width: calc(30% - 10px); */
+        
+        
+        border: 1px solid black;
+      }   
+
+      div.pane-right {
+        /* 
+         * If you don't want a 50/50 arrangement, remove the height setting from div.pane
+         * and set each pane independently. Subtract off the margins in both panes.
+         */         
+        /* width: calc(70% - 10px); */
+        
+        /* I tried using border-collapse: collapse; but that seems to only work for tables */
+        border-top: 1px;
+        border-left: 0px;
+        border-bottom: 1px;        
+        border-right: 1px;
+        border-color: black;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pane pane-left">
+      Left Pane Here
+      <br /><br />
+      Note: Left Half/Right Half layouts are a little tricky, and there are multiple ways of doing it. 
+      <br /><br />
+      Here's a good article <a href="https://css-tricks.com/left-and-right/" target="_blank">on CSS-Tricks</a> that reviews 
+      different methods that can be used:
+    </div>
+    <div class="pane pane-right">
+      Right Pane Here
+    </div>
+  </body>
+</html>
