@@ -32,4 +32,6 @@ Option 2: To serve the web pages from a local web server:
 * Clone this repository to your local computer
 * Configure you web server of choice to serve the HTML, JavaScript, and CSS files. Since this notebook does not require any
   back-end server support, it is not necessary to configure NodeJS, PHP, ASP, ASP.NET, JSP or any other back-end page handlers.
-  Generally you just need to point your browser to the root directory and assign it a port number.
+  Generally you just need to configure your web server to point to the root directory and assign it a port number.
+* Open your browser and navigate to http://localhost:port_number_here, or to whatever location or virtual directory you configured
+  your web server.  
