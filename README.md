@@ -25,9 +25,9 @@ Installation
 Option 1: To use the files directly from your browser:
 
 * Clone this repository to your local computer
-* Using your browser, simply open the index.html file in the root of this repo. Navigate and enjoy. (Tip: On Crhome, press Ctrl-O to open the File Open dialog).
+* Using your browser, simply open the index.html file in the root of this repo. Navigate and enjoy. (Tip: On Chrome, press Ctrl-O to open the File Open dialog).
 
-Option 2: Configuring a web server to serve the pages:
+Option 2: To serve the web pages from a local web server:
 
 * Clone this repository to your local computer
 * Configure you web server of choice to serve the HTML, JavaScript, and CSS files. Since this notebook does not require any
