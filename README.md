@@ -50,5 +50,3 @@ Option 2: To serve the web pages from a local web server:
 * Optional: It's a good idea to configure the web server to serve index.html as the default page.  
 * Open your browser and navigate to http://localhost:port_number_here, or to whatever location or virtual directory you configured
   your local web site. 
-
-* Test  
