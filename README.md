@@ -47,6 +47,6 @@ Option 2: To serve the web pages from a local web server:
 * Configure your web server of choice to serve the HTML, JavaScript, and CSS files. Since this notebook does not require any
   back-end server support, it is not necessary to configure NodeJS, PHP, ASP, ASP.NET, JSP or any other back-end page handlers.
   Generally you just need to configure your web server to point to the root directory and assign it a port number.
-* Optional: It's a good idea to configure the web server to server index.html as the default page.  
+* Optional: It's a good idea to configure the web server to serve index.html as the default page.  
 * Open your browser and navigate to http://localhost:port_number_here, or to whatever location or virtual directory you configured
   your local web site.  
