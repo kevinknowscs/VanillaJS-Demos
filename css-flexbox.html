@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>VanillaJS-Demos</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <style type="text/css">
+      code {
+        color: #0000bb;
+      }
+      
+      .demo-container {
+        border: 1px solid black;
+        display: flex;
+      }
+      
+      .demo-item {
+        border: 1px solid black;
+        background-color: orange;
+        padding: 5px;
+        margin: 5px;
+        flex-grow: 1;
+        flex-shrink: initial;
+      }
+    </style>
+  <head>
+  <body>
+    <h1>Flexbox Overview and Examples</h1>
+    <p>
+      <a href="index.html">Back to Table of Contents</a>
+    </p>
+    <hr>
+    <h2>Flexbox CSS Properties</h2>
+    <table>
+      <tr>
+        <th>Property Name</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td colspan="2" style="background-color: lightgray;">The Flex Container</td>
+      </tr>
+      <tr>
+        <td><code>display: flex;</code></td>
+        <td>Defines the flex container as a block</td>
+      </tr>
+      <tr>
+        <td><code>display: inline-flex;</code></td>
+        <td>Defines the flex container as inline</td>
+      </tr>   
+      <tr>
+        <td colspan="2" style="background-color: lightgray;">Direction</td>
+      </tr>  
+      <tr>
+        <td><code>flex-direction: row;</code></td>
+        <td>Default; Fills the flex container in row-priority order, from left to right</td>
+      </tr>
+      <tr>
+        <td><code>flex-direction: row-reverse;</code></td>
+        <td>Fills the flex container in row-priority order, from right to left </td>
+      </tr>
+      <tr>
+        <td><code>flex-direction: column;</code></td>
+        <td>Fills the flex container in column-priority order, from top to bottom</td>
+      </tr>
+      <tr>
+        <td><code>flex-direction: column-reverse;</code></td>
+        <td>Fills the flex container in column-priority order, from bottom to top</td>
+      </tr>      
+    </table>
+    <hr>
+    <p><u>Example 1: Layout flex items in a row</u></p>
+    <div class="demo-container" style="flex-direction: row;">
+      <div class="demo-item">
+        Item 1
+      </div>
+      <div class="demo-item">
+        Item 2
+      </div>
+      <div class="demo-item">
+        Item 3
+      </div>
+    </div>
+    <hr>
+    <p><u>Example 2: Layout flex items in a row in reverse order</u></p>
+    <div class="demo-container" style="flex-direction: row-reverse;">
+      <div class="demo-item">
+        Item 1
+      </div>
+      <div class="demo-item">
+        Item 2
+      </div>
+      <div class="demo-item">
+        Item 3
+      </div>
+    </div>
+    <p><u>Example 3: Layout flex items in a column</u></p>
+    <div class="demo-container" style="flex-direction: column;">
+      <div class="demo-item">
+        Item 1
+      </div>
+      <div class="demo-item">
+        Item 2
+      </div>
+      <div class="demo-item">
+        Item 3
+      </div>
+    </div> 
+    <p><u>Example 4: Layout flex items in a column in reverse order</u></p>
+    <div class="demo-container" style="flex-direction: column-reverse;">
+      <div class="demo-item">
+        Item 1
+      </div>
+      <div class="demo-item">
+        Item 2
+      </div>
+      <div class="demo-item">
+        Item 3
+      </div>
+    </div>   
+    <p><u>Example 4: Prevent wrapping</u></p>
+    <div class="demo-container" style="flex-direction: row; flex-wrap: nowrap;">
+      <div class="demo-item" style="flex-grow: initial; width: 300px; min-width: 300px;">
+        Item 1
+      </div>
+      <div class="demo-item" style="flex-grow: initial; width: 300px; min-width: 300px;">
+        Item 2
+      </div>
+      <div class="demo-item" style="flex-grow: initial; width: 300px; min-width: 300px;">
+        Item 3
+      </div>
+      <div class="demo-item" style="flex-grow: initial; width: 300px; min-width: 300px;">
+        Item 4
+      </div>
+      <div class="demo-item" style="flex-grow: initial; width: 300px; min-width: 300px;">
+        Item 5
+      </div>      
+    </div> 
+    <p><u>Example 5: Allow wrapping</u></p>
+    <div class="demo-container" style="flex-direction: row; flex-wrap: wrap;">
+      <div class="demo-item" style="flex-grow: initial; width: 300px;">
+        Item 1
+      </div>
+      <div class="demo-item" style="flex-grow: initial; width: 300px;">
+        Item 2
+      </div>
+      <div class="demo-item" style="flex-grow: initial; width: 300px;">
+        Item 3
+      </div>
+      <div class="demo-item" style="flex-grow: initial; width: 300px;">
+        Item 4
+      </div>
+      <div class="demo-item" style="flex-grow: initial; width: 300px;">
+        Item 5
+      </div>      
+    </div> 
+    <p><u>Example 6: Wrap in reverse order</u></p>
+    <div class="demo-container" style="flex-direction: row; flex-wrap: wrap-reverse;">
+      <div class="demo-item" style="flex-grow: initial; width: 300px;">
+        Item 1
+      </div>
+      <div class="demo-item" style="flex-grow: initial; width: 300px;">
+        Item 2
+      </div>
+      <div class="demo-item" style="flex-grow: initial; width: 300px;">
+        Item 3
+      </div>
+      <div class="demo-item" style="flex-grow: initial; width: 300px;">
+        Item 4
+      </div>
+      <div class="demo-item" style="flex-grow: initial; width: 300px;">
+        Item 5
+      </div>      
+    </div>     
+  </body>
+</html>
