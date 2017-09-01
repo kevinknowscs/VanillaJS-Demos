@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>VanillaJS-Demos</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <style type="text/css">
+      code {
+        color: #0000bb;
+      }
+    </style>
+  <head>
+  <body>
+    <p><a href="index.html">Back to Table of Contents</a></p>
+    <p>
+      This page reviews the basic CSS layout strategies that a web developer can employ
+      to layout content on a page.
+    </p>
+    <table>
+      <tr>
+        <th>Summary</th>
+        <th>Description</th>
+        <th>Links</th>
+      </tr>
+      <tr>
+        <td>Floats</td>
+        <td>
+          Originally for floating images inside of blocks of text, the <code>float</code> property has become
+          one of the most commonly used tools for creating multiple column layouts on web pages.
+        </td>
+        <td><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Floats" target="_blank">MDN</a></td>
+      </tr>
+      <tr>
+        <td>Positioning</td>
+        <td>
+          <p>
+            Positioning allows you to take elements out of the normal document layout flow, and make them behave
+            differently, for example sitting on top of one another, or always remaining in the same place inside
+            the browser viewport.
+          </p>
+          <table>
+            <tr>
+              <th>Position Value</th>
+              <th>Description</th>              
+            </tr>
+            <tr>
+              <td><code>position:&nbsp;static;</code></td>
+              <td>
+                The default position of every element. It means <q>put the element in it's normal position in the
+                document layout flow.</q>
+              </td>
+            </tr>
+            <tr>
+              <td><code>position:&nbsp;relative;</code></td>
+              <td>
+                Once the positioned element has taken its place in the normal layout flow, you can then
+                modify its final position (using the CSS properties <code>top</code>, <code>left</code>, <code>bottom</code>,
+                and <code>right</code>).
+              </td>
+            </tr>
+            <tr>
+              <td><code>position:&nbsp;absolute;</code></td>
+              <td>
+                An absolutely positioned element no longer exists in the normal document layout flow. It sits on it's own layer,
+                separate from everything else. It's position is anchored by it's closest statically positioned ancestor, and
+                is controlled with the CSS properties <code>top</code>, <code>left</code>, <code>bottom</code>, and <code>right</code>.
+                You can also use <code>z-index</code> to control its position in a z axis, which can be affected by the opacity
+                if it overlaps other elements.                
+              </td>
+            </tr>
+            <tr>
+              <td><code>position:&nbsp;fixed;</code></td>
+              <td>
+                Similar to <code>absolute</code> positioning, except the element is positioned relative to the browser viewport
+                itself (as opposed to its closest static ancestor).
+              </td>
+            </tr> 
+            <tr>
+              <td><code>position:&nbsp;sticky;</code></td>
+              <td>
+                An experimental position that is not yet widely supported, it is a hybrid of relative and fixed. The element is
+                relatively positioned until it is scrolled to a certain threshold point, after which it becomes fixed.
+              </td>
+            </tr>                
+          </table>
+        </td>
+        <td><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning" target="_blank">MDN</a></td>
+      </tr>
+      <tr>
+        <td>Tables</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Lists</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Flexbox</td>
+        <td>
+          A new technology, but with support now fairly widespread across browsers, Flexbox is starting to become ready for
+          widespread use. It allows for rapid creation of complex, flexible layouts, and features that have historically proved
+          difficult with CSS.
+        </td>
+        <td>
+          <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox" target="_blank">MDN</a>&nbsp;|&nbsp;
+          <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">CSSTricks</a>
+        </td>
+        
+      </tr>
+      <tr>
+        <td>Grids</td>
+        <td>
+          A nascent new browser feature that makes implementing a grid design much easier. Grid designs, such as those popularized
+          by Bootstrap and other similar CSS toolkits have traditionally used <code>floats</code> or other layout features, and
+          can sometimes prove tricky to implement.
+        </td>
+        <td><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids" target="_blank">MDN</a></td>
+      </tr>      
+    </table>
+  </body>
+</html>
