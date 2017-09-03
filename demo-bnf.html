@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      .bnf-grammar {
+        display: table;
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px;
+      }
+      
+      /*
+      .bnf-grammar:before {
+        content: "Grammar";
+        text-decoration: underline;
+        font-weight: bold;
+      }
+      */
+      
+      .bnf-grammar .bnf-production {
+        display: table-row;
+        border: 1px solid black;
+        border-collapse: collapse:
+        padding: 5px;
+      }
+      
+      .bnf-grammar .bnf-production .bnf-production-id {
+        display: table-cell;
+        font-weight: bold;
+        border: 1px solid black;   
+        border-collapse: collapse;
+        padding: 5px;
+      }
+      
+      .bnf-grammar .bnf-production .bnf-production-id:before {
+        content: "\00a0";
+      }      
+      
+      .bnf-grammar .bnf-production .bnf-production-id:after {
+        content: ".\00a0\00a0";
+      }
+
+      .bnf-grammar .bnf-production > .bnf-nonterm {
+        display: table-cell;
+        border-left: 1px solid black;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        border-collapse: collapse;
+        border-right: none:
+        padding: 5px;
+      }
+      
+      .bnf-grammar .bnf-production > .bnf-produces {
+        display: table-cell;
+        border-left: none;
+        border-right: none;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px;
+      }
+      
+      .bnf-grammar .bnf-production > .bnf-produces:after {
+        content: "\00a0\02192\00a0";      
+      } 
+
+      /*
+      .bnf-grammar .bnf-production > .bnf-nonterm:before {
+        content: "\00a0";        
+      }   
+      */      
+      
+      /*
+      .bnf-grammar .bnf-production > .bnf-nonterm:after {
+        content: " \02192 ";
+      }
+      */
+      
+      .bnf-grammar .bnf-production .bnf-sequence {
+        display: table-cell;
+        border: 1px solid black;
+        border-collapse: collapse;
+        border-left: none;
+      }
+      
+      .bnf-grammar .bnf-production .bnf-sequence .bnf-nonterm,
+      .bnf-grammar .bnf-production .bnf-sequence .bnf-term {
+        display: inline;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .bnf-grammar .bnf-production .bnf-sequence .bnf-nonterm:after,
+      .bnf-grammar .bnf-production .bnf-sequence .bnf-term:after {
+        content: "\00a0";
+      }       
+      
+      .bnf-grammar .bnf-production .bnf-sequence .bnf-term {
+        display: inline;
+        text-transform: lowercase;
+        font-style: italic;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bnf-grammar">
+      <div class="bnf-production">
+        <div class="bnf-production-id">0</div>
+        <div class="bnf-nonterm">E'</div>
+        <div class="bnf-produces"></div>
+        <div class="bnf-sequence">
+          <div class="bnf-nonterm">E</div>
+        </div>
+      </div>
+      <div class="bnf-production">
+        <div class="bnf-production-id">1</div>
+        <div class="bnf-nonterm">E</div>
+        <div class="bnf-produces"></div>
+        <div class="bnf-sequence">
+          <div class="bnf-nonterm">E</div>
+          <div class="bnf-term">+</div>
+          <div class="bnf-nonterm">T</div>
+        </div>
+      </div>      
+      <div class="bnf-production">
+        <div class="bnf-production-id">2</div>
+        <div class="bnf-nonterm">E</div>
+        <div class="bnf-produces"></div>
+        <div class="bnf-sequence">
+          <div class="bnf-nonterm">T</div>
+        </div>
+      </div>
+      <div class="bnf-production">
+        <div class="bnf-production-id">3</div>
+        <div class="bnf-nonterm">T</div>
+        <div class="bnf-produces"></div>
+        <div class="bnf-sequence">
+          <div class="bnf-nonterm">T</div>
+          <div class="bnf-term">*</div>
+          <div class="bnf-nonterm">F</div>
+        </div>
+      </div> 
+      <div class="bnf-production">
+        <div class="bnf-production-id">4</div>
+        <div class="bnf-nonterm">T</div>
+        <div class="bnf-produces"></div>
+        <div class="bnf-sequence">
+          <div class="bnf-nonterm">F</div>
+        </div>
+      </div> 
+      <div class="bnf-production">
+        <div class="bnf-production-id">5</div>
+        <div class="bnf-nonterm">F</div>
+        <div class="bnf-produces"></div>
+        <div class="bnf-sequence">
+          <div class="bnf-term">(</div>
+          <div class="bnf-nonterm">E</div>
+          <div class="bnf-term">)</div>
+        </div>
+      </div>       
+      <div class="bnf-production">
+        <div class="bnf-production-id">6</div>        
+        <div class="bnf-nonterm">F</div>
+        <div class="bnf-produces"></div>
+        <div class="bnf-sequence">
+          <div class="bnf-term">id</div>
+        </div>
+      </div>       
+    </div>
+  </body>
+</html>
