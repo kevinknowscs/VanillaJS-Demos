@@ -56,6 +56,14 @@
       <a href="index.html">Back to Table of Contents</a>
     </p>
     <hr>
+    <h2>Web Resources</h2>
+    <ul>
+      <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">CSSTricks : A Complete Guide to Flexbox</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout" target="_blank">MDN : CSS Flexible Box Layout</a></li>
+      <li><a href="https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties" target="_blank">A Visual Guide to Flexbox Properties</a></li>
+      </li>
+    </ul>
+    <hr>
     <h2>Flexbox CSS Properties</h2>
     <table class="flex-demos">
       <tr>
@@ -900,6 +908,78 @@
               </div>
             </div>
           </details>
+        </td>
+      </tr>
+      <tr class="category">
+        <td>Item Basis</td>
+        <td>
+          Specifies the initial (desired size) of the flex item. The item may grow or shrink from this value. See
+          <code>flex&#8209;grow</code> and <code>flex&#8209;shrink</code> for examples.
+        </td>
+      </tr>
+      <tr>
+        <td><code>flex&#8209;basis:&nbsp;&lt;specific-value&gt;;</code></td>
+        <td>Specify the desired size in ordinary CSS units (px, em, etc.)</td>
+      </tr>
+      <tr>
+        <td><code>flex&#8209;basis:&nbsp;auto;</code></td>
+        <td>
+          The default. The flex item is automatically sized, and grows or shrinks as specified by
+          <code>flex&#8209;grow</code> and <code>flex&#8209;shrink</code>
+        </td>
+      </tr>
+      <tr>
+        <td><code>flex&#8209;basis:&nbsp;fill;</code></td>
+        <td>
+          Property listed on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis" target="_blank">MDN</a>. No other information is available.
+        </td>
+      </tr>
+      <tr>
+        <td><code>flex&#8209;basis:&nbsp;max&#8209;content;</code></td>
+        <td>
+          Property listed on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis" target="_blank">MDN</a>. No other information is available.
+        </td>
+      </tr>
+      <tr>
+        <td><code>flex&#8209;basis:&nbsp;min&#8209;content;</code></td>
+        <td>
+          Property listed on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis" target="_blank">MDN</a>. No other information is available.
+        </td>
+      </tr>
+      <tr>
+        <td><code>flex&#8209;basis:&nbsp;fit&#8209;content;</code></td>
+        <td>
+          Property listed on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis" target="_blank">MDN</a>. No other information is available.
+        </td>
+      </tr>
+      <tr>
+        <td><code>flex&#8209;basis:&nbsp;content;</code></td>
+        <td>
+          Property listed on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis" target="_blank">MDN</a>. No other information is available.
+        </td>
+      </tr>
+      <tr>
+        <td><code>flex&#8209;basis:&nbsp;inherit;</code></td>
+        <td>Inherits this property from its parent element.</td>
+      </tr>
+      <tr>
+        <td><code>flex&#8209;basis:&nbsp;initial;</code></td>
+        <td>Sets this property to its default value.</td>
+      </tr>
+      <tr>
+        <td><code>flex&#8209;basis:&nbsp;unset;</code></td>
+        <td>
+          Property listed on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis" target="_blank">MDN</a>. No other information is available.
+        </td>
+      </tr>
+      <tr>
+        <td>Other Notes for <code>flex&#8209;basis</td>
+        <td>
+            <mark>The details for this property are a bit sketchy.</mark> The flexbox specification has had a few changes from its original version, and as
+            such, some articles on the Internet mention properties and values that are now deprecated, and/or fail to mention newer settings.
+            The Mozilla Developer Network references several possible values for this property that are not mentioned in other resources, but does
+            not provide any additional documentation. W3Schools only mentions <code>auto</code>, <code>initial</code>, and <code>inherit</code>, along
+            with setting a specific unit value.
         </td>
       </tr>
     </table>
