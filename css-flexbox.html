@@ -606,37 +606,175 @@
         <td>Content Alignment</td>
         <td>
           Similar to <code>justify-content</code>, but applies to the cross-axis instead of the main-axis.
-        </td>
-      </tr>
-      <tr>
-        <td><code>align-content: flex-start;</code></td>
-        <td>Lines are packed to the start of the container.</td>
-      </tr>
-      <tr>
-        <td><code>align-content: flex-end;</code></td>
-        <td>Items are packed toward the end of the container.</td>
-      </tr>
-      <tr>
-        <td><code>align-content: center;</code></td>
-        <td>Lines are packed to the center of the container.</td>
-      </tr>
-      <tr>
-        <td><code>align&#8209;content:&nbsp;space&#8209;between;</code></td>
-        <td>
-          Lines are evenly distributed. The first line is at the start of the container while
-          the last one is at the end
-        </td>
-      </tr>
-      <tr>
-        <td><code>align-content: space-around;</code></td>
-        <td>
-          Lines evenly distributed with equal space around each line.
+          Has no effect when there is only 1 row of items.
         </td>
       </tr>
       <tr>
         <td><code>align-content: stretch;</code></td>
         <td>
-          Default. Lines stretch to take up the remaining space.
+          <details>
+            <summary>
+              Default. Lines stretch to take up the remaining space.
+            </summary>
+            <div class="demo-container" style="flex-flow: row wrap; align-content: stretch; min-height: 700px;">
+              <div class="demo-item" style="flex-grow: initial; width: 200px;">
+                Item 1
+              </div>
+              <div class="demo-item" style="flex-grow: initial; width: 200px;">
+                Item 2
+              </div>
+              <div class="demo-item" style="flex-grow: initial; width: 200px;">
+                Item 3
+              </div>
+              <div class="demo-item" style="flex-grow: initial; width: 200px;">
+                Item 4
+              </div>
+              <div class="demo-item" style="flex-grow: initial; width: 200px;">
+                Item 5
+              </div>
+            </div>
+          </details>
+        </td>
+      </tr>
+      <tr>
+        <td><code>align-content: flex-start;</code></td>
+        <td>
+          <details>
+            <summary>
+              Lines are packed to the start of the container.
+            </summary>
+            <h2>Live Demo</h2>
+            <div class="demo-container" style="flex-flow: row wrap; align-content: flex-start; min-height: 700px;">
+              <div class="demo-item" style="flex-grow: initial; height: 100px; width: 200px;">
+                Item 1
+              </div>
+              <div class="demo-item" style="flex-grow: initial; height: 150px; width: 200px;">
+                Item 2
+              </div>
+              <div class="demo-item" style="flex-grow: initial; height: 300px; width: 200px;">
+                Item 3
+              </div>
+              <div class="demo-item" style="flex-grow: initial; height: 150px; width: 200px;">
+                Item 4
+              </div>
+              <div class="demo-item" style="flex-grow: initial; height: 100px; width: 200px;">
+                Item 5
+              </div>
+            </div>
+          </details>
+        </td>
+      </tr>
+      <tr>
+        <td><code>align-content: flex-end;</code></td>
+        <td>
+          <details>
+            <summary>
+              Items are packed toward the end of the container.
+            </summary>
+            <h2>Live Demo</h2>
+            <div class="demo-container" style="flex-flow: row wrap; align-content: flex-end; min-height: 700px;">
+              <div class="demo-item" style="flex-grow: initial; height: 100px; width: 200px;">
+                Item 1
+              </div>
+              <div class="demo-item" style="flex-grow: initial; height: 150px; width: 200px;">
+                Item 2
+              </div>
+              <div class="demo-item" style="flex-grow: initial; height: 300px; width: 200px;">
+                Item 3
+              </div>
+              <div class="demo-item" style="flex-grow: initial; height: 150px; width: 200px;">
+                Item 4
+              </div>
+              <div class="demo-item" style="flex-grow: initial; height: 100px; width: 200px;">
+                Item 5
+              </div>
+            </div>
+          </details>
+        </td>
+      </tr>
+      <tr>
+        <td><code>align-content: center;</code></td>
+        <td>
+          <details>
+            <summary>
+              Lines are packed to the center of the container.
+            </summary>
+            <h2>Live Demo</h2>
+            <div class="demo-container" style="flex-flow: row wrap; align-content: center; min-height: 700px;">
+              <div class="demo-item" style="flex-grow: initial; height: 100px; width: 200px;">
+                Item 1
+              </div>
+              <div class="demo-item" style="flex-grow: initial; height: 150px; width: 200px;">
+                Item 2
+              </div>
+              <div class="demo-item" style="flex-grow: initial; height: 300px; width: 200px;">
+                Item 3
+              </div>
+              <div class="demo-item" style="flex-grow: initial; height: 150px; width: 200px;">
+                Item 4
+              </div>
+              <div class="demo-item" style="flex-grow: initial; height: 100px; width: 200px;">
+                Item 5
+              </div>
+            </div>
+          </details>
+        </td>
+      </tr>
+      <tr>
+        <td><code>align&#8209;content:&nbsp;space&#8209;between;</code></td>
+        <td>
+          <details>
+            <summary>
+              Lines are evenly distributed. The first line is at the start of the container while
+              the last one is at the end
+            </summary>
+            <h2>Live Demo</h2>
+            <div class="demo-container" style="flex-flow: row wrap; align-content: space-between; min-height: 700px;">
+              <div class="demo-item" style="flex-grow: initial; height: 100px; width: 200px;">
+                Item 1
+              </div>
+              <div class="demo-item" style="flex-grow: initial; height: 150px; width: 200px;">
+                Item 2
+              </div>
+              <div class="demo-item" style="flex-grow: initial; height: 300px; width: 200px;">
+                Item 3
+              </div>
+              <div class="demo-item" style="flex-grow: initial; height: 150px; width: 200px;">
+                Item 4
+              </div>
+              <div class="demo-item" style="flex-grow: initial; height: 100px; width: 200px;">
+                Item 5
+              </div>
+            </div>
+          </details>
+        </td>
+      </tr>
+      <tr>
+        <td><code>align-content: space-around;</code></td>
+        <td>
+          <details>
+            <summary>
+              Lines evenly distributed with equal space around each line.
+            </summary>
+            <h2>Live Demo</h2>
+            <div class="demo-container" style="flex-flow: row wrap; align-content: space-around; min-height: 700px;">
+              <div class="demo-item" style="flex-grow: initial; height: 100px; width: 200px;">
+                Item 1
+              </div>
+              <div class="demo-item" style="flex-grow: initial; height: 150px; width: 200px;">
+                Item 2
+              </div>
+              <div class="demo-item" style="flex-grow: initial; height: 300px; width: 200px;">
+                Item 3
+              </div>
+              <div class="demo-item" style="flex-grow: initial; height: 150px; width: 200px;">
+                Item 4
+              </div>
+              <div class="demo-item" style="flex-grow: initial; height: 100px; width: 200px;">
+                Item 5
+              </div>
+            </div>
+          </details>
         </td>
       </tr>
       <tr class="category">
