@@ -3,6 +3,47 @@
   <head>
     <title>VanillaJS-Demos</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+    <style type="text/css">
+      summary {
+        font-family: Arial;
+        font-size: 1.25em;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+
+      summary {
+        outline: none;
+      }
+
+      table.common {
+        max-width: 1200px;
+      }
+
+      table.articles td:first-child {
+        width: 200px;
+      }
+
+      table.templates td:first-child {
+        width: 200px;
+      }
+
+      table.templates td:nth-child(2) {
+        width: 190px;
+        text-align: center;
+      }
+
+      table.web-resources {
+      }
+
+      table.articles tr.category,
+      table.web-resources tr.category {
+        background-color: lightgray;
+        font-family: Arial;
+        font-size: 11pt;
+        font-weight: bold;
+      }
+    </style>
   <head>
   <body>
     <h1>VanillaJS-Demos : A Simple Web Developer's Notebook</h1>
@@ -16,15 +57,18 @@
       <a href="https://github.com/kevinknowscs/VanillaJS-Demos" target="_blank">https://github.com/kevinknowscs/VanillaJS-Demos</a>
     </p>
     <hr />
-    <h2>Articles &amp; Quick Reference Lists</h2>
-    <p>
-      <table>
+    <details open>
+      <summary>
+        Articles &amp; Quick Reference Lists
+      </summary>
+      <br>
+      <table class="common articles">
         <tr>
           <th>Link</th>
           <th>Description</th>
         </tr>
-        <tr>
-          <td colspan="3" style="background-color: lightgray;">HTML</td>
+        <tr class="category">
+          <td colspan="3">HTML</td>
         </tr>
         <tr>
           <td><a href="html-tags.html">List of HTML Tags</a></td>
@@ -34,8 +78,8 @@
             But in the meantime, here's a list of all of them.
           </td>
         </tr>
-        <tr>
-          <td colspan="3" style="background-color: lightgray;">CSS</td>
+        <tr class="category">
+          <td colspan="3">CSS</td>
         </tr>
         <tr>
           <td><a href="css-layout.html">CSS Layout</a></td>
@@ -45,13 +89,20 @@
           </td>
         </tr>
         <tr>
+          <td><a href="css-boxdisplay.html">Block vs. Inline</a></td>
+          <td>
+            Discusses the differences between <code>display:&nbsp;block;</code> vs. <code>display:&nbsp;inline</code> vs.
+            <code>display:&nbsp;inline&#8209;block;</code> with examples of each.
+          </td>
+        </tr>
+        <tr>
           <td><a href="css-flexbox.html">Flexbox Examples</a></td>
           <td>
             A demonstration of Flexbox.
           </td>
         </tr>
-        <tr>
-          <td colspan="3" style="background-color: lightgray;">JavaScript</td>
+        <tr class="category">
+          <td colspan="3">JavaScript</td>
         </tr>
         <tr>
           <td><a href="js-videos.html">JavaScript Videos</a></td>
@@ -72,8 +123,8 @@
             browser by default.
           </td>
         </tr>
-        <tr>
-          <td colspan="3" style="background-color: lightgray;">Miscellaneous</td>
+        <tr class="category">
+          <td colspan="3">Miscellaneous</td>
         </tr>
         <tr>
           <td><a href="todo.html">To-Do List</a></td>
@@ -82,11 +133,15 @@
           </td>
         </tr>
       </table>
-    </p>
+      <br>
+    </details>
     <hr />
-    <p>
-      <h2>HTML Page Templates</h2>
-      <table>
+    <details open>
+      <summary>
+        HTML Page Templates
+      </summary>
+      <br>
+      <table class="common templates">
         <tr>
           <th>Summary</th>
           <th>Links</th>
@@ -104,7 +159,10 @@
           </td>
         </tr>
         <tr>
-          <td>A 2-Pane, Vertically Arranged (Top/Bottom) Template</td>
+          <td>
+            2-Pane, Vertical Template<br>
+            (Top/Bottom)
+          </td>
           <td>
             <a href="https://github.com/kevinknowscs/VanillaJS-Demos/blob/master/templates/2pane.html" target="_blank">GitHub</a> |
             <a href="https://raw.githubusercontent.com/kevinknowscs/VanillaJS-Demos/master/templates/2pane.html" target="_blank">GitHub Raw</a> |
@@ -115,7 +173,10 @@
           </td>
         </tr>
         <tr>
-          <td>A 2-Pane, Vertically Arranged Template using iframes</td>
+          <td>
+            2-Pane, Vertical Template<br>
+            (Top/Bottom using iframes)
+          </td>
           <td>
             <a href="https://github.com/kevinknowscs/VanillaJS-Demos/blob/master/templates/2pane-iframe.html" target="_blank">GitHub</a> |
             <a href="https://raw.githubusercontent.com/kevinknowscs/VanillaJS-Demos/master/templates/2pane-iframe.html" target="_blank">GitHub Raw</a> |
@@ -126,7 +187,10 @@
           </td>
         </tr>
         <tr>
-          <td>A 2-Pane, Horizontally Arranged (Left/Right) Template</td>
+          <td>
+            2-Pane, Horizontal Template<br>
+            (Left/Right)
+          </td>
           <td>
             <a href="https://github.com/kevinknowscs/VanillaJS-Demos/blob/master/templates/2pane-horiz.html" target="_blank">GitHub</a> |
             <a href="https://raw.githubusercontent.com/kevinknowscs/VanillaJS-Demos/master/templates/2pane-horiz.html" target="_blank">GitHub Raw</a> |
@@ -137,17 +201,21 @@
           </td>
         </tr>
       </table>
-    <p>
+      <br>
+    </details>
     <hr />
-    <p>
-      <h2>Web Resources</h2>
-      <table>
+    <details open>
+      <summary>
+        Web Resources
+      </summary>
+      <br>
+      <table class="common web-resources">
         <tr>
           <th>Link</th>
           <th>Description</th>
         </tr>
-        <tr>
-          <td colspan="2" style="background-color: lightgray;">VanillaJS Overview</td>
+        <tr class="category">
+          <td colspan="2">VanillaJS Overview</td>
         </tr>
         <tr>
           <td><a href="https://stackoverflow.com/questions/20435653/what-is-vanillajs" target="_blank">What is VanillaJS?</a></td>
@@ -169,8 +237,8 @@
             distribution of the framework. Includes some performance benchmarks comparing VanillaJS to jQuery.
           </td>
         </tr>
-        <tr>
-          <td colspan="2" style="background-color: lightgray;">Online Tools for Web Developers</td>
+        <tr class="category">
+          <td colspan="2">Online Tools for Web Developers</td>
         </tr>
         <tr>
           <td><a href="http://beautifytools.com/" target="_blank">http://beautifytools.com</a></td>
@@ -186,8 +254,8 @@
             A JSON Formatter and Validator.
           </td>
         </tr>
-        <tr>
-          <td colspan="2" style="background-color: lightgray;">Fonts and Text Resources</td>
+        <tr class="category">
+          <td colspan="2">Fonts and Text Resources</td>
         </tr>
         <tr>
           <td><a href="https://www.fontsquirrel.com/" target="_blank">https://www.fontsquirrel.com</a></td>
@@ -227,8 +295,8 @@
             The Unicode Character Database provided by unicode.org
           </td>
         </tr>
-        <tr>
-          <td colspan="2" style="background-color: lightgray;">Other Very Handy Web Resources</td>
+        <tr class="category">
+          <td colspan="2">Other Very Handy Web Resources</td>
         </tr>
         <tr>
           <td><a href="http://caniuse.com" target="_blank">http://caniuse.com</a></td>
@@ -244,8 +312,8 @@
             A good web site for tackling thorny and tricky CSS layout challenges.
           </td>
         </tr>
-        <tr>
-          <td colspan="2" style="background-color: lightgray;">Content Delivery Networks</td>
+        <tr class="category">
+          <td colspan="2">Content Delivery Networks</td>
         </tr>
         <tr>
           <td><a href="https://developers.google.com/speed/libraries/" target="_blank">Google Hosted Libraries</a></td>
@@ -266,8 +334,8 @@
             A good list of other open source content delivery networks, from the MaxCDN blog.
           </td>
         </tr>
-        <tr>
-          <td colspan="2" style="background-color: lightgray;">Reference Material for Web Developers</td>
+        <tr class="category">
+          <td colspan="2">Reference Material for Web Developers</td>
         </tr>
         <tr>
           <td><a href="https://developer.mozilla.org" target="_blank">https://developer.mozilla.org</a></td>
@@ -307,7 +375,8 @@
           </td>
         <tr>
       </table>
-    </p>
+      <br>
+    </details>
     <hr />
   </body>
 </html>
