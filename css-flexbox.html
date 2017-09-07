@@ -30,6 +30,20 @@
         width: 100%;
       }
 
+      table tr.category {
+        background-color: lightgray;
+      }
+
+      table tr.category td:first-child {
+        font-family: Arial, sans-serif;
+        font-size: 11pt;
+        font-weight: bold;
+      }
+
+      table tr.category td:last-child {
+        font-style: italic;
+      }
+
       table.flex-demos tr th:first-child,
       table.flex-demos tr td:first-child {
         width: 250px;
@@ -48,9 +62,9 @@
         <th>Property Name</th>
         <th>Description</th>
       </tr>
-      <tr>
-        <td style="background-color: lightgray;">The Flex Container</td>
-        <td style="background-color: lightgray; font-style: italic;">
+      <tr class="category">
+        <td>The Flex Container</td>
+        <td>
           Defines a flex container that enables a flex context for all its direct children.
         </td>
       </tr>
@@ -62,9 +76,9 @@
         <td><code>display: inline-flex;</code></td>
         <td>Defines the flex container as inline</td>
       </tr>
-      <tr>
-        <td style="background-color: lightgray;">Direction</td>
-        <td style="background-color: lightgray; font-style: italic;">
+      <tr class="category">
+        <td>Direction</td>
+        <td>
           Establishes the <code>main-axis</code>, thus defining the direction that flex items are placed
           in the flex container.
         </td>
@@ -171,9 +185,9 @@
           </details>
         </td>
       </tr>
-      <tr>
-        <td style="background-color: lightgray;">Wrapping</td>
-        <td style="background-color: lightgray; font-style: italic;">
+      <tr class="category">
+        <td>Wrapping</td>
+        <td>
           Defines the behavior of the flex container when all items do not
           fit on one line
         </td>
@@ -261,9 +275,9 @@
           </details>
         </td>
       </tr>
-      <tr>
-        <td style="background-color: lightgray;">Content Justification</td>
-        <td style="background-color: lightgray; font-style: italic;">
+      <tr class="category">
+        <td>Content Justification</td>
+        <td>
           Defines the alignment of the items along the main axis
         </td>
       </tr>
@@ -443,9 +457,9 @@
           </details>
         </td>
       </tr>
-      <tr>
-        <td style="background-color: lightgray;">Item Alignment</td>
-        <td style="background-color: lightgray; font-style: italic;">
+      <tr class="category">
+        <td>Item Alignment</td>
+        <td>
           Defines the default behavior for how flex items are laid out along the cross axis
         </td>
       </tr>
@@ -588,9 +602,9 @@
           </details>
         </td>
       </tr>
-      <tr>
-        <td style="background-color: lightgray;">Content Alignment</td>
-        <td style="background-color: lightgray; font-style: italic;">
+      <tr class="category">
+        <td>Content Alignment</td>
+        <td>
           Similar to <code>justify-content</code>, but applies to the cross-axis instead of the main-axis.
         </td>
       </tr>
@@ -625,9 +639,9 @@
           Default. Lines stretch to take up the remaining space.
         </td>
       </tr>
-      <tr>
-        <td style="background-color: lightgray;">Item Ordering</td>
-        <td style="background-color: lightgray; font-style: italic;">
+      <tr class="category">
+        <td>Item Ordering</td>
+        <td>
           Controls the order that items are laid out in the container.
         </td>
       </tr>
