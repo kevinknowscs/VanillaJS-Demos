@@ -814,8 +814,8 @@
       <tr class="category">
         <td>Item Growth</td>
         <td>
-          Defines the ability for the flex item to grow if necessary. It accepts a unitless parameter
-          that serves as a proportion.
+          Defines how extra space in the flexbox shall be distributed among the flex items. It accepts
+          a unitless parameter that serves as a proportion.
         </td>
       </tr>
       <tr>
@@ -823,23 +823,79 @@
         <td>
           <details>
             <summary>
-              The growth parameter, as a proportion
+              The growth parameter, as a proportion. The default is 0.
             </summary>
+            <h2>Notes</h2>
+            <ul>
+              <li>
+                This is <em><strong>not the same</strong></em> as making the flex items size in proportion
+                to each other. This controls how <em><strong>extra space</strong></em> is divided among
+                the items.
+              </li>
+              <li>
+                See <a href="https://css-tricks.com/flex-grow-is-weird/">https://css-tricks.com/flex-grow-is-weird/</a> and the
+                video below for more information on <code>flex-grow</code>, <code>flex-shrink</code>, and <code>flex-basis</code>.
+              </li>
+            </ul>
+            <h2>Videos</h2>
+            <iframe width="854" height="480" src="https://www.youtube.com/embed/CFgeJq4l1YM" frameborder="0" allowfullscreen></iframe>
             <h2>Live Demo</h2>
             <div class="demo-container" style="flex-flow: row wrap;">
-              <div class="demo-item" style="flex-grow: 1; height: 100px;">
+              <div class="demo-item" style="flex-grow: 1; height: 100px; width: 100px;">
                 Grow 1
               </div>
-              <div class="demo-item" style="flex-grow: 2; height: 100px;">
+              <div class="demo-item" style="flex-grow: 2; height: 100px; width: 100px;">
                 Grow 2
               </div>
-              <div class="demo-item" style="flex-grow: 3; height: 100px; min-width: 200px;">
+              <div class="demo-item" style="flex-grow: 3; height: 100px; width: 200px; flex-basis: 200px;">
                 Grow 3
               </div>
-              <div class="demo-item" style="flex-grow: 2; height: 100px;">
+              <div class="demo-item" style="flex-grow: 2; height: 100px; width: 100px;">
                 Grow 2
               </div>
-              <div class="demo-item" style="flex-grow: 1; height: 100px;">
+              <div class="demo-item" style="flex-grow: 1; height: 100px; width: 100px;">
+                Grow 1
+              </div>
+            </div>
+          </details>
+        </td>
+      </tr>
+      <tr class="category">
+        <td>Item Shrinkage</td>
+        <td>
+          If there is not enough space in the flexbox to accommodate all of the desired widths of the
+          flex items, this parameter controls how space will be taken from each flex item to shrink
+          them down to fit the space. It accepts a unitless parameter that serves as a proportion.
+        </td>
+      </tr>
+      <tr>
+        <td><code>flex-shrink: &lt;integer&gt;;</code></td>
+        <td>
+          <details>
+            <summary>
+              The shrinkage parameter, as a proportion. Default is 1.
+            </summary>
+            <h2>Notes</h2>
+            <ul>
+              <li>
+                See notes and videos in <code>flex-grow</code> for more information on behavior.
+              </li>
+            </ul>
+            <h2>Live Demo</h2>
+            <div class="demo-container" style="flex-flow: row wrap;">
+              <div class="demo-item" style="flex-shrink: 1; height: 100px;">
+                Grow 1
+              </div>
+              <div class="demo-item" style="flex-shrink: 2; height: 100px;">
+                Grow 2
+              </div>
+              <div class="demo-item" style="flex-shrink: 3; height: 100px; min-width: 200px;">
+                Grow 3
+              </div>
+              <div class="demo-item" style="flex-shrink: 2; height: 100px;">
+                Grow 2
+              </div>
+              <div class="demo-item" style="flex-shrinkshrink: 1; height: 100px;">
                 Grow 1
               </div>
             </div>
