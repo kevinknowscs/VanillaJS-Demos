@@ -48,6 +48,10 @@
       table.flex-demos tr td:first-child {
         width: 250px;
       }
+
+      summary {
+        outline: none;
+      }
     </style>
   <head>
   <body>
@@ -281,6 +285,18 @@
                 Item 5
               </div>
           </details>
+        </td>
+      </tr>
+      <tr class="category">
+        <td>Flex Flow Shortcut</td>
+        <td>
+          This is a shortcut property to set <code>flex&#8209;direction</code> and <code>flex&#8209;wrap</code> in one setting.
+        </td>
+      </tr>
+      <tr>
+        <td><code>flex&#8209;flow:&nbsp;<code><em>&lt;flex&#8209;direction&gt;</em><code>&nbsp;<code><em>&lt;flex&#8209;wrap&gt;</em>;</code></td>
+        <td>
+          The default is <code>row&nbsp;nowrap</code>. See above settings for examples.
         </td>
       </tr>
       <tr class="category">
@@ -604,6 +620,179 @@
                 Item 4
               </div>
               <div class="demo-item" style="flex-grow: initial; width: 100px; height: 100px; padding-top: 60px;">
+                Item 5
+              </div>
+            </div>
+          </details>
+        </td>
+      </tr>
+      <tr class="category">
+        <td>Item Self Alignment</td>
+        <td>
+          Allows the default alignment specified by the <code>align&#8209;items</code> setting to be overridden
+          for individual flex items.
+        </td>
+      </tr>
+      <tr>
+        <td><code>align&#8209;self:&nbsp;auto;</code></td>
+        <td>
+          <details>
+            <summary>
+              Default. Use the flex container's <code>align-content</code> setting.
+            </summary>
+            <h2>Live Example</h2>
+            <div class="demo-container" style="flex-flow: row nowrap; align-items: flex-start;">
+              <div class="demo-item" style="flex-grow: initial; width: 100px; height: 100px;">
+                Item 1
+              </div>
+              <div class="demo-item" style="flex-grow: initial; width: 100px; height: 150px;">
+                Item 2
+              </div>
+              <div class="demo-item" style="flex-grow: initial; width: 100px; height: 200px;">
+                Item 3
+              </div>
+              <div class="demo-item" style="flex-grow: initial; width: 100px; height: 125px; background-color: lightblue; align-self: auto;">
+                Item 4, Align Self = <code>auto</code>
+              </div>
+              <div class="demo-item" style="flex-grow: initial; width: 100px; height: 100px;">
+                Item 5
+              </div>
+            </div>
+          </details>
+        </td>
+      </tr>
+      <tr>
+        <td><code>align&#8209;self:&nbsp;flex&#8209;start;</code></td>
+        <td>
+          <details>
+            <summary>
+              <code>cross-start</code> margin edge of the items is placed on the <code>cross-start</code> line
+            </summary>
+            <h2>Live Example</h2>
+            <div class="demo-container" style="flex-flow: row nowrap; align-items: flex-start;">
+              <div class="demo-item" style="flex-grow: initial; width: 100px; height: 100px;">
+                Item 1
+              </div>
+              <div class="demo-item" style="flex-grow: initial; width: 100px; height: 150px;">
+                Item 2
+              </div>
+              <div class="demo-item" style="flex-grow: initial; width: 100px; height: 200px;">
+                Item 3
+              </div>
+              <div class="demo-item" style="flex-grow: initial; width: 100px; height: 125px; background-color: lightblue; align-self: flex-start;">
+                Item 4, Align Self = <code>flex&#8209;start</code>
+              </div>
+              <div class="demo-item" style="flex-grow: initial; width: 100px; height: 100px;">
+                Item 5
+              </div>
+            </div>
+          </details>
+        </td>
+      </tr>
+      <tr>
+        <td><code>align&#8209;self:&nbsp;flex&#8209;end;</code></td>
+        <td>
+          <details>
+            <summary>
+              <code>cross-end</code> margin edge of the items is placed on the <code>cross-end</code> line
+            </summary>
+            <h2>Live Example</h2>
+            <div class="demo-container" style="flex-flow: row nowrap; align-items: flex-start;">
+              <div class="demo-item" style="flex-grow: initial; width: 100px; height: 100px;">
+                Item 1
+              </div>
+              <div class="demo-item" style="flex-grow: initial; width: 100px; height: 150px;">
+                Item 2
+              </div>
+              <div class="demo-item" style="flex-grow: initial; width: 100px; height: 200px;">
+                Item 3
+              </div>
+              <div class="demo-item" style="flex-grow: initial; width: 100px; height: 125px; background-color: lightblue; align-self: flex-end;">
+                Item 4, Align Self = <code>flex&#8209;end</code>
+              </div>
+              <div class="demo-item" style="flex-grow: initial; width: 100px; height: 100px;">
+                Item 5
+              </div>
+            </div>
+          </details>
+        </td>
+      </tr>
+      <tr>
+        <td><code>align&#8209;self:&nbsp;center;</code></td>
+        <td>
+          <details>
+            <summary>
+              Items are centered in the <code>cross-axis</code>
+            </summary>
+            <h2>Live Example</h2>
+            <div class="demo-container" style="flex-flow: row nowrap; align-items: flex-start;">
+              <div class="demo-item" style="flex-grow: initial; width: 100px; height: 100px;">
+                Item 1
+              </div>
+              <div class="demo-item" style="flex-grow: initial; width: 100px; height: 150px;">
+                Item 2
+              </div>
+              <div class="demo-item" style="flex-grow: initial; width: 100px; height: 200px;">
+                Item 3
+              </div>
+              <div class="demo-item" style="flex-grow: initial; width: 100px; height: 125px; background-color: lightblue; align-self: center;">
+                Item 4, Align Self = <code>center</code>
+              </div>
+              <div class="demo-item" style="flex-grow: initial; width: 100px; height: 100px;">
+                Item 5
+              </div>
+            </div>
+          </details>
+        </td>
+      </tr>
+      <tr>
+        <td><code>align&#8209;self:&nbsp;stretch;</code></td>
+        <td>
+          <details>
+            <summary>
+              Stretch to fill the container (but still respect min-width/max-width)
+            </summary>
+            <div class="demo-container" style="flex-flow: row nowrap; align-items: flex-start;">
+              <div class="demo-item" style="flex-grow: initial; width: 100px; height: 100px;">
+                Item 1
+              </div>
+              <div class="demo-item" style="flex-grow: initial; width: 100px; height: 150px;">
+                Item 2
+              </div>
+              <div class="demo-item" style="flex-grow: initial; width: 100px; height: 200px;">
+                Item 3
+              </div>
+              <div class="demo-item" style="flex-grow: initial; width: 100px; background-color: lightblue; align-self: stretch;">
+                Item 4, Align Self = <code>stretch</code>
+              </div>
+              <div class="demo-item" style="flex-grow: initial; width: 100px; height: 100px;">
+                Item 5
+              </div>
+            </div>
+          </details>
+        </td>
+      </tr>
+      <tr>
+        <td><code>align&#8209;self:&nbsp;baseline;</code></td>
+        <td>
+          <details>
+            <summary>
+              Items are aligned such as their baselines align
+            </summary>
+            <div class="demo-container" style="flex-flow: row nowrap; align-items: flex-start;">
+              <div class="demo-item" style="flex-grow: initial; width: 100px; height: 100px;">
+                Item 1
+              </div>
+              <div class="demo-item" style="flex-grow: initial; width: 100px; height: 150px;">
+                Item 2
+              </div>
+              <div class="demo-item" style="flex-grow: initial; width: 100px; height: 200px;">
+                Item 3
+              </div>
+              <div class="demo-item" style="flex-grow: initial; width: 100px; height: 125px; background-color: lightblue; align-self: baseline;">
+                Item 4, Align Self = <code>baseline</code>
+              </div>
+              <div class="demo-item" style="flex-grow: initial; width: 100px; height: 100px;">
                 Item 5
               </div>
             </div>
@@ -982,6 +1171,40 @@
             with setting a specific unit value.
         </td>
       </tr>
+      <tr class="category">
+        <td>Flex Shortcut</td>
+        <td>
+          The <code>flex</code> property allows a shortcut for setting <code>flex&#8209;grow</code>, <code>flex&#8209;shrink</code>, and
+          <code>flex&#8209;basis</code> with a single setting. This is the preferred method.
+        </td>
+      </tr>
+      <tr>
+        <td><code>flex:&nbsp;none;</code></td>
+        <td>
+          Same as <code>flex:&nbsp;0&nbsp;0&nbsp;auto;</code>
+        </td>
+      </tr>
+      <tr>
+        <td><code>flex:&nbsp;<em>&lt;flex&#8209;grow&gt;</em>;</code></td>
+        <td>
+          If only one value is specified, it is taken as the <code>flex&#8209;grow</code> setting. However,
+          it is recommended to give all 3 values.
+        </td>
+      </tr>
+      <tr>
+        <td><code>flex:&nbsp;<em>&lt;flex&#8209;grow&gt;</em>&nbsp;<em>&lt;flex&#8209;basis&gt;</em>;</code></td>
+        <td>
+          IF only two values are specified, they are taken as the <code>flex&#8209;grow</code> and <code>flex&#8209;basis</code> settings.
+        </td>
+      </tr>
+      <tr>
+        <td><code>flex:&nbsp;<em>&lt;flex&#8209;grow&gt;</em>&nbsp;<em>&lt;flex&#8209;shrink&gt;</em>&nbsp;<em>&lt;flex&#8209;basis&gt;</em>;</code></td>
+        <td>
+          <mark>This is the recommended form</mark> of the <code>flex</code> setting. If not specified, it defaults to <code>flex:&nbsp;0&nbsp;1&nbsp;auto;</code>.
+        </td>
+      </tr>
     </table>
+    <br>
+    <br>
   </body>
 </html>
