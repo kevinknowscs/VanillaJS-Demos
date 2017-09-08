@@ -17,6 +17,28 @@ header div.page-title {
   font-weight: bold;
 }
 
+section h1 {
+  font-family: Arial;
+  font-size: 1.25em;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+summary {
+  font-family: Arial;
+  font-size: 1.25em;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+summary {
+  outline: none;
+}
+
+table.common {
+  max-width: 1200px;
+}
+
 table, tr, th, td {
   border: 1px solid black;
   border-collapse: collapse;
@@ -50,4 +72,27 @@ h3 {
   font-size: 0.9em;
   font-weight: normal;
   text-decoration: underline;
+}
+
+main section:not(:first-child) {
+  padding-top: 15px;
+}
+
+main section details > p:nth-child(2) {
+  padding: none;
+  margin: none;
+  -webkit-margin-before: 0;
+}
+
+main section:not(:last-child) {
+  padding-bottom: 20px;
+  border-bottom: 1px solid lightgray;
+}
+
+section p:last-child {
+  margin-bottom: 0;
+}
+
+section details[open] summary {
+  padding-bottom: 1em;
 }

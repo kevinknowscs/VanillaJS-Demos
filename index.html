@@ -5,23 +5,6 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
 
     <style type="text/css">
-
-
-      summary {
-        font-family: Arial;
-        font-size: 1.25em;
-        font-weight: bold;
-        text-decoration: underline;
-      }
-
-      summary {
-        outline: none;
-      }
-
-      table.common {
-        max-width: 1200px;
-      }
-
       table.articles td:first-child {
         width: 200px;
       }
@@ -45,30 +28,6 @@
         font-size: 11pt;
         font-weight: bold;
       }
-
-      main section:not(:first-child) {
-        padding-top: 15px;
-      }
-
-      main section:not(:last-child) {
-        padding-bottom: 20px;
-        border-bottom: 1px solid lightgray;
-      }
-
-      section p:last-child {
-        margin-bottom: 0;
-      }
-
-      section h1 {
-        font-family: Arial;
-        font-size: 1.25em;
-        font-weight: bold;
-        text-decoration: underline;
-      }
-
-      section details[open] summary {
-        padding-bottom: 1em;
-      }
     </style>
   <head>
   <body>
@@ -77,15 +36,17 @@
     </header>
     <main>
       <section>
-        <h1>Introduction</h1>
-        <p>
-          This is a notebook written in raw HTML. It demonstrates the core principles of writing web sites using pure
-          HTML, CSS, JavaScript, without any additional frameworks or languages.
-        </p>
-        <p>
-          The source code can be found at:
-          <a href="https://github.com/kevinknowscs/VanillaJS-Demos" target="_blank">https://github.com/kevinknowscs/VanillaJS-Demos</a>
-        </p>
+        <details open>
+          <summary>Introduction</summary>
+          <p>
+            This is a notebook written in raw HTML. It demonstrates the core principles of writing web sites using pure
+            HTML, CSS, JavaScript, without any additional frameworks or languages.
+          </p>
+          <p>
+            The source code can be found at:
+            <a href="https://github.com/kevinknowscs/VanillaJS-Demos" target="_blank">https://github.com/kevinknowscs/VanillaJS-Demos</a>
+          </p>
+        </details>
       </section>
       <section>
         <details open>

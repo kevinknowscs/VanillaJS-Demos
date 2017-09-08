@@ -23,69 +23,248 @@
       </nav>
     </header>
     <main>
-      <table>
+      <section>
+        <h1>Introduction</h1>
+        <p>
+          UNDER CONSTRUCTION
+        </p>
         <p>
           This page reviews the basic CSS layout strategies that a web developer can employ
           to layout content on a page.
+        </p>
+      </section>
+
+      <section>
+        <details>
+          <summary>HTML Tags</summary>
+          <p>
+            Before we begin to layout out the page structure with CSS rules, we want to first consider
+            a sensible structure using available HTML tags.
+          </p>
+          <table class="common">
+            <tr>
+              <th>Tag Purpose</th>
+              <th>Tag Section(s)</th>
+              <th>Tag List</th>
+              <th>Notes</th>
+            </tr>
+            <tr>
+              <td>Presentation Tags</td>
+              <td>Phrasing Content</td>
+              <td><code>&lt;b&gt;</code>, <code>&lt;br&gt;</code>, etc.</td>
+              <td>
+                Avoid using presentation-style tags whereever possible. Look to see if you can find
+                a tag with semantic meaning.
+              </td>
+            </tr>
+            <tr>
+              <td>Semantic Tags</td>
+              <td>Phrasing Content</td>
+              <td><code>&lt;abbr&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;strong&gt;<code>, etc.</td>
+              <td>
+              </td>
+            </tr>
+            <tr>
+              <td>Semantic Tags</td>
+              <td>Sectioning Content</td>
+              <td><code>&lt;article&gt;</code>, <code>&lt;aside&gt;<code>, etc.</td>
+              <td>
+                Semantic-oriented section content tags are the first opportunity to begin considering the
+                actual layout structure of the page.
+              </td>
+            </tr>
+            <tr>
+              <td>Generic Box Tags</td>
+              <td>Sectioning Content</td>
+              <td><code>&lt;div&gt;<code>, <code>&lt;span&gt;</code></td>
+              <td>
+                If you can't find an existing HTML tag that seems applicable to the type of page layout you
+                are doing, then the next best choice is to use the generic box tags <code>&lt;div&gt;</code> and
+                <code>&lt;span&gt;</code>, which give you block and inline boxes (see below for more details).
+                For increased semantic meaning, we can apply one or more CSS classes.
+              </td>
+            </tr>
+          </table>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary>Box Display Types</summary>
+          <p>
+            You can always use the standard <code>display</code> properties to layout elements using the
+            standard document flow.
+          </p>
+          <table>
+            <tr>
+              <th>Display Value</th>
+              <th>Description</th>
+              <th>Box Characteristics</th>
+            </tr>
+            <tr>
+              <td><code>display:&nbsp;none;</code></td>
+              <td>
+                The box is not rendered and no space is taken up in the document flow. To reserve space in the
+                document flow, but make the box invisible, use <code>visibility:&nbsp;hidden;</code> instead.
+              </td>
+              <td>
+                <ul>
+                  <li>N/A</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><code>display:&nbsp;block;</code></td>
+              <td>Displays the element as a block element (like <code>&lt;p&gt;<code>)</td>
+              <td>
+                <ul>
+                  <li>Settable width and height</li>
+                  <li>
+                    Normally, line breaks are inserted into the document flow after the element, unless other flow-disrupting
+                    properties are in effect, such as floats, non-static positioning, etc.
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><code>display:&nbsp;inline;</code></td>
+              <td>Displays the element as an inline element (like <code>&lt;span&gt;</code>)</td>
+              <td>
+                <ul>
+                  <li>Width and height are ignored</li>
+                  <li>No line break inserted into the document flow after the element</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><code>display:&nbsp;inline&#8209;block;</code></td>
+              <td>
+                Displays the element as an inline-level block container. The inside of this block is
+                formatted as a block-level box, and the element itself is formatted as an inline-level box.
+              </td>
+              <td>
+                <ul>
+                  <li>Settable width and height</li>
+                  <li>No line break inserted into the document flow after the element</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Other Display Values</td>
+              <td>
+                <mark>
+                  See other layout alternatives below for more possible display values, such as <code>flex</code>
+                  and <code>grid</code>.
+                </mark>
+              </td>
+              <td>
+                <ul>
+                  <li>See below</li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary>Basic Box Model Layout</summary>
+          <p>
+            Narrative here
+          </p>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary>Box Sizing</summary>
+          <p>
+            Narrative here
+          </p>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary>Advanced Box Model Layout</summary>
+          <p>
+            Narrative here
+          </p>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary>Media Queries</summary>
+          <p>
+            Narrative here
+          </p>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary>Floats</summary>
+          <p>
+            Narrative here
+          </p>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary>Positioning</summary>
+          <p>
+            Narrative here
+          </p>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary>List Layouts</summary>
+          <p>
+            Narrative here
+          </p>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary>Table Layouts</summary>
+          <p>
+            Narrative here
+          </p>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary>Flexbox</summary>
+          <p>
+            Narrative here
+          </p>
+        </details>
+      </section>
+
+      <section>
+        <details>
+          <summary>Grid Layouts</summary>
+          <p>
+            Narrative here
+          </p>
+        </details>
+      </section>
+
+
+      <table>
+        <p>
         </p>
         <tr>
           <th>Summary</th>
           <th>Description</th>
           <th>Links</th>
-        </tr>
-        <tr>
-            <td>HTML Tags</td>
-            <td>
-              <p>
-                Before we begin to layout out the page structure with CSS rules, we want to first consider
-                a sensible structure using available HTML tags.
-              </p>
-              <table>
-                <tr>
-                  <th>Tag Purpose</th>
-                  <th>Tag Section(s)</th>
-                  <th>Tag List</th>
-                  <th>Notes</th>
-                </tr>
-                <tr>
-                  <td>Presentation Tags</td>
-                  <td>Phrasing Content</td>
-                  <td><code>&lt;b&gt;</code>, <code>&lt;br&gt;</code>, etc.</td>
-                  <td>
-                    Avoid using presentation-style tags whereever possible. Look to see if you can find
-                    a tag with semantic meaning.
-                  </td>
-                </tr>
-                <tr>
-                  <td>Semantic Tags</td>
-                  <td>Phrasing Content</td>
-                  <td><code>&lt;abbr&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;strong&gt;<code>, etc.</td>
-                  <td>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Semantic Tags</td>
-                  <td>Sectioning Content</td>
-                  <td><code>&lt;article&gt;</code>, <code>&lt;aside&gt;<code>, etc.</td>
-                  <td>
-                    Semantic-oriented section content tags are the first opportunity to begin considering the
-                    actual layout structure of the page.
-                  </td>
-                </tr>
-                <tr>
-                  <td>Generic Box Tags</td>
-                  <td>Sectioning Content</td>
-                  <td><code>&lt;div&gt;<code>, <code>&lt;span&gt;</code></td>
-                  <td>
-                    If you can't find an existing HTML tag that seems applicable to the type of page layout you
-                    are doing, then the next best choice is to use the generic box tags <code>&lt;div&gt;</code> and
-                    <code>&lt;span&gt;</code>, which give you block and inline boxes (see below for more details).
-                    For increased semantic meaning, we can apply one or more CSS classes.
-                  </td>
-                </tr>
-              </table>
-            </td>
-            <td></td>
         </tr>
         <tr>
           <td>Box Display Types</td>
