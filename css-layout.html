@@ -24,63 +24,134 @@
     </header>
     <main>
       <section>
-        <h1>Introduction</h1>
-        <p>
-          UNDER CONSTRUCTION
-        </p>
-        <p>
-          This page reviews the basic CSS layout strategies that a web developer can employ
-          to layout content on a page.
-        </p>
+        <details>
+          <summary>Introduction</summary>
+          <p>
+            UNDER CONSTRUCTION
+          </p>
+          <p>
+            This page reviews the basic CSS layout strategies that a web developer can employ
+            to layout content on a page.
+          </p>
+        </details>
       </section>
 
       <section>
         <details>
           <summary>HTML Tags</summary>
           <p>
-            Before we begin to layout out the page structure with CSS rules, we want to first consider
-            a sensible structure using available HTML tags.
+            Before we begin to stylize and layout the page structure with CSS rules, we want to first consider
+            a sensible DOM structure using available HTML tags.
           </p>
           <table class="common">
             <tr>
-              <th>Tag Purpose</th>
               <th>Tag Section(s)</th>
+              <th>Purpose</th>
               <th>Tag List</th>
               <th>Notes</th>
             </tr>
             <tr>
-              <td>Presentation Tags</td>
               <td>Phrasing Content</td>
-              <td><code>&lt;b&gt;</code>, <code>&lt;br&gt;</code>, etc.</td>
+              <td>Presentation-Oriented Inline Content Styling</td>
+              <td><code>&lt;b&gt;</code>, <code>&lt;br&gt;</code>, <code>&lt;i&gt;</code></td>
               <td>
-                Avoid using presentation-style tags whereever possible. Look to see if you can find
-                a tag with semantic meaning.
+                Avoid using presentation-oriented tags. Use alternate tags with better semantic
+                meaning where possible. <code>&lt;strong&gt;</code> is preferred over <code>&lt;b&gt;</code>.
+                <code>&lt;em&gt;</code> is preferred over <code>&lt;i&gt;</code>. Use paragraphs and/or margins
+                and padding in place of <code>&lt;br&gt;</code> where possible.
               </td>
             </tr>
             <tr>
-              <td>Semantic Tags</td>
-              <td>Phrasing Content</td>
+              <td>Phrasing &amp; Flow Content</td>
+              <td>Semantically-Oriented Inline Content Styling</td>
               <td><code>&lt;abbr&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;strong&gt;<code>, etc.</td>
               <td>
+                Most other tags not listed here, with the exception of metadata tags, are part of a large category
+                of flow content tags. They are generally used to style the actual content of the page, not the
+                structural layout.
               </td>
             </tr>
             <tr>
-              <td>Semantic Tags</td>
               <td>Sectioning Content</td>
-              <td><code>&lt;article&gt;</code>, <code>&lt;aside&gt;<code>, etc.</td>
+              <td>Semantically Meaningful Structure</td>
               <td>
-                Semantic-oriented section content tags are the first opportunity to begin considering the
-                actual layout structure of the page.
+                <code>&lt;article&gt;</code>, <code>&lt;aside&gt;<code>, <code>&lt;nav&gt;<code>, <code>&lt;section&gt;</code>
+              </td>
+              <td>
+                Sectioning content tags are the first opportunity to begin considering the actual structural layout
+                of the page.
               </td>
             </tr>
             <tr>
-              <td>Generic Box Tags</td>
-              <td>Sectioning Content</td>
+              <td>Flow Content</td>
+              <td>Section Headers &amp; Footers</td>
+              <td>
+                <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>
+              </td>
+              <td>
+                Technically speaking, these tags are flow content, and are not considered part of sectioning content
+                or heading content. They are generally placed inside of a <code>&lt;section&gt;</code>, but this is not
+                required. When not inside a section group, the tags should be considered to supply header and footer content
+                for the page body. As such, these tags should be considered for use as part of an overall page
+                layout strategy.
+              </td>
+            </tr>
+            <tr>
+              <td>Flow Content</td>
+              <td>The Main Tag</td>
+              <td><code>&lt;main&gt;</code></td>
+              <td>
+                Another flow content tag, <code>&lt;main&gt;</code> designates the main body of content of page.
+                It should not contain any content that is repeated across pages, such as logos, top navigation bars, side
+                navigation bars, headers, footers, etc. This tag should be considered as part of a well-designed page layout.
+              </td>
+            </tr>
+            <tr>
+              <td>Heading Content</td>
+              <td>Header Titles</td>
+              <td>
+                <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>
+              </td>
+              <td>
+                Use heading content tags to supply title information to pages and sections.
+              </td>
+            </tr>
+            <tr>
+              <td>Flow Content</td>
+              <td>Lists &amp; More</td>
+              <td>
+                <code>&lt;ol&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;li&gt;</code>
+              </td>
+              <td>
+                Traditionally used to format hierarchically-arranged bulleted lists, these tags have
+                been used creatively for other purposes. A common example is to use a formatted list to style
+                a set of tab header items for tab-separated content. In addition to the tags, the CSS property
+                <code>display:&nbsp;list&#8209;item</code> can be used to style any element as a list item.
+              </td>
+            </tr>
+            <tr>
+              <td>Flow Content</td>
+              <td>Tables</td>
+              <td>
+                <code>&lt;table&gt;<code>, <code>&lt;tr&gt;<code>, <code>&lt;thead&gt;<code>, <code>&lt;tfoot&gt;<code>,
+                <code>&lt;th&gt;<code>, <code>&lt;td&gt;<code>
+              </td>
+              <td>
+                Tables should not be used for general page layout purposes. They should only be used to format genuinely
+                tabular data for which multiply aligned rows and columns are the most logical form of presentation. The
+                corresponding CSS rules <code>display:&nbsp;table</code> and its brethren can now be used to style any
+                element as a table-type structure, and can sometimes be a good choice for cetain layouts that are difficult
+                to achieve with ordinary methods, although now with Flexbox and Grid layouts they are less needed.
+              </td>
+            </tr>
+            <tr>
+              <td>Flow Content</td>
+              <td>Generic Structure</td>
               <td><code>&lt;div&gt;<code>, <code>&lt;span&gt;</code></td>
               <td>
-                If you can't find an existing HTML tag that seems applicable to the type of page layout you
-                are doing, then the next best choice is to use the generic box tags <code>&lt;div&gt;</code> and
-                <code>&lt;span&gt;</code>, which give you block and inline boxes (see below for more details).
+                Because HTML provides us with so few sectioning content tags that we can use for semantically-meaningful
+                layout, most of the time we need to resort the the generic box tags <code>&lt;div&gt;</code> and
+                <code>&lt;span&gt;</code>, which provide block and inline boxes (see below for more details).
                 For increased semantic meaning, we can apply one or more CSS classes.
               </td>
             </tr>
@@ -92,10 +163,12 @@
         <details>
           <summary>Box Display Types</summary>
           <p>
-            You can always use the standard <code>display</code> properties to layout elements using the
-            standard document flow.
+            The commonly-used <code>block</code>, <code>inline</code>, and <code>inline&#8209;block</code> <code>display</code>
+            values are typically used in conjunction with the <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> tags, but
+            they can be applied to any element. These properties are frequently the first line of attack when approaching
+            page layout.
           </p>
-          <table>
+          <table class="common">
             <tr>
               <th>Display Value</th>
               <th>Description</th>
@@ -132,6 +205,10 @@
               <td>
                 <ul>
                   <li>Width and height are ignored</li>
+                  <li>
+                    The size of the box expands or contracts as needed to accommodate the size
+                    of its children.
+                  </li>
                   <li>No line break inserted into the document flow after the element</li>
                 </ul>
               </td>
@@ -164,15 +241,91 @@
               </td>
             </tr>
           </table>
+          <h1>More Information</h1>
+          <p>
+            <a href="css-boxdisplay.html">Block vs. Inline</a>
+          </p>
         </details>
       </section>
 
       <section>
-        <details>
+        <details open>
           <summary>Basic Box Model Layout</summary>
           <p>
-            Narrative here
+            The CSS box model consists of margins, borders, padding, and content. The top, left, bottom, and right
+            values can be set independently, or they can be set with a single setting using a shortcut specifying
+            one or more values.
           </p>
+          <p>
+            When shortcuts are used, the top value is specified first, and then proceeds clockwise around the box; i.e.,
+            top, then right, then bottom, then left. See below for more details.
+          </p>
+          <h1>The CSS Box Model</h1>
+          <p>
+            <img src="images/css-boxmodel.png">
+          </p>
+          <h1>Box Model Properties</h1>
+          <table class="common">
+            <tr>
+              <th>CSS Property</th>
+              <th>Description</th>
+            </tr>
+            <tr class="category">
+              <td>Margins</td>
+              <td><em>Margins are used to push the box border away from the surrounding content</em></td>
+            </tr>
+            <tr>
+              <td><code>margin&#8209;top:&nbsp;&lt;value&gt;;</code></td>
+              <td>The top margin</td>
+            </tr>
+            <tr>
+              <td><code>margin&#8209;left:&nbsp;&lt;value&gt;;</code></td>
+              <td>The left margin</td>
+            </tr>
+            <tr>
+              <td><code>margin&#8209;bottom:&nbsp;&lt;value&gt;;</code></td>
+              <td>The bottom margin</td>
+            </tr>
+            <tr>
+              <td><code>margin&#8209;right:&nbsp;&lt;value&gt;;</code></td>
+              <td>The right margin</td>
+            </tr>
+            <tr class="category">
+              <td>Margin Shortcuts</td>
+              <td>Specify all margins in a single setting</td>
+            </tr>
+            <tr>
+              <td><code>margin:&nbsp;20px,&nbsp;15px,&nbsp;10px&nbsp;5px;</code></td>
+              <td>Top is 20px; Right is 15px; Bottom is 10px; Left is 5px</td>
+            </tr>
+            <tr>
+              <td><code>margin:&nbsp;20px,&nbsp;15px,&nbsp;10px;</code></td>
+              <td>
+                Top is 20px; Right is 15px; Bottom is 10px; 15px. Since the left margin value
+                was omitted, the value of the right margin is used for both left and right.
+              </td>
+            </tr>
+            <tr>
+              <td><code>margin:&nbsp;20px,&nbsp;15px;</code></td>
+              <td>
+                Top is 20px; Right is 15px; Bottom is 20px; Left is 15px. Since only two values
+                were specified, the first value is used for the top and bottom, and the second
+                value is used for the left and right.
+              </td>
+            </tr>
+            <tr>
+              <td><code>margin:&nbsp;20px;</code></td>
+              <td>
+                All four margins are set to 20px. Since only one value is specified, the value is
+                used for all four settings.
+              </td>
+            </tr>
+            <tr class="category">
+              <td>Borders</td>
+              <td><em>A box can specify a border that goes around the padding and content.</em></td>
+            </tr>
+
+          </table>
         </details>
       </section>
 

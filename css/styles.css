@@ -36,7 +36,15 @@ summary {
 }
 
 table.common {
+  min-width: 1200px;
   max-width: 1200px;
+}
+
+table.common tr.category {
+  background-color: lightgray;
+  font-family: Arial;
+  font-size: 11pt;
+  font-weight: bold;
 }
 
 table, tr, th, td {
@@ -60,14 +68,14 @@ h1 {
   margin-left: 0px;
 }
 
-h2 {
+h2, main h1, section h1 {
   font-family: Arial;
   font-size: 1.05em;
   font-weight: bold;
   text-decoration: underline;
 }
 
-h3 {
+h3, main h2, section h2 {
   font-family: Arial;
   font-size: 0.9em;
   font-weight: normal;
