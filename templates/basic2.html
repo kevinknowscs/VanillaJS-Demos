@@ -7,7 +7,28 @@
     <!-- JavaScript References -->
     <!-- <script type="text/javascript" src="/path/to/js/file/here" /> -->
 
-    <script type="text/javascript" src="../scripts/helpers.js"></script>
+    <!-- The following onDocumentReady() function is also available in -->
+    <!-- the ../scripts/helpers.js file                                -->
+    <!-- <script type="text/javascript" src="../scripts/helpers.js"></script> -->
+
+    <script type="text/javascript">
+      function onDocumentReady(callback) {
+        if (document.readyState !== 'loading') {
+          callback();
+        }
+        else if (document.addEventListener) {
+          document.addEventListener('DOMContentLoaded', callback)
+        }
+        else if (document.attachEvent) {
+          document.attachEvent('onreadystatechange', function() {
+            if (document.readyState === 'complete') {
+              callback();
+            }
+          });
+        }
+      }
+    </script>
+
     <script type="text/javascript">
       onDocumentReady(function () {
         alert('THE DOCUMENT HAS LOADED!!!')
