@@ -3,7 +3,7 @@ function onDocumentReady(callback) {
     callback();
   }
   else if (document.addEventListener) {
-    document.addEventListener('DOMContentLoaded', callback)
+    document.addEventListener('DOMContentLoaded', callback);
   }
   else if (document.attachEvent) {
     document.attachEvent('onreadystatechange', function() {
