@@ -1,273 +1,340 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- Stylesheet References -->
-    <link rel="stylesheet" type="text/css" href="../../css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/layout/notebook1.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/themes/blue.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/content/standard.css" />
+
+    <style type="text/css">
+      table.templates td:first-child {
+        width: 200px;
+      }
+
+      table.templates td:nth-child(2) {
+        width: 190px;
+      }
+    </style>
   </head>
   <body>
-    <header>
-      <h1>The CSS Box Model</h1>
-      <nav>
-        <p><a href="../../index.html">Back to Table of Contents</a></p>
-      </nav>
-    </header>
-    <main>
-      <h1>Introduction</h1>
-      <p>
-        The CSS box model consists of margins, borders, padding, and content. The top, left, bottom, and right
-        values can be set independently, or they can be set with a single setting using a shortcut specifying
-        one or more values.
-      </p>
-      <p>
-        When shortcuts are used, the top value is specified first, and then proceeds clockwise around the box; i.e.,
-        top, then right, then bottom, then left. See below for more details.
-      </p>
-      <h1>Web Resources</h1>
-      <p>
-        <ul>
-          <li><a href="https://www.w3schools.com/css/css_boxmodel.asp" target="_blank">W3Schools Box Model Reference</a></li>
-        </ul>
-      </p>
-      <h1>Visual Depiction</h1>
-      <p>
-        <img src="../../images/css-boxmodel.png">
-      </p>
-      <h1>Box Model Properties</h1>
-      <table class="common">
-        <tr>
-          <th>CSS Property</th>
-          <th>Description</th>
-        </tr>
-        <tr class="category">
-          <td>Margins</td>
-          <td><em>Margins are used to push the box border away from the surrounding content</em></td>
-        </tr>
-        <tr>
-          <td><code>margin&#8209;top:&nbsp;&lt;value&gt;;</code></td>
-          <td>The top margin</td>
-        </tr>
-        <tr>
-          <td><code>margin&#8209;left:&nbsp;&lt;value&gt;;</code></td>
-          <td>The left margin</td>
-        </tr>
-        <tr>
-          <td><code>margin&#8209;bottom:&nbsp;&lt;value&gt;;</code></td>
-          <td>The bottom margin</td>
-        </tr>
-        <tr>
-          <td><code>margin&#8209;right:&nbsp;&lt;value&gt;;</code></td>
-          <td>The right margin</td>
-        </tr>
-        <tr class="category">
-          <td>Margin Shortcuts</td>
-          <td>Specify all margins in a single setting</td>
-        </tr>
-        <tr>
-          <td><code>margin:&nbsp;20px,&nbsp;15px,&nbsp;10px&nbsp;5px;</code></td>
-          <td>Top is 20px; Right is 15px; Bottom is 10px; Left is 5px</td>
-        </tr>
-        <tr>
-          <td><code>margin:&nbsp;20px,&nbsp;15px,&nbsp;10px;</code></td>
-          <td>
-            Top is 20px; Right is 15px; Bottom is 10px; 15px. Since the left margin value
-            was omitted, the value of the right margin is used for both left and right.
-          </td>
-        </tr>
-        <tr>
-          <td><code>margin:&nbsp;20px,&nbsp;15px;</code></td>
-          <td>
-            Top is 20px; Right is 15px; Bottom is 20px; Left is 15px. Since only two values
-            were specified, the first value is used for the top and bottom, and the second
-            value is used for the left and right.
-          </td>
-        </tr>
-        <tr>
-          <td><code>margin:&nbsp;20px;</code></td>
-          <td>
-            All four margins are set to 20px. Since only one value is specified, the value is
-            used for all four settings.
-          </td>
-        </tr>
-        <tr class="category">
-          <td>Padding</td>
-          <td>
-            Padding pushes the content away from the box border. The padding settings are analagous
-            to the margin settings.
-          </td>
-        </tr>
-        <tr>
-          <td><code>padding&#8209;top:&nbsp;&lt;value&gt;;</code></td>
-          <td>The top padding</td>
-        </tr>
-        <tr>
-          <td><code>padding&#8209;left:&nbsp;&lt;value&gt;;</code></td>
-          <td>The left padding</td>
-        </tr>
-        <tr>
-          <td><code>padding&#8209;bottom:&nbsp;&lt;value&gt;;</code></td>
-          <td>The bottom padding</td>
-        </tr>
-        <tr>
-          <td><code>margin&#8209;right:&nbsp;&lt;value&gt;;</code></td>
-          <td>The right padding</td>
-        </tr>
-        <tr class="category">
-          <td>Padding Shortcuts</td>
-          <td>Specify all paddings in a single setting</td>
-        </tr>
-        <tr>
-          <td><code>padding:&nbsp;20px,&nbsp;15px,&nbsp;10px&nbsp;5px;</code></td>
-          <td>Same as margins. See above.</td>
-        </tr>
-        <tr>
-          <td><code>padding:&nbsp;20px,&nbsp;15px,&nbsp;10px;</code></td>
-          <td>
-            Same as margins. See above.
-          </td>
-        </tr>
-        <tr>
-          <td><code>padding:&nbsp;20px,&nbsp;15px;</code></td>
-          <td>
-            Same as margins. See above.
-          </td>
-        </tr>
-        <tr>
-          <td><code>padding:&nbsp;20px;</code></td>
-          <td>
-            Same as margins. See above.
-          </td>
-        </tr>
-        <tr class="category">
-          <td>Borders</td>
-          <td><em>A box can specify a border that goes around the padding and content.</em></td>
-        </tr>
-        <tr>
-          <td><code>border&#8209;:&nbsp;;</code></td>
-          <td>
+    <div class="outer-layout">
+      <div class="north-pane">
+        <div class="north-left-pane">
+          <div class="logo-area">
+            <div class="logo">
+              VanillaJS-Demos
+            </div>
+          </div>
+        </div>
+        <div class="north-right-pane">
+          <div class="search-outer-area">
+              <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search ...">
+          </div>
+        </div>
+      </div>
+      <div class="south-pane">
+        <div class="south-left-pane">
+          <div class="sidebar-area">
+            <section>
+              <a href="../../index3.html">Home</a>
+            </section>
+            <section>
+              <h1>HTML</h1>
+              <a href="../html/html-tags.html">List of HTML Tags</a>
+            </section>
+            <section>
+              <h1>CSS</h1>
+              <a href="css-boxmodel.html">CSS Box Model</a><br>
+              <a href="css-layout.html">Layout Strategies</a><br>
+              <a href="css-boxdisplay.html">Block vs. Inline</a><br>
+              <a href="css-flexbox.html">Flexbox Examples</a></br>
+            </section>
+            <section>
+              <h1>JavaScript</h1>
+              <a href="../js/js-videos.html">JavaScript Videos</a><br>
+              <a href="../js/js-dom.html">DOM Manipulation</a></br>
+              <a href="../js/js-funclist.html">JavaScript Functions</a></br>
+            </section>
+            <section>
+              <h1>Quick Links</h1>
+              <a href="https://developer.mozilla.org" target="_blank">MDN</a><br>
+              <a href="https://w3schools.com" target="_blank">W3Schools</a>
+            </section>
+            <section>
+              <h1>More</h1>
+              <a href="https://github.com/kevinknowscs/VanillaJS-Demos" target="_blank">GitHub Source</a>
+            </section>
+          </div>
+        </div>
+        <div class="south-right-pane">
+          <div class="page-area">
+            <div class="page-title-area">
+              <div class="page-title">
+                CSS Box Model
+              </div>
+            </div>
+            <div class="page-content-scroller">
+              <div class="page-content">
+                <h1>Introduction</h1>
+                <p>
+                  The CSS box model consists of margins, borders, padding, and content. The top, left, bottom, and right
+                  values can be set independently, or they can be set with a single setting using a shortcut specifying
+                  one or more values.
+                </p>
+                <p>
+                  When shortcuts are used, the top value is specified first, and then proceeds clockwise around the box; i.e.,
+                  top, then right, then bottom, then left. See below for more details.
+                </p>
+                <h1>Web Resources</h1>
+                <p>
+                  <ul>
+                    <li><a href="https://www.w3schools.com/css/css_boxmodel.asp" target="_blank">W3Schools Box Model Reference</a></li>
+                  </ul>
+                </p>
+                <h1>Visual Depiction</h1>
+                <p>
+                  <img src="../../images/css-boxmodel.png">
+                </p>
+                <h1>Box Model Properties</h1>
+                <table class="common">
+                  <tr>
+                    <th>CSS Property</th>
+                    <th>Description</th>
+                  </tr>
+                  <tr class="category">
+                    <td>Margins</td>
+                    <td><em>Margins are used to push the box border away from the surrounding content</em></td>
+                  </tr>
+                  <tr>
+                    <td><code>margin&#8209;top:&nbsp;&lt;value&gt;;</code></td>
+                    <td>The top margin</td>
+                  </tr>
+                  <tr>
+                    <td><code>margin&#8209;left:&nbsp;&lt;value&gt;;</code></td>
+                    <td>The left margin</td>
+                  </tr>
+                  <tr>
+                    <td><code>margin&#8209;bottom:&nbsp;&lt;value&gt;;</code></td>
+                    <td>The bottom margin</td>
+                  </tr>
+                  <tr>
+                    <td><code>margin&#8209;right:&nbsp;&lt;value&gt;;</code></td>
+                    <td>The right margin</td>
+                  </tr>
+                  <tr class="category">
+                    <td>Margin Shortcuts</td>
+                    <td>Specify all margins in a single setting</td>
+                  </tr>
+                  <tr>
+                    <td><code>margin:&nbsp;20px,&nbsp;15px,&nbsp;10px&nbsp;5px;</code></td>
+                    <td>Top is 20px; Right is 15px; Bottom is 10px; Left is 5px</td>
+                  </tr>
+                  <tr>
+                    <td><code>margin:&nbsp;20px,&nbsp;15px,&nbsp;10px;</code></td>
+                    <td>
+                      Top is 20px; Right is 15px; Bottom is 10px; 15px. Since the left margin value
+                      was omitted, the value of the right margin is used for both left and right.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>margin:&nbsp;20px,&nbsp;15px;</code></td>
+                    <td>
+                      Top is 20px; Right is 15px; Bottom is 20px; Left is 15px. Since only two values
+                      were specified, the first value is used for the top and bottom, and the second
+                      value is used for the left and right.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>margin:&nbsp;20px;</code></td>
+                    <td>
+                      All four margins are set to 20px. Since only one value is specified, the value is
+                      used for all four settings.
+                    </td>
+                  </tr>
+                  <tr class="category">
+                    <td>Padding</td>
+                    <td>
+                      Padding pushes the content away from the box border. The padding settings are analagous
+                      to the margin settings.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>padding&#8209;top:&nbsp;&lt;value&gt;;</code></td>
+                    <td>The top padding</td>
+                  </tr>
+                  <tr>
+                    <td><code>padding&#8209;left:&nbsp;&lt;value&gt;;</code></td>
+                    <td>The left padding</td>
+                  </tr>
+                  <tr>
+                    <td><code>padding&#8209;bottom:&nbsp;&lt;value&gt;;</code></td>
+                    <td>The bottom padding</td>
+                  </tr>
+                  <tr>
+                    <td><code>margin&#8209;right:&nbsp;&lt;value&gt;;</code></td>
+                    <td>The right padding</td>
+                  </tr>
+                  <tr class="category">
+                    <td>Padding Shortcuts</td>
+                    <td>Specify all paddings in a single setting</td>
+                  </tr>
+                  <tr>
+                    <td><code>padding:&nbsp;20px,&nbsp;15px,&nbsp;10px&nbsp;5px;</code></td>
+                    <td>Same as margins. See above.</td>
+                  </tr>
+                  <tr>
+                    <td><code>padding:&nbsp;20px,&nbsp;15px,&nbsp;10px;</code></td>
+                    <td>
+                      Same as margins. See above.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>padding:&nbsp;20px,&nbsp;15px;</code></td>
+                    <td>
+                      Same as margins. See above.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>padding:&nbsp;20px;</code></td>
+                    <td>
+                      Same as margins. See above.
+                    </td>
+                  </tr>
+                  <tr class="category">
+                    <td>Borders</td>
+                    <td><em>A box can specify a border that goes around the padding and content.</em></td>
+                  </tr>
+                  <tr>
+                    <td><code>border&#8209;:&nbsp;;</code></td>
+                    <td>
 
-          </td>
-        </tr>
-        <tr>
-          <td><code>border&#8209;bottom:&nbsp;;</code></td>
-          <td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>border&#8209;bottom:&nbsp;;</code></td>
+                    <td>
 
-          </td>
-        </tr>
-        <tr>
-          <td><code>border&#8209;bottom&#8209;color:&nbsp;;</code></td>
-          <td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>border&#8209;bottom&#8209;color:&nbsp;;</code></td>
+                    <td>
 
-          </td>
-        </tr>
-        <tr>
-          <td><code>border&#8209;boottom&#8209;left&#8209;radius:&nbsp;;</code></td>
-          <td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>border&#8209;boottom&#8209;left&#8209;radius:&nbsp;;</code></td>
+                    <td>
 
-          </td>
-        </tr>
-        <tr>
-          <td><code>border&#8209;:&nbsp;;</code></td>
-          <td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>border&#8209;:&nbsp;;</code></td>
+                    <td>
 
-          </td>
-        </tr>
-        <tr>
-          <td><code>border&#8209;:&nbsp;;</code></td>
-          <td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>border&#8209;:&nbsp;;</code></td>
+                    <td>
 
-          </td>
-        </tr>
-        <tr>
-          <td><code>border&#8209;:&nbsp;;</code></td>
-          <td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>border&#8209;:&nbsp;;</code></td>
+                    <td>
 
-          </td>
-        </tr>
-        <tr>
-          <td><code>border&#8209;:&nbsp;;</code></td>
-          <td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>border&#8209;:&nbsp;;</code></td>
+                    <td>
 
-          </td>
-        </tr>
-        <tr>
-          <td><code>border&#8209;:&nbsp;;</code></td>
-          <td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>border&#8209;:&nbsp;;</code></td>
+                    <td>
 
-          </td>
-        </tr>
-        <tr>
-          <td><code>border&#8209;:&nbsp;;</code></td>
-          <td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>border&#8209;:&nbsp;;</code></td>
+                    <td>
 
-          </td>
-        </tr>
-        <tr>
-          <td><code>border&#8209;:&nbsp;;</code></td>
-          <td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>border&#8209;:&nbsp;;</code></td>
+                    <td>
 
-          </td>
-        </tr>
-        <tr>
-          <td><code>border&#8209;:&nbsp;;</code></td>
-          <td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>border&#8209;:&nbsp;;</code></td>
+                    <td>
 
-          </td>
-        </tr>
-        <tr>
-          <td><code>border&#8209;:&nbsp;;</code></td>
-          <td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>border&#8209;:&nbsp;;</code></td>
+                    <td>
 
-          </td>
-        </tr>
-        <tr>
-          <td><code>border&#8209;:&nbsp;;</code></td>
-          <td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>border&#8209;:&nbsp;;</code></td>
+                    <td>
 
-          </td>
-        </tr>
-        <tr>
-          <td><code>border&#8209;:&nbsp;;</code></td>
-          <td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>border&#8209;:&nbsp;;</code></td>
+                    <td>
 
-          </td>
-        </tr>
-        <tr>
-          <td><code>border&#8209;:&nbsp;;</code></td>
-          <td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>border&#8209;:&nbsp;;</code></td>
+                    <td>
 
-          </td>
-        </tr>
-        <tr>
-          <td><code>border&#8209;:&nbsp;;</code></td>
-          <td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>border&#8209;:&nbsp;;</code></td>
+                    <td>
 
-          </td>
-        </tr>
-        <tr>
-          <td><code>border&#8209;:&nbsp;;</code></td>
-          <td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>border&#8209;:&nbsp;;</code></td>
+                    <td>
 
-          </td>
-        </tr>
-        <tr>
-          <td><code>border&#8209;:&nbsp;;</code></td>
-          <td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>border&#8209;:&nbsp;;</code></td>
+                    <td>
 
-          </td>
-        </tr>
-        <tr>
-          <td><code>border&#8209;:&nbsp;;</code></td>
-          <td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>border&#8209;:&nbsp;;</code></td>
+                    <td>
 
-          </td>
-        </tr>
-        <tr>
-          <td><code>border&#8209;:&nbsp;;</code></td>
-          <td>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>border&#8209;:&nbsp;;</code></td>
+                    <td>
 
-          </td>
-        </tr>
-      </table>
-    </main>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

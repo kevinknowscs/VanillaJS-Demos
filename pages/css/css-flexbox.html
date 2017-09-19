@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../../css/layout/notebook1.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/themes/blue.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/content/standard.css" />
+
+    <style type="text/css">
+      .page-area {
+        max-width: initial;
+      }
+
+      code {
+        color: #0000bb;
+      }
+
+      .demo-container {
+        border: 1px solid black;
+        display: flex;
+      }
+
+      .demo-item {
+        border: 1px solid black;
+        background-color: orange;
+        padding: 5px;
+        margin: 5px;
+        flex-grow: 1;
+        flex-shrink: initial;
+      }
+
+      table {
+        width: 100%;
+      }
+
+      table tr {
+        width: 100%;
+      }
+
+      table tr.category {
+        background-color: lightgray;
+      }
+
+      table tr.category td:first-child {
+        font-family: Arial, sans-serif;
+        font-size: 11pt;
+        font-weight: bold;
+      }
+
+      table tr.category td:last-child {
+        font-style: italic;
+      }
+
+      table.flex-demos tr th:first-child,
+      table.flex-demos tr td:first-child {
+        width: 250px;
+      }
+
+      summary {
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer-layout">
+      <div class="north-pane">
+        <div class="north-left-pane">
+          <div class="logo-area">
+            <div class="logo">
+              VanillaJS-Demos
+            </div>
+          </div>
+        </div>
+        <div class="north-right-pane">
+          <div class="search-outer-area">
+              <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search ...">
+          </div>
+        </div>
+      </div>
+      <div class="south-pane">
+        <div class="south-left-pane">
+          <div class="sidebar-area">
+            <section>
+              <a href="../../index3.html">Home</a>
+            </section>
+            <section>
+              <h1>HTML</h1>
+              <a href="../html/html-tags.html">List of HTML Tags</a>
+            </section>
+            <section>
+              <h1>CSS</h1>
+              <a href="css-boxmodel.html">CSS Box Model</a><br>
+              <a href="css-layout.html">Layout Strategies</a><br>
+              <a href="css-boxdisplay.html">Block vs. Inline</a><br>
+              <a href="css-flexbox.html">Flexbox Examples</a></br>
+            </section>
+            <section>
+              <h1>JavaScript</h1>
+              <a href="../js/js-videos.html">JavaScript Videos</a><br>
+              <a href="../js/js-dom.html">DOM Manipulation</a></br>
+              <a href="../js/js-funclist.html">JavaScript Functions</a></br>
+            </section>
+            <section>
+              <h1>Quick Links</h1>
+              <a href="https://developer.mozilla.org" target="_blank">MDN</a><br>
+              <a href="https://w3schools.com" target="_blank">W3Schools</a>
+            </section>
+            <section>
+              <h1>More</h1>
+              <a href="https://github.com/kevinknowscs/VanillaJS-Demos" target="_blank">GitHub Source</a>
+            </section>
+          </div>
+        </div>
+        <div class="south-right-pane">
+          <div class="page-area">
+            <div class="page-title-area">
+              <div class="page-title">
+                Flexbox Examples
+              </div>
+            </div>
+            <div class="page-content-scroller">
+              <div class="page-content">
+                <h2>Web Resources</h2>
+                <ul>
+                  <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">CSSTricks : A Complete Guide to Flexbox</a></li>
+                  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout" target="_blank">MDN : CSS Flexible Box Layout</a></li>
+                  <li><a href="https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties" target="_blank">A Visual Guide to Flexbox Properties</a></li>
+                  </li>
+                </ul>
+                <hr>
+                <h2>Flexbox CSS Properties</h2>
+                <table class="flex-demos">
+                  <tr>
+                    <th>Property Name</th>
+                    <th>Description</th>
+                  </tr>
+                  <tr class="category">
+                    <td>The Flex Container</td>
+                    <td>
+                      Defines a flex container that enables a flex context for all its direct children.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>display: flex;</code></td>
+                    <td>Defines the flex container as a block</td>
+                  </tr>
+                  <tr>
+                    <td><code>display: inline-flex;</code></td>
+                    <td>Defines the flex container as inline</td>
+                  </tr>
+                  <tr class="category">
+                    <td>Direction</td>
+                    <td>
+                      Establishes the <code>main-axis</code>, thus defining the direction that flex items are placed
+                      in the flex container.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="vertical-align: top;"><code>flex-direction: row;</code></td>
+                    <td>
+                      <details>
+                        <summary>
+                          Default. Fills the flex container in row-priority order, from left to right.
+                        </summary>
+                        <br />
+                        <h2>Depiction</h2>
+                        <img style="border: 1px solid black;" src="images/flex-l2r.png" />
+                        <h2>Live Example</h2>
+                        <div class="demo-container" style="flex-direction: row;">
+                          <div class="demo-item" style="height: 200px;">
+                            Item 1
+                          </div>
+                          <div class="demo-item" style="height: 200px;">
+                            Item 2
+                          </div>
+                          <div class="demo-item" style="height: 200px;">
+                            Item 3
+                          </div>
+                        </div>
+                        <h2>JSFiddle</h2>
+                        <script async src="https://jsfiddle.net/kevinknowscs/avfzu08o/1/embed/result,html,css/dark/"></script>
+                      </details>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>flex-direction: row-reverse;</code></td>
+                    <td>
+                      <details>
+                        <summary>
+                          Fills the flex container in row-priority order, from right to left.
+                        </summary>
+                        <br />
+                        <h2>Depiction</h2>
+                        <img style="border: 1px solid black;" src="images/flex-r2l.png" />
+                        <h2>Live Example</h2>
+                        <div class="demo-container" style="flex-direction: row-reverse;">
+                          <div class="demo-item" style="height: 200px;">
+                            Item 1
+                          </div>
+                          <div class="demo-item" style="height: 200px;">
+                            Item 2
+                          </div>
+                          <div class="demo-item" style="height: 200px;">
+                            Item 3
+                          </div>
+                        </div>
+                      </details>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>flex-direction: column;</code></td>
+                    <td>
+                      <details>
+                        <summary>
+                          Fills the flex container in column-priority order, from top to bottom.
+                        </summary>
+                        <br />
+                        <h2>Depiction</h2>
+                        <img style="border: 1px solid black;" src="images/flex-t2b.png" />
+                        <h2>Live Example</h2>
+                        <div class="demo-container" style="flex-direction: column;">
+                          <div class="demo-item" style="height: 200px;">
+                            Item 1
+                          </div>
+                          <div class="demo-item" style="height: 200px;">
+                            Item 2
+                          </div>
+                          <div class="demo-item" style="height: 200px;">
+                            Item 3
+                          </div>
+                        </div>
+                      </details>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>flex-direction: column-reverse;</code></td>
+                    <td>
+                      <details>
+                        <summary>
+                          Fills the flex container in column-priority order, from bottom to top.
+                        </summary>
+                        <br />
+                        <h2>Depiction</h2>
+                        <img style="border: 1px solid black;" src="images/flex-b2t.png" />
+                        <h2>Live Example</h2>
+                        <div class="demo-container" style="flex-direction: column-reverse;">
+                          <div class="demo-item" style="height: 200px;">
+                            Item 1
+                          </div>
+                          <div class="demo-item" style="height: 200px;">
+                            Item 2
+                          </div>
+                          <div class="demo-item" style="height: 200px;">
+                            Item 3
+                          </div>
+                        </div>
+                      </details>
+                    </td>
+                  </tr>
+                  <tr class="category">
+                    <td>Wrapping</td>
+                    <td>
+                      Defines the behavior of the flex container when all items do not
+                      fit on one line
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>flex-wrap: nowrap;</code></td>
+                    <td>
+                      <details>
+                        <summary>
+                          Default. All flex items will be on one line
+                        </summary>
+                        <h2>Live Example</h2>
+                        <div class="demo-container" style="flex-direction: row; flex-wrap: nowrap;">
+                          <div class="demo-item" style="flex-grow: initial; height: 200px; width: 300px; min-width: 300px;">
+                            Item 1
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 200px; width: 300px; min-width: 300px;">
+                            Item 2
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 200px; width: 300px; min-width: 300px;">
+                            Item 3
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 200px; width: 300px; min-width: 300px;">
+                            Item 4
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 200px; width: 300px; min-width: 300px;">
+                            Item 5
+                          </div>
+                        </div>
+                      </details>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>flex-wrap: wrap;<code></td>
+                    <td>
+                      <details>
+                        <summary>
+                          Flex items will wrap onto multiple lines, from top to bottom
+                        </summary>
+                        <h2>Live Example</h2>
+                        <div class="demo-container" style="flex-direction: row; flex-wrap: wrap;">
+                          <div class="demo-item" style="flex-grow: initial; height: 200px; width: 300px; min-width: 300px;">
+                            Item 1
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 200px; width: 300px; min-width: 300px;">
+                            Item 2
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 200px; width: 300px; min-width: 300px;">
+                            Item 3
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 200px; width: 300px; min-width: 300px;">
+                            Item 4
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 200px; width: 300px; min-width: 300px;">
+                            Item 5
+                          </div>
+                        </div>
+                      </details>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>flex-wrap: wrap-reverse;</code></td>
+                    <td>
+                      <details>
+                        <summary>
+                          Flex items will wrap onto multiple lines, from bottom to top
+                        </summary>
+                        <h2>Live Example</h2>
+                        <div class="demo-container" style="flex-direction: row; flex-wrap: wrap-reverse;">
+                          <div class="demo-item" style="flex-grow: initial; height: 200px; width: 300px; min-width: 300px;">
+                            Item 1
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 200px; width: 300px; min-width: 300px;">
+                            Item 2
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 200px; width: 300px; min-width: 300px;">
+                            Item 3
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 200px; width: 300px; min-width: 300px;">
+                            Item 4
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 200px; width: 300px; min-width: 300px;">
+                            Item 5
+                          </div>
+                      </details>
+                    </td>
+                  </tr>
+                  <tr class="category">
+                    <td>Flex Flow Shortcut</td>
+                    <td>
+                      This is a shortcut property to set <code>flex&#8209;direction</code> and <code>flex&#8209;wrap</code> in one setting.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>flex&#8209;flow:&nbsp;<code><em>&lt;flex&#8209;direction&gt;</em><code>&nbsp;<code><em>&lt;flex&#8209;wrap&gt;</em>;</code></td>
+                    <td>
+                      The default is <code>row&nbsp;nowrap</code>. See above settings for examples.
+                    </td>
+                  </tr>
+                  <tr class="category">
+                    <td>Content Justification</td>
+                    <td>
+                      Defines the alignment of the items along the main axis
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>justify-content: flex-start;</code></td>
+                    <td>
+                      <details>
+                        <summary>
+                          Default. Items are packed toward the start of the line.
+                        </summary>
+                        <h2>Live Example</h2>
+                        <div class="demo-container" style="flex-flow: row nowrap; justify-content: flex-start;">
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 100px;">
+                            Item 1
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 150px;">
+                            Item 2
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 300px;">
+                            Item 3
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 150px;">
+                            Item 4
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 100px;">
+                            Item 5
+                          </div>
+                        </div>
+                      </details>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>justify-content: flex-end;</code></td>
+                    <td>
+                      <details>
+                        <summary>
+                          Items are packed toward the end of the line.
+                        </summary>
+                        <h2>Live Example</h2>
+                        <div class="demo-container" style="flex-flow: row nowrap; justify-content: flex-end;">
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 100px;">
+                            Item 1
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 150px;">
+                            Item 2
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 200px;">
+                            Item 3
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 150px;">
+                            Item 4
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 100px;">
+                            Item 5
+                          </div>
+                        </div>
+                      </details>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>justify-content: center;</code></td>
+                    <td>
+                      <details>
+                        <summary>
+                          Items are centered along the line
+                        </summary>
+                        <h2>Live Example</h2>
+                        <div class="demo-container" style="flex-flow: row nowrap; justify-content: center;">
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 100px;">
+                            Item 1
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 150px;">
+                            Item 2
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 200px;">
+                            Item 3
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 150px;">
+                            Item 4
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 100px;">
+                            Item 5
+                          </div>
+                        </div>
+                      </details/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>justify&#8209;content:&nbsp;space&#8209;between;</code></td>
+                    <td>
+                      <details>
+                        <summary>
+                          Items are evenly distributed in the line; The first item is on the start
+                          line, last item is on the end line.
+                        </summary>
+                        <h2>Live Example</h2>
+                        <div class="demo-container" style="flex-flow: row nowrap; justify-content: space-between;">
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 100px;">
+                            Item 1
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 150px;">
+                            Item 2
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 200px;">
+                            Item 3
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 150px;">
+                            Item 4
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 100px;">
+                            Item 5
+                          </div>
+                        </div>
+                      </details>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>justify-content: space-around;</code></td>
+                    <td>
+                      <details>
+                        <summary>
+                          Items are evenly distributed in the line with equal space around them.
+                        </summary>
+                        <h2>Notes</h2>
+                        <p>
+                          Items in the middle have twice as much space as the space to the left of
+                          the first item, and to the right of the last item. This is because each item
+                          has the same space to the left and right, meaning items in the middle will have
+                          double the space.
+                        </p>
+                        <h2>Live Example</h2>
+                        <div class="demo-container" style="flex-flow: row nowrap; justify-content: space-around;">
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 100px;">
+                            Item 1
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 150px;">
+                            Item 2
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 200px;">
+                            Item 3
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 150px;">
+                            Item 4
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 100px;">
+                            Item 5
+                          </div>
+                        </div>
+                      </details>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>justify-content: space-evenly;</code></td>
+                    <td>
+                      <details>
+                        <summary>
+                          Items are distributed so that the spacing between any two items is equal.
+                        </summary>
+                        <h2>Live Example</h2>
+                        <div class="demo-container" style="flex-flow: row nowrap; justify-content: space-evenly;">
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 100px;">
+                            Item 1
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 150px;">
+                            Item 2
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 200px;">
+                            Item 3
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 150px;">
+                            Item 4
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 100px;">
+                            Item 5
+                          </div>
+                        </div>
+                      </details>
+                    </td>
+                  </tr>
+                  <tr class="category">
+                    <td>Item Alignment</td>
+                    <td>
+                      Defines the default behavior for how flex items are laid out along the cross axis
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>align&#8209;items:&nbsp;stretch;</code></td>
+                    <td>
+                      <details>
+                        <summary>
+                          Default. Stretch to fill the container (but still respect <code>min-width</code>/<code>max-width</code>)
+                        </summary>
+                        <h2>Live Example</h2>
+                        <div class="demo-container" style="flex-flow: row nowrap; align-items: stretch;">
+                          <div class="demo-item" style="flex-grow: initial; width: 100px;">
+                            Item 1
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px;">
+                            Item 2
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 200px;">
+                            Item 3
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px;">
+                            Item 4
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px;">
+                            Item 5
+                          </div>
+                        </div>
+                      </details>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>align&#8209;items:&nbsp;flex&#8209;start;</code></td>
+                    <td>
+                      <details>
+                        <summary>
+                          <code>cross-start</code> margin edge of the items is placed on the <code>cross-start</code> line
+                        </summary>
+                        <h2>Live Example</h2>
+                        <div class="demo-container" style="flex-flow: row nowrap; align-items: flex-start;">
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 100px;">
+                            Item 1
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 150px;">
+                            Item 2
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 200px;">
+                            Item 3
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 150px;">
+                            Item 4
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 100px;">
+                            Item 5
+                          </div>
+                        </div>
+                      </details>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>align&#8209;items:&nbsp;flex&#8209;end;</code></td>
+                    <td>
+                      <details>
+                        <summary>
+                          <code>cross-end</code> margin edge of the items is placed on the <code>cross-end</code> line
+                        </summary>
+                        <h2>Live Example</h2>
+                        <div class="demo-container" style="flex-flow: row nowrap; align-items: flex-end;">
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 100px;">
+                            Item 1
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 150px;">
+                            Item 2
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 200px;">
+                            Item 3
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 150px;">
+                            Item 4
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 100px;">
+                            Item 5
+                          </div>
+                        </div>
+                      </details>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>align&#8209;items:&nbsp;center;</code></td>
+                    <td>
+                      <details>
+                        <summary>
+                          Items are centered in the <code>cross-axis</code>
+                        </summary>
+                        <h2>Live Example</h2>
+                        <div class="demo-container" style="flex-flow: row nowrap; align-items: center;">
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 100px;">
+                            Item 1
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 150px;">
+                            Item 2
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 200px;">
+                            Item 3
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 150px;">
+                            Item 4
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 100px;">
+                            Item 5
+                          </div>
+                        </div>
+                      </details>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>align&#8209;items:&nbsp;baseline;</code></td>
+                    <td>
+                      <details>
+                        <summary>
+                          Items are aligned such as their baselines align
+                        </summary>
+                        <div class="demo-container" style="flex-flow: row nowrap; align-items: baseline;">
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 100px; padding-top: 25px;">
+                            Item 1
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 150px; padding-top: 125px;">
+                            Item 2
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 200px; padding-top: 100px;">
+                            Item 3
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 150px; padding-top: 40px;">
+                            Item 4
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 100px; padding-top: 60px;">
+                            Item 5
+                          </div>
+                        </div>
+                      </details>
+                    </td>
+                  </tr>
+                  <tr class="category">
+                    <td>Item Self Alignment</td>
+                    <td>
+                      Allows the default alignment specified by the <code>align&#8209;items</code> setting to be overridden
+                      for individual flex items.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>align&#8209;self:&nbsp;auto;</code></td>
+                    <td>
+                      <details>
+                        <summary>
+                          Default. Use the flex container's <code>align-content</code> setting.
+                        </summary>
+                        <h2>Live Example</h2>
+                        <div class="demo-container" style="flex-flow: row nowrap; align-items: flex-start;">
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 100px;">
+                            Item 1
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 150px;">
+                            Item 2
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 200px;">
+                            Item 3
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 125px; background-color: lightblue; align-self: auto;">
+                            Item 4, Align Self = <code>auto</code>
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 100px;">
+                            Item 5
+                          </div>
+                        </div>
+                      </details>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>align&#8209;self:&nbsp;flex&#8209;start;</code></td>
+                    <td>
+                      <details>
+                        <summary>
+                          <code>cross-start</code> margin edge of the items is placed on the <code>cross-start</code> line
+                        </summary>
+                        <h2>Live Example</h2>
+                        <div class="demo-container" style="flex-flow: row nowrap; align-items: flex-start;">
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 100px;">
+                            Item 1
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 150px;">
+                            Item 2
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 200px;">
+                            Item 3
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 125px; background-color: lightblue; align-self: flex-start;">
+                            Item 4, Align Self = <code>flex&#8209;start</code>
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 100px;">
+                            Item 5
+                          </div>
+                        </div>
+                      </details>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>align&#8209;self:&nbsp;flex&#8209;end;</code></td>
+                    <td>
+                      <details>
+                        <summary>
+                          <code>cross-end</code> margin edge of the items is placed on the <code>cross-end</code> line
+                        </summary>
+                        <h2>Live Example</h2>
+                        <div class="demo-container" style="flex-flow: row nowrap; align-items: flex-start;">
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 100px;">
+                            Item 1
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 150px;">
+                            Item 2
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 200px;">
+                            Item 3
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 125px; background-color: lightblue; align-self: flex-end;">
+                            Item 4, Align Self = <code>flex&#8209;end</code>
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 100px;">
+                            Item 5
+                          </div>
+                        </div>
+                      </details>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>align&#8209;self:&nbsp;center;</code></td>
+                    <td>
+                      <details>
+                        <summary>
+                          Items are centered in the <code>cross-axis</code>
+                        </summary>
+                        <h2>Live Example</h2>
+                        <div class="demo-container" style="flex-flow: row nowrap; align-items: flex-start;">
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 100px;">
+                            Item 1
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 150px;">
+                            Item 2
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 200px;">
+                            Item 3
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 125px; background-color: lightblue; align-self: center;">
+                            Item 4, Align Self = <code>center</code>
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 100px;">
+                            Item 5
+                          </div>
+                        </div>
+                      </details>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>align&#8209;self:&nbsp;stretch;</code></td>
+                    <td>
+                      <details>
+                        <summary>
+                          Stretch to fill the container (but still respect min-width/max-width)
+                        </summary>
+                        <div class="demo-container" style="flex-flow: row nowrap; align-items: flex-start;">
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 100px;">
+                            Item 1
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 150px;">
+                            Item 2
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 200px;">
+                            Item 3
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; background-color: lightblue; align-self: stretch;">
+                            Item 4, Align Self = <code>stretch</code>
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 100px;">
+                            Item 5
+                          </div>
+                        </div>
+                      </details>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>align&#8209;self:&nbsp;baseline;</code></td>
+                    <td>
+                      <details>
+                        <summary>
+                          Items are aligned such as their baselines align
+                        </summary>
+                        <div class="demo-container" style="flex-flow: row nowrap; align-items: flex-start;">
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 100px;">
+                            Item 1
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 150px;">
+                            Item 2
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 200px;">
+                            Item 3
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 125px; background-color: lightblue; align-self: baseline;">
+                            Item 4, Align Self = <code>baseline</code>
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 100px; height: 100px;">
+                            Item 5
+                          </div>
+                        </div>
+                      </details>
+                    </td>
+                  </tr>
+                  <tr class="category">
+                    <td>Content Alignment</td>
+                    <td>
+                      Similar to <code>justify-content</code>, but applies to the cross-axis instead of the main-axis.
+                      Has no effect when there is only 1 row of items.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>align-content: stretch;</code></td>
+                    <td>
+                      <details>
+                        <summary>
+                          Default. Lines stretch to take up the remaining space.
+                        </summary>
+                        <div class="demo-container" style="flex-flow: row wrap; align-content: stretch; min-height: 700px;">
+                          <div class="demo-item" style="flex-grow: initial; width: 200px;">
+                            Item 1
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 200px;">
+                            Item 2
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 200px;">
+                            Item 3
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 200px;">
+                            Item 4
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; width: 200px;">
+                            Item 5
+                          </div>
+                        </div>
+                      </details>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>align-content: flex-start;</code></td>
+                    <td>
+                      <details>
+                        <summary>
+                          Lines are packed to the start of the container.
+                        </summary>
+                        <h2>Live Demo</h2>
+                        <div class="demo-container" style="flex-flow: row wrap; align-content: flex-start; min-height: 700px;">
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 200px;">
+                            Item 1
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 150px; width: 200px;">
+                            Item 2
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 300px; width: 200px;">
+                            Item 3
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 150px; width: 200px;">
+                            Item 4
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 200px;">
+                            Item 5
+                          </div>
+                        </div>
+                      </details>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>align-content: flex-end;</code></td>
+                    <td>
+                      <details>
+                        <summary>
+                          Items are packed toward the end of the container.
+                        </summary>
+                        <h2>Live Demo</h2>
+                        <div class="demo-container" style="flex-flow: row wrap; align-content: flex-end; min-height: 700px;">
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 200px;">
+                            Item 1
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 150px; width: 200px;">
+                            Item 2
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 300px; width: 200px;">
+                            Item 3
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 150px; width: 200px;">
+                            Item 4
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 200px;">
+                            Item 5
+                          </div>
+                        </div>
+                      </details>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>align-content: center;</code></td>
+                    <td>
+                      <details>
+                        <summary>
+                          Lines are packed to the center of the container.
+                        </summary>
+                        <h2>Live Demo</h2>
+                        <div class="demo-container" style="flex-flow: row wrap; align-content: center; min-height: 700px;">
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 200px;">
+                            Item 1
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 150px; width: 200px;">
+                            Item 2
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 300px; width: 200px;">
+                            Item 3
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 150px; width: 200px;">
+                            Item 4
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 200px;">
+                            Item 5
+                          </div>
+                        </div>
+                      </details>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>align&#8209;content:&nbsp;space&#8209;between;</code></td>
+                    <td>
+                      <details>
+                        <summary>
+                          Lines are evenly distributed. The first line is at the start of the container while
+                          the last one is at the end
+                        </summary>
+                        <h2>Live Demo</h2>
+                        <div class="demo-container" style="flex-flow: row wrap; align-content: space-between; min-height: 700px;">
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 200px;">
+                            Item 1
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 150px; width: 200px;">
+                            Item 2
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 300px; width: 200px;">
+                            Item 3
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 150px; width: 200px;">
+                            Item 4
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 200px;">
+                            Item 5
+                          </div>
+                        </div>
+                      </details>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>align-content: space-around;</code></td>
+                    <td>
+                      <details>
+                        <summary>
+                          Lines evenly distributed with equal space around each line.
+                        </summary>
+                        <h2>Live Demo</h2>
+                        <div class="demo-container" style="flex-flow: row wrap; align-content: space-around; min-height: 700px;">
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 200px;">
+                            Item 1
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 150px; width: 200px;">
+                            Item 2
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 300px; width: 200px;">
+                            Item 3
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 150px; width: 200px;">
+                            Item 4
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 200px;">
+                            Item 5
+                          </div>
+                        </div>
+                      </details>
+                    </td>
+                  </tr>
+                  <tr class="category">
+                    <td>Item Ordering</td>
+                    <td>
+                      Controls the order that items are laid out in the container.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>order: &lt;integer&gt;;</code></td>
+                    <td>
+                      <details>
+                        <summary>
+                          The order of the item
+                        </summary>
+                        <h2>Live Demo</h2>
+                        <div class="demo-container" style="flex-flow: row wrap;">
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 100px; order: 2;">
+                            Item 1, Order 2
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 100px; order: 3;">
+                            Item 2, Order 3
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 100px; order: 1;">
+                            Item 3, Order 1
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 100px; order: 5;">
+                            Item 4, Order 5
+                          </div>
+                          <div class="demo-item" style="flex-grow: initial; height: 100px; width: 100px; order: 4;">
+                            Item 5, Order 4
+                          </div>
+                        </div>
+                      </details>
+                    </td>
+                  </tr>
+                  <tr class="category">
+                    <td>Item Growth</td>
+                    <td>
+                      Defines how extra space in the flexbox shall be distributed among the flex items. It accepts
+                      a unitless parameter that serves as a proportion.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>flex-grow: &lt;integer&gt;;</code></td>
+                    <td>
+                      <details>
+                        <summary>
+                          The growth parameter, as a proportion. The default is 0.
+                        </summary>
+                        <h2>Notes</h2>
+                        <ul>
+                          <li>
+                            This is <em><strong>not the same</strong></em> as making the flex items size in proportion
+                            to each other. This controls how <em><strong>extra space</strong></em> is divided among
+                            the items.
+                          </li>
+                          <li>
+                            See <a href="https://css-tricks.com/flex-grow-is-weird/">https://css-tricks.com/flex-grow-is-weird/</a> and the
+                            video below for more information on <code>flex-grow</code>, <code>flex-shrink</code>, and <code>flex-basis</code>.
+                          </li>
+                        </ul>
+                        <h2>Videos</h2>
+                        <iframe width="854" height="480" src="https://www.youtube.com/embed/CFgeJq4l1YM" frameborder="0" allowfullscreen></iframe>
+                        <h2>Live Demo</h2>
+                        <div class="demo-container" style="flex-flow: row wrap;">
+                          <div class="demo-item" style="flex-grow: 1; height: 100px; width: 100px;">
+                            Grow 1
+                          </div>
+                          <div class="demo-item" style="flex-grow: 2; height: 100px; width: 100px;">
+                            Grow 2
+                          </div>
+                          <div class="demo-item" style="flex-grow: 3; height: 100px; width: 200px; flex-basis: 200px;">
+                            Grow 3
+                          </div>
+                          <div class="demo-item" style="flex-grow: 2; height: 100px; width: 100px;">
+                            Grow 2
+                          </div>
+                          <div class="demo-item" style="flex-grow: 1; height: 100px; width: 100px;">
+                            Grow 1
+                          </div>
+                        </div>
+                      </details>
+                    </td>
+                  </tr>
+                  <tr class="category">
+                    <td>Item Shrinkage</td>
+                    <td>
+                      If there is not enough space in the flexbox to accommodate all of the desired widths of the
+                      flex items, this parameter controls how space will be taken from each flex item to shrink
+                      them down to fit the space. It accepts a unitless parameter that serves as a proportion.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>flex-shrink: &lt;integer&gt;;</code></td>
+                    <td>
+                      <details>
+                        <summary>
+                          The shrinkage parameter, as a proportion. Default is 1.
+                        </summary>
+                        <h2>Notes</h2>
+                        <ul>
+                          <li>
+                            See notes and videos in <code>flex-grow</code> for more information on behavior.
+                          </li>
+                        </ul>
+                        <h2>Live Demo</h2>
+                        <div class="demo-container" style="flex-flow: row wrap;">
+                          <div class="demo-item" style="flex-shrink: 1; height: 100px;">
+                            Grow 1
+                          </div>
+                          <div class="demo-item" style="flex-shrink: 2; height: 100px;">
+                            Grow 2
+                          </div>
+                          <div class="demo-item" style="flex-shrink: 3; height: 100px; min-width: 200px;">
+                            Grow 3
+                          </div>
+                          <div class="demo-item" style="flex-shrink: 2; height: 100px;">
+                            Grow 2
+                          </div>
+                          <div class="demo-item" style="flex-shrinkshrink: 1; height: 100px;">
+                            Grow 1
+                          </div>
+                        </div>
+                      </details>
+                    </td>
+                  </tr>
+                  <tr class="category">
+                    <td>Item Basis</td>
+                    <td>
+                      Specifies the initial (desired size) of the flex item. The item may grow or shrink from this value. See
+                      <code>flex&#8209;grow</code> and <code>flex&#8209;shrink</code> for examples.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>flex&#8209;basis:&nbsp;&lt;specific-value&gt;;</code></td>
+                    <td>Specify the desired size in ordinary CSS units (px, em, etc.)</td>
+                  </tr>
+                  <tr>
+                    <td><code>flex&#8209;basis:&nbsp;auto;</code></td>
+                    <td>
+                      The default. The flex item is automatically sized, and grows or shrinks as specified by
+                      <code>flex&#8209;grow</code> and <code>flex&#8209;shrink</code>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>flex&#8209;basis:&nbsp;fill;</code></td>
+                    <td>
+                      Property listed on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis" target="_blank">MDN</a>. No other information is available.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>flex&#8209;basis:&nbsp;max&#8209;content;</code></td>
+                    <td>
+                      Property listed on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis" target="_blank">MDN</a>. No other information is available.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>flex&#8209;basis:&nbsp;min&#8209;content;</code></td>
+                    <td>
+                      Property listed on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis" target="_blank">MDN</a>. No other information is available.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>flex&#8209;basis:&nbsp;fit&#8209;content;</code></td>
+                    <td>
+                      Property listed on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis" target="_blank">MDN</a>. No other information is available.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>flex&#8209;basis:&nbsp;content;</code></td>
+                    <td>
+                      Property listed on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis" target="_blank">MDN</a>. No other information is available.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>flex&#8209;basis:&nbsp;inherit;</code></td>
+                    <td>Inherits this property from its parent element.</td>
+                  </tr>
+                  <tr>
+                    <td><code>flex&#8209;basis:&nbsp;initial;</code></td>
+                    <td>Sets this property to its default value.</td>
+                  </tr>
+                  <tr>
+                    <td><code>flex&#8209;basis:&nbsp;unset;</code></td>
+                    <td>
+                      Property listed on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis" target="_blank">MDN</a>. No other information is available.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Other Notes for <code>flex&#8209;basis</td>
+                    <td>
+                        <mark>The details for this property are a bit sketchy.</mark> The flexbox specification has had a few changes from its original version, and as
+                        such, some articles on the Internet mention properties and values that are now deprecated, and/or fail to mention newer settings.
+                        The Mozilla Developer Network references several possible values for this property that are not mentioned in other resources, but does
+                        not provide any additional documentation. W3Schools only mentions <code>auto</code>, <code>initial</code>, and <code>inherit</code>, along
+                        with setting a specific unit value.
+                    </td>
+                  </tr>
+                  <tr class="category">
+                    <td>Flex Shortcut</td>
+                    <td>
+                      The <code>flex</code> property allows a shortcut for setting <code>flex&#8209;grow</code>, <code>flex&#8209;shrink</code>, and
+                      <code>flex&#8209;basis</code> with a single setting. This is the preferred method.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>flex:&nbsp;none;</code></td>
+                    <td>
+                      Same as <code>flex:&nbsp;0&nbsp;0&nbsp;auto;</code>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>flex:&nbsp;<em>&lt;flex&#8209;grow&gt;</em>;</code></td>
+                    <td>
+                      If only one value is specified, it is taken as the <code>flex&#8209;grow</code> setting. However,
+                      it is recommended to give all 3 values.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>flex:&nbsp;<em>&lt;flex&#8209;grow&gt;</em>&nbsp;<em>&lt;flex&#8209;basis&gt;</em>;</code></td>
+                    <td>
+                      IF only two values are specified, they are taken as the <code>flex&#8209;grow</code> and <code>flex&#8209;basis</code> settings.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>flex:&nbsp;<em>&lt;flex&#8209;grow&gt;</em>&nbsp;<em>&lt;flex&#8209;shrink&gt;</em>&nbsp;<em>&lt;flex&#8209;basis&gt;</em>;</code></td>
+                    <td>
+                      <mark>This is the recommended form</mark> of the <code>flex</code> setting. If not specified, it defaults to <code>flex:&nbsp;0&nbsp;1&nbsp;auto;</code>.
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

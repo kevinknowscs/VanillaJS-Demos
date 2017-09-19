@@ -13,6 +13,43 @@
       table.templates td:nth-child(2) {
         width: 190px;
       }
+
+      .page-area {
+        max-width: initial;
+      }
+
+      table.htmltags-table td:nth-child(3) {
+        width: 100px;
+      }
+
+      table.htmltags-table td:nth-child(6) {
+        width: 160px;
+      }
+
+      table.htmltags-table tr:nth-child(even) td {
+        background-color: #f0f0f0;
+      }
+
+      table.htmltags-table tr:nth-child(odd) td {
+        background-color: #FCFDFD;
+      }
+
+      table.htmltags-table tr:hover td {
+        background-color: #7F9CBD;
+      }
+
+      table.htmltags-table td {
+        border-top: 1px solid lightgray;
+        border-bottom: 1px solid lightgray;
+      }
+
+      code {
+        color: #0000bb;
+      }
+
+      code.htmltag {
+        font-weight: bold;
+      }
     </style>
   </head>
   <body>
@@ -35,21 +72,24 @@
         <div class="south-left-pane">
           <div class="sidebar-area">
             <section>
+              <a href="../../index3.html">Home</a>
+            </section>
+            <section>
               <h1>HTML</h1>
-              <a href="pages/html/html-tags.html">List of HTML Tags</a>
+              <a href="html-tags.html">List of HTML Tags</a>
             </section>
             <section>
               <h1>CSS</h1>
-              <a href="pages/css/css-boxmodel.html">CSS Box Model</a><br>
-              <a href="css-layout.html">Layout Strategies</a><br>
-              <a href="css-boxdisplay.html">Block vs. Inline</a><br>
-              <a href="css-flexbox.html">Flexbox Examples</a></br>
+              <a href="../css/css-boxmodel.html">CSS Box Model</a><br>
+              <a href="../css/css-layout.html">Layout Strategies</a><br>
+              <a href="../css/css-boxdisplay.html">Block vs. Inline</a><br>
+              <a href="../css/css-flexbox.html">Flexbox Examples</a></br>
             </section>
             <section>
               <h1>JavaScript</h1>
-              <a href="js-videos.html">JavaScript Videos</a><br>
-              <a href="js-dom.html">DOM Manipulation</a></br>
-              <a href="js-funclist.html">JavaScript Functions</a></br>
+              <a href="../js/js-videos.html">JavaScript Videos</a><br>
+              <a href="../js/js-dom.html">DOM Manipulation</a></br>
+              <a href="../js/js-funclist.html">JavaScript Functions</a></br>
             </section>
             <section>
               <h1>Quick Links</h1>
@@ -71,7 +111,7 @@
             </div>
             <div class="page-content-scroller">
               <div class="page-content">
-                <table>
+                <table class="htmltags-table">
                   <tr>
                     <th>Tag Name</th>
                     <th>Description</th>

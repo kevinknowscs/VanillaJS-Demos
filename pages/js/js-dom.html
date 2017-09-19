@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../../css/layout/notebook1.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/themes/blue.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/content/standard.css" />
+
+    <style type="text/css">
+      .page-area {
+        max-width: initial;
+      }
+
+      table.templates td:first-child {
+        width: 200px;
+      }
+
+      table.templates td:nth-child(2) {
+        width: 190px;
+      }
+
+      div.pane {
+        /* Note: When using border-box, the size of the box includes the border and the
+           padding, but not the margin, so we have to subtract off the margins */
+        height: 50%;
+
+        border-collapse: collapse;
+        box-sizing: border-box;
+        padding: 5px;
+      }
+
+      div.pane-top {
+        /*
+         * If you don't want a 50/50 arrangement, remove the height setting from div.pane
+         * and set each pane independently. Subtract off the margins in both panes.
+         */
+        /* height: calc(30% - 10px); */
+
+        border: 1px solid black;
+      }
+
+      div.pane-bottom {
+        /*
+         * If you don't want a 50/50 arrangement, remove the height setting from div.pane
+         * and set each pane independently. Subtract off the margins in both panes.
+         */
+        /* height: calc(70% - 10px); */
+
+        /* I tried using border-collapse: collapse; but that seems to only work for tables */
+        border-top: 0px;
+        border-left: 1px;
+        border-bottom: 1px;
+        border-right: 1px;
+        border-color: black;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer-layout">
+      <div class="north-pane">
+        <div class="north-left-pane">
+          <div class="logo-area">
+            <div class="logo">
+              VanillaJS-Demos
+            </div>
+          </div>
+        </div>
+        <div class="north-right-pane">
+          <div class="search-outer-area">
+              <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search ...">
+          </div>
+        </div>
+      </div>
+      <div class="south-pane">
+        <div class="south-left-pane">
+          <div class="sidebar-area">
+            <section>
+              <a href="../../index3.html">Home</a>
+            </section>
+            <section>
+              <h1>HTML</h1>
+              <a href="../html/html-tags.html">List of HTML Tags</a>
+            </section>
+            <section>
+              <h1>CSS</h1>
+              <a href="../css/css-boxmodel.html">CSS Box Model</a><br>
+              <a href="../css/css-layout.html">Layout Strategies</a><br>
+              <a href="../css/css-boxdisplay.html">Block vs. Inline</a><br>
+              <a href="../css/css-flexbox.html">Flexbox Examples</a></br>
+            </section>
+            <section>
+              <h1>JavaScript</h1>
+              <a href="js-videos.html">JavaScript Videos</a><br>
+              <a href="js-dom.html">DOM Manipulation</a></br>
+              <a href="js-funclist.html">JavaScript Functions</a></br>
+            </section>
+            <section>
+              <h1>Quick Links</h1>
+              <a href="https://developer.mozilla.org" target="_blank">MDN</a><br>
+              <a href="https://w3schools.com" target="_blank">W3Schools</a>
+            </section>
+            <section>
+              <h1>More</h1>
+              <a href="https://github.com/kevinknowscs/VanillaJS-Demos" target="_blank">GitHub Source</a>
+            </section>
+          </div>
+        </div>
+        <div class="south-right-pane">
+          <div class="page-area">
+            <div class="page-title-area">
+              <div class="page-title">
+                DOM Manipulation
+              </div>
+            </div>
+            <div class="page-content-scroller">
+              <div class="page-content" style="height: calc(100% - 20px);">
+                <div class="pane pane-top" style="overflow-y: scroll;">
+                  <table>
+                    <tr>
+                      <th>Operation</th>
+                      <th>Quick Reference</th>
+                      <th>Link</th>
+                    </tr>
+                    <tr class="category">
+                      <td colspan="3"><b><u>Selecting DOM Elements</u></b></td>
+                    </tr>
+                    <tr>
+                      <td>Select DOM elements by CSS selector</td>
+                      <td><code>document.querySelectorAll()</code></td>
+                      <td><a href="https://plainjs.com/javascript/selecting/select-dom-elements-by-css-selector-4/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Select elements by class name</td>
+                      <td><code>document.getElementsByClassName()</code></td>
+                      <td><a href="https://plainjs.com/javascript/selecting/select-elements-by-class-name-3/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Select elements by tag name</td>
+                      <td><code>document.getElementsByTagName()</code></td>
+                      <td><a href="https://plainjs.com/javascript/selecting/select-elements-by-tag-name-2/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Select elements by ID</td>
+                      <td><code>document.getElementsById()</code></td>
+                      <td><a href="https://plainjs.com/javascript/selecting/select-an-element-by-id-1/" target="details">Examples</a></td>
+                    </tr>
+                    <tr class="category">
+                      <td colspan="3"><b><u>DOM Traversing</u></b></td>
+                    </tr>
+                    <tr>
+                      <td>Match element selector</td>
+                      <td>Use <code>matches()</code> or <code>matchesSelector()</code></td>
+                      <td><a href="https://plainjs.com/javascript/traversing/match-element-selector-52/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Get parent element node</td>
+                      <td><code>el.parentNode</code></td>
+                      <td><a href="https://plainjs.com/javascript/traversing/get-parent-element-node-41/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Get siblings of an element</td>
+                      <td>Helper function using <code>firstChild</code> / <code>nextSibling</code></td>
+                      <td><a href="https://plainjs.com/javascript/traversing/get-siblings-of-an-element-40/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Get closest element by selector</td>
+                      <td><code>el.closest()</code> + polyfill for older browsers</td>
+                      <td><a href="https://plainjs.com/javascript/traversing/get-closest-element-by-selector-39/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Select the children of an element</td>
+                      <td><code>el.firstChild</code> / <code>el.lastChild</code> / <code>el.childNodes</code></td>
+                      <td><a href="https://plainjs.com/javascript/traversing/select-the-children-of-an-element-38/" target="details">Examples</a></td>
+                    </tr>
+                    <tr class="category">
+                      <td colspan="3"><b><u>Manipulating DOM Elements</u></b></td>
+                    </tr>
+                    <tr>
+                      <td>Create a DOM Element</td>
+                      <td><code>document.createElement()</code> / <code>el.innerHTML</code> / <code>document.createTextNode()</code></td>
+                      <td><a href="https://plainjs.com/javascript/manipulation/create-a-dom-element-51/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Replace a DOM Element</td>
+                      <td><code>el.parentNode.replaceChild()</code></td>
+                      <td><a href="https://plainjs.com/javascript/manipulation/replace-a-dom-element-36/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Unwrap a DOM Element</td>
+                      <td>Helper function using <code>el.firstChild</code> / <code>parent.removeChild()</code></td>
+                      <td><a href="https://plainjs.com/javascript/manipulation/unwrap-a-dom-element-35/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Empty an element's content</td>
+                      <td><code>el.innerHTML = '';</code></td>
+                      <td><a href="https://plainjs.com/javascript/manipulation/empty-an-elements-content-34/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Removing an element</td>
+                      <td><code>el.parentNode.removeChild()</code></td>
+                      <td><a href="https://plainjs.com/javascript/manipulation/removing-an-element-33/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Insert an element after or before another</td>
+                      <td>Helper function using <code>nextSibling</code> &amp; <code>insertBefore()</code></td>
+                      <td><a href="https://plainjs.com/javascript/manipulation/insert-an-element-after-or-before-another-32/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Get the text content of an element</td>
+                      <td><code>el.textContent || el.innertText</code></td>
+                      <td><a href="https://plainjs.com/javascript/manipulation/get-the-text-content-of-an-element-31/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Get and set the HTML content of an element</td>
+                      <td><code>el.innerHTML</code></td>
+                      <td><a href="https://plainjs.com/javascript/manipulation/get-and-set-the-html-content-of-an-element-30/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Append or prepend to an element</td>
+                      <td>Modify <code>el.innerHTML</code> or use <code>appendChild()</code> / <code>insertBefore()</code></td>
+                      <td><a href="https://plainjs.com/javascript/manipulation/append-or-prepend-to-an-element-29/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Wrap an HTML structure around an element</td>
+                      <td>Helper function using <code>insertBefore()</code> / <code>appendChild()</code></td>
+                      <td><a href="https://plainjs.com/javascript/manipulation/wrap-an-html-structure-around-an-element-28/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Clone an element</td>
+                      <td><code>el.cloneNode(true);</code></td>
+                      <td><a href="https://plainjs.com/javascript/manipulation/clone-an-element-27/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Iterating over a list of selected elements</td>
+                      <td>Call <code>document.querySelectorAll()</code>, then iterate using various methods</td>
+                      <td><a href="https://plainjs.com/javascript/manipulation/iterating-over-a-list-of-selected-elements-6/" target="details">Examples</a></td>
+                    </tr>
+                    <tr class="category">
+                      <td colspan="3"><b><u>Getting and Setting DOM Attributes</u></b></td>
+                    </tr>
+                    <tr>
+                      <td>Set, get, and remove properties of DOM elements</td>
+                      <td>Directly access <code>el.href</code>, <code>el.title</code>, <code>el.alt</code>, <code>el.value</code> as JavaScript properties</td>
+                      <td><a href="https://plainjs.com/javascript/attributes/set-get-and-remove-properties-of-dom-elements-10/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Adding, removing, and testing for classes</td>
+                      <td>User helper function to manipulate <code>el.classList</code> or <code>el.className</code></td>
+                      <td><a href="https://plainjs.com/javascript/attributes/adding-removing-and-testing-for-classes-9/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Setting, getting, and removing data attributes</td>
+                      <td><code>el.setAttribute()</code>, <code>el.getAttribute()</code>, <code>el.removateAttribute()</code> with &quot;<code>data-</code>&quot; names</td>
+                      <td><a href="https://plainjs.com/javascript/attributes/setting-getting-and-removing-data-attributes-8/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Getting, setting, and removing attributes</td>
+                      <td><code>el.setAttribute()</code>, <code>el.getAttribute()</code>, <code>el.removateAttribute()</code></td>
+                      <td><a href="https://plainjs.com/javascript/attributes/getting-setting-and-removing-attributes-7/" target="details">Examples</a></td>
+                    </tr>
+                    <tr class="category">
+                      <td colspan="3"><b><u>Getting and Setting Element Styles</u></b></td>
+                    </tr>
+                    <tr>
+                      <td>Set and get CSS styles of elements</td>
+                      <td>Get: <code>el.getComputedStyle</code> or <code>el.currentStyle</code> (IE &lt; 9); Set: <code>el.style</code></td>
+                      <td><a href="https://plainjs.com/javascript/styles/set-and-get-css-styles-of-elements-53/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Get and set scroll position of an element</td>
+                      <td><code>el.scrollTop</code>, <code>el.scrollLeft</code></td>
+                      <td><a href="https://plainjs.com/javascript/styles/get-and-set-scroll-position-of-an-element-26/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Get the offset position of an element relative to its parent</td>
+                      <td><code>el.offsetTop</code>, <code>el.offsetLeft</code></td>
+                      <td><a href="https://plainjs.com/javascript/styles/get-the-offset-position-of-an-element-relative-to-its-parent-25/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Get the position of an element relative to the document</td>
+                      <td>Helper function using <code>el.getBoundingClientRect()</code></td>
+                      <td><a href="https://plainjs.com/javascript/styles/get-the-position-of-an-element-relative-to-the-document-24/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Getting width and height of an element</td>
+                      <td>
+                        <code>el.offsetWidth, el.offsetHeight</code><br />
+                        <code>el.clientWidth, el.clientHeight</code><br />
+                        <code>style.marginLeft, style.marginRight, style.marginTop, style.marginBottom</code><br /><br />
+                        etc ... For other box model properties
+                      </td>
+                      <td><a href="https://plainjs.com/javascript/styles/getting-width-and-height-of-an-element-23/" target="details">Examples</a></td>
+                    </tr>
+                    <tr class="category">
+                      <td colspan="3"><b><u>AJAX Requests</u></b></td>
+                    </tr>
+                    <tr>
+                      <td>Making CORS AJAX GET requests</td>
+                      <td>Helper function using <code>XMLHttpRequest()</code> and <code>XDomainRequest()</code></td>
+                      <td><a href="https://plainjs.com/javascript/ajax/making-cors-ajax-get-requests-54/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>JSONP AJAX requests</td>
+                      <td>Create/append <code>script</code> element and set <code>script.src</code><</td>
+                      <td><a href="https://plainjs.com/javascript/ajax/jsonp-ajax-requests-50/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Load a script file asynchronously</td>
+                      <td>Inject a new <code>script</code> tag into the DOM</td>
+                      <td><a href="https://plainjs.com/javascript/ajax/load-a-script-file-asynchronously-49/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Send AJAX GET and POST requests</td>
+                      <td>Helper function using <code>XMLHttpRequest()</code> / <code>ActiveXObject()</code></td>
+                      <td><a href="https://plainjs.com/javascript/ajax/send-ajax-get-and-post-requests-47/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Serialize form data into an array</td>
+                      <td>Helper function that iterates over <code>form.elements</code> to build array</td>
+                      <td><a href="https://plainjs.com/javascript/ajax/serialize-form-data-into-an-array-46/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Serialize form data into a query string</td>
+                      <td>Helper function that iterates over <code>form.elements</code> to build string</td>
+                      <td><a href="https://plainjs.com/javascript/ajax/serialize-form-data-into-a-query-string-45/" target="details">Examples</a></td>
+                    </tr>
+                    <tr class="category">
+                      <td colspan="3"><b><u>Binding and Unbinding Events</u></b></td>
+                    </tr>
+                    <tr>
+                      <td>Preventing the default action or bubbling of events</td>
+                      <td><code>e.preventDefault()</code> / <code>e.stopPropagation()</code></td>
+                      <td><a href="https://plainjs.com/javascript/events/preventing-the-default-action-or-bubbling-of-events-18/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Getting the keycode from keyboard events</td>
+                      <td><code>e.keyCode</code> / <code>e.which</code> / <code>e.shiftKey</code> / <code>e.altKey</code> / <code>e.ctrlKey</code></td>
+                      <td><a href="https://plainjs.com/javascript/events/getting-the-keycode-from-keyboard-events-17/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Getting the current mouse position</td>
+                      <td><code>e.pageX</code> / <code>e.pageY</code> / <code>e.clientX</code> / <code>e.clientY</code></td>
+                      <td><a href="https://plainjs.com/javascript/events/getting-the-current-mouse-position-16/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Running code when the document is ready</td>
+                      <td>Add an event listener for <code>'DOMContentLoaded'</code></td>
+                      <td><a href="https://plainjs.com/javascript/events/running-code-when-the-document-is-ready-15/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Live binding event handlers</td>
+                      <td>Helper function using <code>el.addEventListener()</code> + some polyfills</td>
+                      <td><a href="https://plainjs.com/javascript/events/live-binding-event-handlers-14/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Binding and unbinding event handlers</td>
+                      <td><code>el.addEventListener()</code> / <code>el.removeEventListener()</code> + polyfills</td>
+                      <td><a href="https://plainjs.com/javascript/events/binding-and-unbinding-of-event-handlers-12/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Trigger an event</td>
+                      <td>Helper function using <code>document.createEvent()</code> / <code>el.dispatchEvent()</code> / <code>el.fireEvent()</code></td>
+                      <td><a href="https://plainjs.com/javascript/events/trigger-an-event-11/" target="details">Examples</a></td>
+                    </tr>
+                    <tr class="category">
+                      <td colspan="3"><b><u>Animation and Effects</u></b></td>
+                    </tr>
+                    <tr>
+                      <td>Animate an element property</td>
+                      <td>Helper functions that adjust <code>el.style.opacity</code> using <code>setTimeout()</code></td>
+                      <td><a href="https://plainjs.com/javascript/effects/animate-an-element-property-44/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Hide or show an element</td>
+                      <td>Helper functions that adjust <code>el.style.display</code></td>
+                      <td><a href="https://plainjs.com/javascript/effects/hide-or-show-an-element-42/" target="details">Examples</a></td>
+                    </tr>
+                    <tr class="category">
+                      <td colspan="3"><b><u>Utilities</u></b></td>
+                    </tr>
+                    <tr>
+                      <td>Parsing a JSON string</td>
+                      <td><code>JSON.parse()</code></td>
+                      <td><a href="https://plainjs.com/javascript/utilities/parsing-a-json-string-22/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Strip leading and trailing whitespace from a string</td>
+                      <td><code>s.trim()</code> + polyfills</td>
+                      <td><a href="https://plainjs.com/javascript/utilities/strip-leading-and-trailing-white-space-from-string-21/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Test if a certain value exists in an array</td>
+                      <td><code>a.indexOf()</code> and/or helper function for IE8</td>
+                      <td><a href="https://plainjs.com/javascript/utilities/test-if-a-certain-value-exists-in-an-array-20/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Merge two JavaScript objects</td>
+                      <td>Helper function to iterate over properties, checking <code>o.hasOwnProperty()</code></td>
+                      <td><a href="https://plainjs.com/javascript/utilities/merge-two-javascript-objects-19/" target="details">Examples</a></td>
+                    </tr>
+                    <tr>
+                      <td>Set, get, and delete cookies</td>
+                      <td>Helper functions to manipulate <code>document.cookie</code></td>
+                      <td><a href="https://plainjs.com/javascript/utilities/set-cookie-get-cookie-and-delete-cookie-5/" target="details">Examples</a></td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="pane pane-bottom">
+                  <iframe name="details" style="height: 100%; width: 100%; margin: 0; border: 0; padding: 0;" width="100%" height="100%" src="https://plainjs.com/javascript/selecting/select-dom-elements-by-css-selector-4/">
+                    <p>Your browser does not support iframes.</p>
+                  </iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../../css/layout/notebook1.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/themes/blue.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/content/standard.css" />
+
+    <style type="text/css">
+      table.templates td:first-child {
+        width: 200px;
+      }
+
+      table.templates td:nth-child(2) {
+        width: 190px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer-layout">
+      <div class="north-pane">
+        <div class="north-left-pane">
+          <div class="logo-area">
+            <div class="logo">
+              VanillaJS-Demos
+            </div>
+          </div>
+        </div>
+        <div class="north-right-pane">
+          <div class="search-outer-area">
+              <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search ...">
+          </div>
+        </div>
+      </div>
+      <div class="south-pane">
+        <div class="south-left-pane">
+          <div class="sidebar-area">
+            <section>
+              <a href="../../index3.html">Home</a>
+            </section>
+            <section>
+              <h1>HTML</h1>
+              <a href="../html/html-tags.html">List of HTML Tags</a>
+            </section>
+            <section>
+              <h1>CSS</h1>
+              <a href="../css/css-boxmodel.html">CSS Box Model</a><br>
+              <a href="../css/css-layout.html">Layout Strategies</a><br>
+              <a href="../css/css-boxdisplay.html">Block vs. Inline</a><br>
+              <a href="../css/css-flexbox.html">Flexbox Examples</a></br>
+            </section>
+            <section>
+              <h1>JavaScript</h1>
+              <a href="js-videos.html">JavaScript Videos</a><br>
+              <a href="js-dom.html">DOM Manipulation</a></br>
+              <a href="js-funclist.html">JavaScript Functions</a></br>
+            </section>
+            <section>
+              <h1>Quick Links</h1>
+              <a href="https://developer.mozilla.org" target="_blank">MDN</a><br>
+              <a href="https://w3schools.com" target="_blank">W3Schools</a>
+            </section>
+            <section>
+              <h1>More</h1>
+              <a href="https://github.com/kevinknowscs/VanillaJS-Demos" target="_blank">GitHub Source</a>
+            </section>
+          </div>
+        </div>
+        <div class="south-right-pane">
+          <div class="page-area">
+            <div class="page-title-area">
+              <div class="page-title">
+                JavaScript Built-In Functions
+              </div>
+            </div>
+            <div class="page-content-scroller">
+              <div class="page-content">
+                <table>
+                  <tr>
+                    <th>Class Name</th>
+                    <th>Property/Function</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Links</th>
+                  </tr>
+                  <tr class="category" >
+                    <td colspan="5">String</td>
+                  </tr>
+                  <tr class="jsprop">
+                    <td>String</td>
+                    <td>Property</td>
+                    <td>constructor</td>
+                    <td>Returns the string's constructor function</td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsprop">
+                    <td>String</td>
+                    <td>Property</td>
+                    <td>length</td>
+                    <td>Returns the length of the string</td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsprop">
+                    <td>String</td>
+                    <td>Property</td>
+                    <td>prototype</td>
+                    <td>Allows you to add properties and methods to an object</td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>String</td>
+                    <td>Function</td>
+                    <td>charAt(pos)</td>
+                    <td>Returns the character at the specified index</td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>String</td>
+                    <td>Function</td>
+                    <td>charCodeAt(pos)</td>
+                    <td>Returns the Unicode of the character at the specified index</td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>String</td>
+                    <td>Function</td>
+                    <td>concat()</td>
+                    <td>Joins two or more strings, and returns a new joined string</td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>String</td>
+                    <td>Function</td>
+                    <td>endsWith()</td>
+                    <td>Checks whether a string ends with specified string/characters</td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>String</td>
+                    <td>Function</td>
+                    <td>fromCharCode()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>String</td>
+                    <td>Function</td>
+                    <td>includes()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>String</td>
+                    <td>Function</td>
+                    <td>indexOf()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>String</td>
+                    <td>Function</td>
+                    <td>lastIndexOf()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>String</td>
+                    <td>Function</td>
+                    <td>localeCompare()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>String</td>
+                    <td>Function</td>
+                    <td>match()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>String</td>
+                    <td>Function</td>
+                    <td>repeat()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>String</td>
+                    <td>Function</td>
+                    <td>replace()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>String</td>
+                    <td>Function</td>
+                    <td>search()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>String</td>
+                    <td>Function</td>
+                    <td>slice()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>String</td>
+                    <td>Function</td>
+                    <td>split()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>String</td>
+                    <td>Function</td>
+                    <td>startsWith()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>String</td>
+                    <td>Function</td>
+                    <td>substr()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>String</td>
+                    <td>Function</td>
+                    <td>substring()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>String</td>
+                    <td>Function</td>
+                    <td>toLocaleLowerCase()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>String</td>
+                    <td>Function</td>
+                    <td>toLocaleUpperCase()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>String</td>
+                    <td>Function</td>
+                    <td>toLowerCase()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>String</td>
+                    <td>Function</td>
+                    <td>toString()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>String</td>
+                    <td>Function</td>
+                    <td>toUpperCase()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>String</td>
+                    <td>Function</td>
+                    <td>trim()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>String</td>
+                    <td>Function</td>
+                    <td>valueOf()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="category" >
+                    <td colspan="5">Number</td>
+                  </tr>
+                  <tr class="jsprop">
+                    <td>Number</td>
+                    <td>Property</td>
+                    <td>constructor</td>
+                    <td>Returns the function that created JavaScript's Number prototype</td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsprop">
+                    <td>Number</td>
+                    <td>Property</td>
+                    <td>MAX_VALUE</td>
+                    <td>Returns the largest number possible in JavaScript</td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsprop">
+                    <td>Number</td>
+                    <td>Property</td>
+                    <td>MIN_VALUE</td>
+                    <td>Returns the smallest number possible in JavaScript</td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsprop">
+                    <td>Number</td>
+                    <td>Property</td>
+                    <td>NEGATIVE_INFINITY</td>
+                    <td>Represents negative infinity</td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsprop">
+                    <td>Number</td>
+                    <td>Property</td>
+                    <td>NaN</td>
+                    <td>Represents a &quot;Not-a-Number&quot; value</td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsprop">
+                    <td>Number</td>
+                    <td>Property</td>
+                    <td>POSITIVE_INFINITY</td>
+                    <td>Represents infinity</td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsprop">
+                    <td>Number</td>
+                    <td>Property</td>
+                    <td>prototype</td>
+                    <td>Allows you to add properties and methods to an object</td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>Number</td>
+                    <td>Function</td>
+                    <td>isFinite()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>Number</td>
+                    <td>Function</td>
+                    <td>isInteger()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>Number</td>
+                    <td>Function</td>
+                    <td>isNaN()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>Number</td>
+                    <td>Function</td>
+                    <td>isSafeInteger()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>Number</td>
+                    <td>Function</td>
+                    <td>toExponential()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>Number</td>
+                    <td>Function</td>
+                    <td>toFixed()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>Number</td>
+                    <td>Function</td>
+                    <td>toPrecision()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>Number</td>
+                    <td>Function</td>
+                    <td>toString()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>Number</td>
+                    <td>Function</td>
+                    <td>valueOf()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="category" >
+                    <td colspan="5">Math</td>
+                  </tr>
+                  <tr class="jsprop">
+                    <td>Math</td>
+                    <td>Property</td>
+                    <td>E</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsprop">
+                    <td>Math</td>
+                    <td>Property</td>
+                    <td>LN2</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsprop">
+                    <td>Math</td>
+                    <td>Property</td>
+                    <td>LOG2E</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsprop">
+                    <td>Math</td>
+                    <td>Property</td>
+                    <td>LOG10E</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsprop">
+                    <td>Math</td>
+                    <td>Property</td>
+                    <td>PE</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsprop">
+                    <td>Math</td>
+                    <td>Property</td>
+                    <td>SQRT1_2</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsprop">
+                    <td>Math</td>
+                    <td>Property</td>
+                    <td>SQRT</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>Math</td>
+                    <td>Function</td>
+                    <td>abs()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>Math</td>
+                    <td>Function</td>
+                    <td>acos()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>Math</td>
+                    <td>Function</td>
+                    <td>asin()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>Math</td>
+                    <td>Function</td>
+                    <td>atan()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>Math</td>
+                    <td>Function</td>
+                    <td>atan2()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>Math</td>
+                    <td>Function</td>
+                    <td>ceil()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>Math</td>
+                    <td>Function</td>
+                    <td>cos()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>Math</td>
+                    <td>Function</td>
+                    <td>exp()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>Math</td>
+                    <td>Function</td>
+                    <td>flooer()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>Math</td>
+                    <td>Function</td>
+                    <td>log()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>Math</td>
+                    <td>Function</td>
+                    <td>max()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>Math</td>
+                    <td>Function</td>
+                    <td>min()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>Math</td>
+                    <td>Function</td>
+                    <td>pow()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>Math</td>
+                    <td>Function</td>
+                    <td>random()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>Math</td>
+                    <td>Function</td>
+                    <td>round()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>Math</td>
+                    <td>Function</td>
+                    <td>sin()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>Math</td>
+                    <td>Function</td>
+                    <td>sqrt()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="jsfunc">
+                    <td>Math</td>
+                    <td>Function</td>
+                    <td>tan()</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
