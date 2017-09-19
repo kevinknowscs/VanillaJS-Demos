@@ -1,0 +1,171 @@
+.north-pane {
+  font-family: Arial;
+}
+
+.logo {
+  font-size: 16pt;
+  font-weight: bold;
+}
+
+.sidebar-area {
+  font-family: Arial;
+}
+
+.sidebar-area h1 {
+  font-size: 14pt;
+  text-decoration: underline;
+  margin-bottom: 0.25em;
+}
+
+.sidebar-area a, sidebar-area a:visited {
+  color: blue;
+}
+
+body > header {
+  width: 100%;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+header div.page-title {
+  font-family: Arial;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+section h1 {
+  font-family: Arial;
+  font-size: 1.25em;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+summary {
+  font-family: Arial;
+  font-size: 1.25em;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.page-content section + section {
+  border-top: 1px solid lightgray;
+  margin-top: 1em;
+  padding-top: 1em;
+}
+
+.sidebar-area section + section {
+  border-top: 1px solid black;
+  margin-top: 1em;
+  padding-top: 1em;
+}
+
+.page-content p {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+
+.page-content p + p {
+  margin-top: 1em;
+}
+
+summary {
+  outline: none;
+}
+
+table.common {
+  max-width: calc(12in - 20px);
+}
+
+table.common tr.category {
+  background-color: lightgray;
+  font-family: Arial;
+  font-size: 11pt;
+  font-weight: bold;
+}
+
+table, tr, th, td {
+  border-collapse: collapse;
+}
+
+tr th {
+  text-align: left;
+  border-bottom: 1px solid black;
+  /* border: 1px solid black; */
+}
+
+tr td {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+tr td:first-child {
+  border-left: 1px solid black;
+}
+
+tr td:last-child {
+  border-right: 1px solid black;
+}
+
+table tr:last-child, table tr:last-child td {
+  border-bottom: 1px solid black;
+}
+
+th, td {
+  padding: 5px;
+}
+
+a:visited, a:link {
+  color: blue;
+}
+
+h1 {
+  font-family: Arial;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-left: 0px;
+}
+
+h2, main h1, section h1 {
+  font-family: Arial;
+  font-size: 1.05em;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+h3, main h2, section h2 {
+  font-family: Arial;
+  font-size: 0.9em;
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+main {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main section:not(:first-child) {
+  padding-top: 15px;
+}
+
+main section details > p:nth-child(2) {
+  padding: none;
+  margin: none;
+  -webkit-margin-before: 0;
+}
+
+main section:not(:last-child) {
+  padding-bottom: 20px;
+  border-bottom: 1px solid lightgray;
+}
+
+section p:last-child {
+  margin-bottom: 0;
+}
+
+section details[open] summary {
+  padding-bottom: 0.5em;
+}

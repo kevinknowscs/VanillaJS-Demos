@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/layout/notebook1.css" />
+    <link rel="stylesheet" type="text/css" href="css/themes/blue.css" />
+    <link rel="stylesheet" type="text/css" href="css/content/standard.css" />
+
+    <style type="text/css">
+      table.templates td:first-child {
+        width: 200px;
+      }
+
+      table.templates td:nth-child(2) {
+        width: 190px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer-layout">
+      <div class="north-pane">
+        <div class="north-left-pane">
+          <div class="logo-area">
+            <div class="logo">
+              VanillaJS-Demos
+            </div>
+          </div>
+        </div>
+        <div class="north-right-pane">
+          <div class="search-outer-area">
+              <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search ...">
+          </div>
+        </div>
+      </div>
+      <div class="south-pane">
+        <div class="south-left-pane">
+          <div class="sidebar-area">
+            <section>
+              <h1>HTML</h1>
+              <a href="pages/html/html-tags.html">List of HTML Tags</a>
+            </section>
+            <section>
+              <h1>CSS</h1>
+              <a href="pages/css/css-boxmodel.html">CSS Box Model</a><br>
+              <a href="css-layout.html">Layout Strategies</a><br>
+              <a href="css-boxdisplay.html">Block vs. Inline</a><br>
+              <a href="css-flexbox.html">Flexbox Examples</a></br>
+            </section>
+            <section>
+              <h1>JavaScript</h1>
+              <a href="js-videos.html">JavaScript Videos</a><br>
+              <a href="js-dom.html">DOM Manipulation</a></br>
+              <a href="js-funclist.html">JavaScript Functions</a></br>
+            </section>
+            <section>
+              <h1>Quick Links</h1>
+              <a href="https://developer.mozilla.org" target="_blank">MDN</a><br>
+              <a href="https://w3schools.com" target="_blank">W3Schools</a>
+            </section>
+            <section>
+              <h1>More</h1>
+              <a href="https://github.com/kevinknowscs/VanillaJS-Demos" target="_blank">GitHub Source</a>
+            </section>
+          </div>
+        </div>
+        <div class="south-right-pane">
+          <div class="page-area">
+            <div class="page-title-area">
+              <div class="page-title">
+                Home Page
+              </div>
+            </div>
+            <div class="page-content-scroller">
+              <div class="page-content">
+                <section>
+                  <details open>
+                    <summary>Articles &amp; Quick Reference Lists</summary>
+                    <table class="common articles">
+                      <tr>
+                        <th>Link</th>
+                        <th>Description</th>
+                      </tr>
+                      <tr class="category">
+                        <td colspan="3">HTML</td>
+                      </tr>
+                      <tr>
+                        <td><a href="pages/html/html-tags.html">List of HTML Tags</a></td>
+                        <td>
+                          An alphabetical list of all HTML tags.
+                        </td>
+                      </tr>
+                      <tr class="category">
+                        <td colspan="3">CSS</td>
+                      </tr
+                      <tr>
+                        <td><a href="pages/css/css-boxmodel.html">The CSS Box Model</a></td>
+                        <td>
+                          The CSS box model is a crucial paradigm to understand. It defines the basic properties of a box: margin, borders,
+                          padding, and content.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="css-layout.html">CSS Layout</a></td>
+                        <td>
+                          An overview of CSS Layout Strategies, including floats, positioning, tables, lists,
+                          Flexbox, and Grids.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="css-boxdisplay.html">Block vs. Inline</a></td>
+                        <td>
+                          Discusses the differences between <code>display:&nbsp;block;</code> vs. <code>display:&nbsp;inline</code> vs.
+                          <code>display:&nbsp;inline&#8209;block;</code> with examples of each.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="css-flexbox.html">Flexbox Examples</a></td>
+                        <td>
+                          A demonstration of Flexbox.
+                        </td>
+                      </tr>
+                      <tr class="category">
+                        <td colspan="3">JavaScript</td>
+                      </tr>
+                      <tr>
+                        <td><a href="js-videos.html">JavaScript Videos</a></td>
+                        <td>
+                          List of JavaScript Videos by Doug Crockford.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="pages/js/js-dom2.html">DOM Manipulation</a></td>
+                        <td>
+                          DOM manipulation in plain JavaScript without jQuery.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="js-funclist.html">Built-In JavaScript Functions</a></td>
+                        <td>
+                          A complete list of JavaScript classes, properties, and functions that are built into them
+                          browser by default.
+                        </td>
+                      </tr>
+                      <tr class="category">
+                        <td colspan="3">Miscellaneous</td>
+                      </tr>
+                      <tr>
+                        <td><a href="todo.html">To-Do List</a></td>
+                        <td>
+                          Things I want to add to this notebook.
+                        </td>
+                      </tr>
+                    </table>
+                  </details>
+                </section>
+                <section>
+                  <details open>
+                    <summary>HTML Page Templates</summary>
+                    <table class="common templates">
+                      <tr>
+                        <th>Summary</th>
+                        <th>Links</th>
+                        <th>Description</th>
+                      </tr>
+                      <tr>
+                        <td>An Empty HTML Template</td>
+                        <td>
+                          <a href="https://github.com/kevinknowscs/VanillaJS-Demos/blob/master/templates/basic.html" target="_blank">GitHub</a> |
+                          <a href="https://raw.githubusercontent.com/kevinknowscs/VanillaJS-Demos/master/templates/basic.html" target="_blank">GitHub Raw</a> |
+                          <a href="templates/basic.html" target="_blank">Live</a>
+                        </td>
+                        <td>
+                          A basic, empty HTML template with head sections to fill in for scripts and stylesheets.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          An Empty HTML Template<br>
+                          (with onDocumentReady)
+                        </td>
+                        <td>
+                          <a href="https://github.com/kevinknowscs/VanillaJS-Demos/blob/master/templates/basic2.html" target="_blank">GitHub</a> |
+                          <a href="https://raw.githubusercontent.com/kevinknowscs/VanillaJS-Demos/master/templates/basic2.html" target="_blank">GitHub Raw</a> |
+                          <a href="templates/basic2.html" target="_blank">Live</a>
+                        </td>
+                        <td>
+                          A basic, empty HTML template plus installation of a function that runs after the page is loaded (similar to jQuery's
+                          $(document).ready() function).
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          2-Pane, Vertical Template<br>
+                          (Top/Bottom)
+                        </td>
+                        <td>
+                          <a href="https://github.com/kevinknowscs/VanillaJS-Demos/blob/master/templates/2pane.html" target="_blank">GitHub</a> |
+                          <a href="https://raw.githubusercontent.com/kevinknowscs/VanillaJS-Demos/master/templates/2pane.html" target="_blank">GitHub Raw</a> |
+                          <a href="templates/2pane.html" target="_blank">Live</a>
+                        </td>
+                        <td>
+                          A simple 2-pane layout arranged vertically with a top and bottom pane.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          2-Pane, Vertical Template<br>
+                          (Top/Bottom using iframes)
+                        </td>
+                        <td>
+                          <a href="https://github.com/kevinknowscs/VanillaJS-Demos/blob/master/templates/2pane-iframe.html" target="_blank">GitHub</a> |
+                          <a href="https://raw.githubusercontent.com/kevinknowscs/VanillaJS-Demos/master/templates/2pane-iframe.html" target="_blank">GitHub Raw</a> |
+                          <a href="templates/2pane-iframe.html" target="_blank">Live</a>
+                        </td>
+                        <td>
+                          Same as the basic 2-pane vertical template, but with the bottom pane containing an iframe.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          2-Pane, Horizontal Template<br>
+                          (Left/Right)
+                        </td>
+                        <td>
+                          <a href="https://github.com/kevinknowscs/VanillaJS-Demos/blob/master/templates/2pane-horiz.html" target="_blank">GitHub</a> |
+                          <a href="https://raw.githubusercontent.com/kevinknowscs/VanillaJS-Demos/master/templates/2pane-horiz.html" target="_blank">GitHub Raw</a> |
+                          <a href="templates/2pane-horiz.html" target="_blank">Live</a>
+                        </td>
+                        <td>
+                          A simple 2-pane layout arranged horizontally with a left and right pane. This is accomplished using inline-block display attributes and floats.
+                        </td>
+                      </tr>
+                    </table>
+                  </details>
+                </section>
+                <section>
+                  <details open>
+                    <summary>Web Resources</summary>
+                    <table class="common web-resources">
+                      <tr>
+                        <th>Link</th>
+                        <th>Description</th>
+                      </tr>
+                      <tr class="category">
+                        <td colspan="2">VanillaJS Overview</td>
+                      </tr>
+                      <tr>
+                        <td><a href="https://stackoverflow.com/questions/20435653/what-is-vanillajs" target="_blank">What is VanillaJS?</a></td>
+                        <td>
+                          What, you've never heard of the amazingly powerful VanillaJS Framework? Well, you're not alone.
+                          Here's what StackOverflow has to say about it.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="http://plainjs.com" target="_blank">http://plainjs.com</a></td>
+                        <td>A good resource on writing plain HTML and JavaScript (without jQuery)</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a href="http://vanilla-js.com" target="_blank">http://vanilla-js.com</a>
+                        </td>
+                        <td>
+                          A comprehensive guide to the VanillaJS Framework, complete with a customizable, downloadable
+                          distribution of the framework. Includes some performance benchmarks comparing VanillaJS to jQuery.
+                        </td>
+                      </tr>
+                      <tr class="category">
+                        <td colspan="2">Online Tools for Web Developers</td>
+                      </tr>
+                      <tr>
+                        <td><a href="http://beautifytools.com/" target="_blank">http://beautifytools.com</a></td>
+                        <td>
+                          A great collection of online tools including beautifiers, minifiers, CSS preprocessors, unit converters,
+                          text converters, code validators, cryptography tools, code editors, string utilties, web utilities,
+                          SEO tools, and IP tools.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="https://jsonformatter.curiousconcept.com/" target="_blank">https://jsonformatter.curiousconcept.com</a></td>
+                        <td>
+                          A JSON Formatter and Validator.
+                        </td>
+                      </tr>
+                      <tr class="category">
+                        <td colspan="2">Fonts and Text Resources</td>
+                      </tr>
+                      <tr>
+                        <td><a href="https://www.fontsquirrel.com/" target="_blank">https://www.fontsquirrel.com</a></td>
+                        <td>
+                          A huge list of free fonts
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="https://www.toptal.com/designers/htmlarrows/" target="_blank">HTML Special Characters</a></td>
+                        <td>
+                          A great list of special characters usable from HTML. Each entry shows a large graphic depecting the symbol,
+                          and the Unicode, Hex Code, HTML Code, and HTML Entity names. Characters are categorized by: Arrows, Currency,
+                          Letters, Math, Numbers, Punctuation, and Symbols.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="https://unicode-table.com/en/#control-character" target="_blank">Unicode Character Table</a></td>
+                        <td>
+                          A full list of Unicode characters depicting in a two-dimensional table organized by hex code.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="https://www.johndcook.com/blog/greek_letters/" target="_blank">Greek Letters</a></td>
+                        <td>
+                          Greek letters in HTML, XML, TeX, and Unicode
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="http://www.unicode.org/charts/" target="_blank">Unicode Character Code Chart</a></td>
+                        <td>
+                          The Unicode 10.0 Character Code Chart provided by unicode.org
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="http://www.unicode.org/ucd/" target="_blank">Unicode Character Database</a></td>
+                        <td>
+                          The Unicode Character Database provided by unicode.org
+                        </td>
+                      </tr>
+                      <tr class="category">
+                        <td colspan="2">Icons</td>
+                      </tr>
+                      <tr>
+                        <td><a href="https://www.w3schools.com/icons/default.asp" target="_blank">W3Schools Icons Tutorial</a></td>
+                        <td>
+                          W3Schools has a very nice tutorial and reference section for icons, including a complete list of icons
+                          from Font Awesome, Bootstrap, and Google's Material Design.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="http://fontawesome.io/" target="_blank">Font Awesome</a></td>
+                        <td>
+                          Font Awesome is, well ..., awesome. A collection of 675 commonly used icons delivered as a single font,
+                          and usable directly from the CloudFlare content deliver network if desired.
+                          <p>
+                            <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&quot;&gt;</code>
+                          </p>
+                        </td>
+                      </tr>
+                      <tr class="category">
+                        <td colspan="2">Other Very Handy Web Resources</td>
+                      </tr>
+                      <tr>
+                        <td><a href="http://caniuse.com" target="_blank">http://caniuse.com</a></td>
+                        <td>
+                          An excellent resource to check for browser compatibility against the feature you wish to use.
+                          Without a framework like jQuery to handle browser compatibility issues for you, you'll want
+                          to be more vigilant about considering browser compatibility issues.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="https://css-tricks.com" target="_blank">https://css-tricks.com</a></td>
+                        <td>
+                          A good web site for tackling thorny and tricky CSS layout challenges.
+                        </td>
+                      </tr>
+                      <tr class="category">
+                        <td colspan="2">Content Delivery Networks</td>
+                      </tr>
+                      <tr>
+                        <td><a href="https://developers.google.com/speed/libraries/" target="_blank">Google Hosted Libraries</a></td>
+                        <td>
+                          Libraries hosted by Google.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="https://cdnjs.com" target="_blank">cdnjs.com</a></td>
+                        <td>
+                          A comprehensive CDN for JavaScript Frameworks used by over 320,000 web sites. Very handy when you want to
+                          quickly prototype a web site and fiddle with a framework without downloading or deploying it manually.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="https://www.maxcdn.com/blog/free-open-source-cdns/" target="_blank">List of Other CDNs</a></td>
+                        <td>
+                          A good list of other open source content delivery networks, from the MaxCDN blog.
+                        </td>
+                      </tr>
+                      <tr class="category">
+                        <td colspan="2">Reference Material for Web Developers</td>
+                      </tr>
+                      <tr>
+                        <td><a href="https://developer.mozilla.org" target="_blank">https://developer.mozilla.org</a></td>
+                        <td>
+                          A fabulous resource for web developer technical information, well-organized, cleanly designed,
+                          and freely licensed and redistributable content. You can even create an account and start
+                          contributing to this great body of work.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="https://w3schools.com" target="_blank">https://w3schools.com</a></td>
+                        <td>
+                          Another amazingly voluminous resource on all manner of web technologies. I use this web site a lot,
+                          along with the Mozilla Developer Network above. I think the content is copyrighted, however, so
+                          be careful about redistributing it.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="https://www.w3.org/" target="_blank">https://www.w3.org</a></td>
+                        <td>
+                          For the most fundamental resource of all, you can't get any more foundational than the W3C
+                          comittee.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="https://www.ietf.org/" target="_blank">https://www.ietf.org</a></td>
+                        <td>
+                          Ever want to peruse those wonderful RFC documents that you might run across once in a while. Well,
+                          the Internet Engineering Task Force (IETF) is for you.
+                        </td>
+                      <tr>
+                      <tr>
+                        <td><a href="https://www.whatwg.org/" target="_blank">https://www.whatwg.org</a></td>
+                        <td>
+                          The Web Hypertext Application Technology Working Group (WHATWG) is another great web site that tracks the
+                          evolving standards of HTML and related web technologies.
+                        </td>
+                      <tr>
+                    </table>
+                  </details>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

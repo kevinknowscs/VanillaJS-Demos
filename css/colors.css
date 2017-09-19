@@ -1,0 +1,39 @@
+/* Colors:
+ * Monochromatic scheme from W3Schools
+ * Very Light: #FCFDFD
+ * Light: #E8EFF3
+ * Medium-Light: #7AA6B8
+ * Medium: #477385
+ * Medium-Dark: #243A42
+ * Dark: #11232C
+ */
+
+ body, html {
+   background-color: #E8EFF3;
+ }
+
+ main {
+   background-color: #FCFDFD;
+   /* margin: 0.25in; */
+   /* border: 1px solid black;
+   padding: 10px; */
+ }
+
+ table, tr, td  {
+   background-color: #E8EFF3;
+ }
+
+ th {
+   background-color: #FCFDFD;
+   color: black;
+   border: none;
+ }
+
+ tr.category, tr.category td {
+   background-color: #7AA6B8;
+ }
+
+ body header {
+   background-color: #11232C;
+   color: white;
+ }

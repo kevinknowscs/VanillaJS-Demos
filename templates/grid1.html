@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: lightgray;
+        height: 100%;
+      }
+
+      .outer-layout {
+        display: grid;
+        grid-template-rows: 40px 10px auto 10px;
+        grid-template-columns: 10px 300px 10px 10px auto 10px;
+        height: 100%;
+      }
+
+      .upper-left-area {
+        grid-row: 1 / 1;
+        grid-column: 1 / 1;
+        background-color: black;
+      }
+
+      .upper-right-area {
+        grid-row: 1 / 1;
+        grid-column: 6 / 6;
+        background-color: black;
+      }
+
+      .upper-gap-1 {
+        grid-row: 1 / 1;
+        grid-column: 3 / 3;
+        background-color: black;
+      }
+
+      .upper-gap-2 {
+        grid-row: 1 / 1;
+        grid-column: 4 / 4;
+        background-color: black;
+      }
+
+      .logo-area {
+        grid-row: 1 / 1;
+        grid-column: 2 / 2;
+        background-color: black;
+        color: white;
+        align-self: stretch;
+        height: 100%;
+      }
+
+      .search-area {
+        grid-row: 1 / 1;
+        grid-column: 5 / 5;
+        background-color: black;
+      }
+
+      .sidebar-area {
+        grid-row: 3 / 3;
+        grid-column: 2 / 2;
+        border: 1px dashed black;
+        background-color: darkgray;
+        align-self: stretch;
+        justify-content: stretch;
+      }
+
+      .splitter {
+        grid-row: 2 / 5;
+        grid-column: 3 / 3;
+        border-right: 1px solid black;
+      }
+
+      .main-content-area {
+        grid-row: 3 / 3;
+        grid-column: 5 / 5;
+        background: pink;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer-layout">
+      <div class="upper-left-area"></div>
+      <div class="logo-area">
+        <div style="height: 100%;">
+          Logo Area
+        </div>
+      </div>
+      <div class="upper-gap-1"></div>
+      <div class="upper-gap-2"></div>
+      <div class="search-area">
+      </div>
+      <div class="upper-right-area"></div>
+      <div class="sidebar-area">
+        <div style="height: 100%;">
+          Here is some sidebar content
+        </div>
+      </div>
+      <div class="splitter"></div>
+      <div class="main-content-area">
+      </div>
+    </div>
+  </body>
+</html>
