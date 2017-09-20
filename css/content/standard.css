@@ -123,8 +123,13 @@ h1 {
   font-family: Arial;
   font-size: 1.5em;
   font-weight: bold;
-  margin-top: 5px;
+  margin-top: 1.0em;
   margin-left: 0px;
+}
+
+section h1:first-child {
+  margin-top: 0.5em;
+  -webkit-margin-before: 0;
 }
 
 h2, main h1, section h1 {
