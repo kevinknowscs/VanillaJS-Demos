@@ -6,11 +6,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/content/standard.css" />
 
     <style type="text/css">
-      table.templates td:first-child {
-        width: 200px;
-      }
-
-      table.templates td:nth-child(2) {
+      table.table-funclist td:nth-child(3) {
         width: 190px;
       }
     </style>
@@ -75,212 +71,228 @@
             </div>
             <div class="page-content-scroller">
               <div class="page-content">
-                <table>
+                <table class="table-funclist">
                   <tr>
                     <th>Class Name</th>
+                    <th>Static/Instance</th>
                     <th>Property/Function</th>
-                    <th>Name</th>
+                    <th>Signature</th>
                     <th>Description</th>
                     <th>Links</th>
                   </tr>
                   <tr class="category" >
-                    <td colspan="5">String</td>
+                    <td colspan="6">String Static Properties &amp; Functions</td>
                   </tr>
-                  <tr class="jsprop">
+                  <tr class="jsfunc">
                     <td>String</td>
-                    <td>Property</td>
-                    <td>constructor</td>
-                    <td>Returns the string's constructor function</td>
+                    <td>Static</td>
+                    <td>Function</td>
+                    <td><code>fromCharCode()</code></td>
+                    <td></td>
                     <td></td>
                   </tr>
+                  <tr class="category" >
+                    <td colspan="6">String Instance Properties &amp; Functions</td>
+                  </tr>
                   <tr class="jsprop">
                     <td>String</td>
+                    <td>Instance</td>
                     <td>Property</td>
-                    <td>length</td>
+                    <td><code>length</code></td>
                     <td>Returns the length of the string</td>
                     <td></td>
                   </tr>
-                  <tr class="jsprop">
+                  <tr class="jsfunc">
                     <td>String</td>
-                    <td>Property</td>
-                    <td>prototype</td>
-                    <td>Allows you to add properties and methods to an object</td>
-                    <td></td>
+                    <td>Instance</td>
+                    <td>Function</td>
+                    <td><code>charAt(<var>pos</var>)</cod></td>
+                    <td>Returns a 1 character string representing the character at the specified position</td>
+                    <td><a href="https://www.w3schools.com/jsref/jsref_charat.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
                     <td>String</td>
+                    <td>Instance</td>
                     <td>Function</td>
-                    <td>charAt(pos)</td>
-                    <td>Returns the character at the specified index</td>
-                    <td></td>
-                  </tr>
-                  <tr class="jsfunc">
-                    <td>String</td>
-                    <td>Function</td>
-                    <td>charCodeAt(pos)</td>
+                    <td><code>charCodeAt(<var>pos</var>)</code></td>
                     <td>Returns the Unicode of the character at the specified index</td>
-                    <td></td>
+                    <td><a href="https://www.w3schools.com/jsref/jsref_charcodeat.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
                     <td>String</td>
+                    <td>Instance</td>
                     <td>Function</td>
-                    <td>concat()</td>
+                    <td><code>concat()</code></td>
                     <td>Joins two or more strings, and returns a new joined string</td>
-                    <td></td>
+                    <td><a href="https://www.w3schools.com/jsref/jsref_concat.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
                     <td>String</td>
+                    <td>Instance</td>
                     <td>Function</td>
-                    <td>endsWith()</td>
+                    <td><code>endsWith()</code></td>
                     <td>Checks whether a string ends with specified string/characters</td>
-                    <td></td>
+                    <td><a href="https://www.w3schools.com/jsref/jsref_endswith.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
                     <td>String</td>
+                    <td>Instance</td>
                     <td>Function</td>
-                    <td>fromCharCode()</td>
+                    <td><code>includes()</code></td>
                     <td></td>
-                    <td></td>
+                    <td><a href="https://www.w3schools.com/jsref/jsref_includes.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
                     <td>String</td>
+                    <td>Instance</td>
                     <td>Function</td>
-                    <td>includes()</td>
+                    <td><code>indexOf()</code></td>
                     <td></td>
-                    <td></td>
+                    <td><a href="https://www.w3schools.com/jsref/jsref_indexof.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
                     <td>String</td>
+                    <td>Instance</td>
                     <td>Function</td>
-                    <td>indexOf()</td>
+                    <td><code>lastIndexOf()</code></td>
                     <td></td>
-                    <td></td>
+                    <td><a href="https://www.w3schools.com/jsref/jsref_lastindexof.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
                     <td>String</td>
+                    <td>Instance</td>
                     <td>Function</td>
-                    <td>lastIndexOf()</td>
+                    <td><code>localeCompare()</code></td>
                     <td></td>
-                    <td></td>
+                    <td><a href="https://www.w3schools.com/jsref/jsref_localecompare.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
                     <td>String</td>
+                    <td>Instance</td>
                     <td>Function</td>
-                    <td>localeCompare()</td>
+                    <td><code>match()</code></td>
                     <td></td>
-                    <td></td>
+                    <td><a href="https://www.w3schools.com/jsref/jsref_match.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
                     <td>String</td>
+                    <td>Instance</td>
                     <td>Function</td>
-                    <td>match()</td>
+                    <td><code>repeat()</code></td>
                     <td></td>
-                    <td></td>
+                    <td><a href="https://www.w3schools.com/jsref/jsref_repeat.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
                     <td>String</td>
+                    <td>Instance</td>
                     <td>Function</td>
-                    <td>repeat()</td>
+                    <td><code>replace()</code></td>
                     <td></td>
-                    <td></td>
+                    <td><a href="https://www.w3schools.com/jsref/jsref_replace.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
                     <td>String</td>
+                    <td>Instance</td>
                     <td>Function</td>
-                    <td>replace()</td>
+                    <td><code>search()</code></td>
                     <td></td>
-                    <td></td>
+                    <td><a href="https://www.w3schools.com/jsref/jsref_search.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
                     <td>String</td>
+                    <td>Instance</td>
                     <td>Function</td>
-                    <td>search()</td>
+                    <td><code>slice()</code></td>
                     <td></td>
-                    <td></td>
+                    <td><a href="https://www.w3schools.com/jsref/jsref_slice.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
                     <td>String</td>
+                    <td>Instance</td>
                     <td>Function</td>
-                    <td>slice()</td>
+                    <td><code>split()</code></td>
                     <td></td>
-                    <td></td>
+                    <td><a href="https://www.w3schools.com/jsref/jsref_split.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
                     <td>String</td>
+                    <td>Instance</td>
                     <td>Function</td>
-                    <td>split()</td>
+                    <td><code>startsWith()</code></td>
                     <td></td>
-                    <td></td>
+                    <td><a href="https://www.w3schools.com/jsref/jsref_startswith.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
                     <td>String</td>
+                    <td>Instance</td>
                     <td>Function</td>
-                    <td>startsWith()</td>
+                    <td><code>substr()</code></td>
                     <td></td>
-                    <td></td>
+                    <td><a href="https://www.w3schools.com/jsref/jsref_substr.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
                     <td>String</td>
+                    <td>Instance</td>
                     <td>Function</td>
-                    <td>substr()</td>
+                    <td><code>substring()</code></td>
                     <td></td>
-                    <td></td>
+                    <td><a href="https://www.w3schools.com/jsref/jsref_substring.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
                     <td>String</td>
+                    <td>Instance</td>
                     <td>Function</td>
-                    <td>substring()</td>
+                    <td><code>toLocaleLowerCase()</code></td>
                     <td></td>
-                    <td></td>
+                    <td><a href="https://www.w3schools.com/jsref/jsref_tolocalelowercase.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
                     <td>String</td>
+                    <td>Instance</td>
                     <td>Function</td>
-                    <td>toLocaleLowerCase()</td>
+                    <td><code>toLocaleUpperCase()</code></td>
                     <td></td>
-                    <td></td>
+                    <td><a href="https://www.w3schools.com/jsref/jsref_tolocaleuppercase.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
                     <td>String</td>
+                    <td>Instance</td>
                     <td>Function</td>
-                    <td>toLocaleUpperCase()</td>
+                    <td><code>toLowerCase()</code></td>
                     <td></td>
-                    <td></td>
+                    <td><a href="https://www.w3schools.com/jsref/jsref_tolowercase.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
                     <td>String</td>
+                    <td>Instance</td>
                     <td>Function</td>
-                    <td>toLowerCase()</td>
+                    <td><code>toString()</code></td>
                     <td></td>
-                    <td></td>
+                    <td><a href="https://www.w3schools.com/jsref/jsref_tostring.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
                     <td>String</td>
+                    <td>Instance</td>
                     <td>Function</td>
-                    <td>toString()</td>
+                    <td><code>toUpperCase()</code></td>
                     <td></td>
-                    <td></td>
+                    <td><a href="https://www.w3schools.com/jsref/jsref_touppercase.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
                     <td>String</td>
+                    <td>Instance</td>
                     <td>Function</td>
-                    <td>toUpperCase()</td>
+                    <td><code>trim()</code></td>
                     <td></td>
-                    <td></td>
+                    <td><a href="https://www.w3schools.com/jsref/jsref_trim.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
                     <td>String</td>
+                    <td>Instance</td>
                     <td>Function</td>
-                    <td>trim()</td>
+                    <td><code>valueOf()</code></td>
                     <td></td>
-                    <td></td>
-                  </tr>
-                  <tr class="jsfunc">
-                    <td>String</td>
-                    <td>Function</td>
-                    <td>valueOf()</td>
-                    <td></td>
-                    <td></td>
+                    <td><a href="https://www.w3schools.com/jsref/jsref_valueof.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="category" >
                     <td colspan="5">Number</td>
