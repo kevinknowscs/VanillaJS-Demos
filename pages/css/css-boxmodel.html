@@ -596,6 +596,53 @@
                         must be set separately. <a href="https://www.w3schools.com/cssref/pr_outline.asp" target="_blank">More details</a>.
                       </td>
                     </tr>
+                    <tr class="category">
+                      <td>Content Hieght and Width</td>
+                      <td colspan="2"><em>How the box content is sized</em></td>
+                    </tr>
+                    <tr>
+                      <td><code>height:&nbsp;<em>&lt;value&gt;</em>;</code></td>
+                      <td colspan="2">
+                        <p>
+                          If <code>box&#8209;sizing</code> is set to <code>context&#8209;box</code>, then this setting determines the
+                          height of the box's content. The total size of the box would be the content height, plus the padding, border,
+                          and margins.
+                        </p>
+                        <p>
+                          If <code>box&#8209;sizing</code> is set to <code>border&#8209;box</code>, then this setting determines the height
+                          of the content + padding + border. The total height of the box would be this value, plus the margin. The height
+                          of the content would be this value - padding - border.
+                        </p>
+                        <p>
+                          Heights and widths are ignored for <code>inline</code> elements (such as <code>&lt;span&gt;</code> elements by default).
+                          Inline elements always shrink or expand to accomodate the size of their children.
+                        </p>
+                        <p>
+                          The value can be a unit value or a percentage. When expressed as a percentage, it is relative to the size of the parent
+                          box.
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>width:&nbsp;<em>&lt;value&gt;</em>;</code></td>
+                      <td colspan="2">
+                        Sets the width of the box, using the same algorithm as the height (see above).
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>box&#8209;sizing:&nbsp;content&#8209;box;</code></td>
+                      <td colspan="2">
+                        The default sizing method for the box. The height and width are applied to the content only, and do not include
+                        the margin, padding, or border.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>box&#8209;sizing:&nbsp;border&#8209;box;</code></td>
+                      <td colspan="2">
+                        The height and width are applied to the total size of the content + padding + border, but does not include
+                        the margin.
+                      </td>
+                    </tr>
                   </table>
                 </section>
               </div>
