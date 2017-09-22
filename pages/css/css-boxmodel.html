@@ -84,13 +84,14 @@
                 <section>
                 <h1>Introduction</h1>
                   <p>
-                    The CSS box model consists of margins, borders, padding, and content. The top, left, bottom, and right
-                    values can be set independently, or they can be set with a single setting using a shortcut specifying
-                    one or more values.
+                    The CSS box model consists of margins, borders, padding, and content. A sometimes overlooked aspect of the box model
+                    is the outline, which can be used to augment the look of the border. It does not take up extra space or change the
+                    total size of the box (it encroaches into the margin). It is often used to highlight input element focus.
                   </p>
                   <p>
-                    When shortcuts are used, the top value is specified first, and then proceeds clockwise around the box; i.e.,
-                    top, then right, then bottom, then left. See below for more details.
+                    The most complicated aspect of the box model is the border, which has a wide variety of attributes that
+                    can be set, including the width, style, color, radius, and image, and all of those settings can be set
+                    individually per edge. This gives a the designer a huge variety of creative options to consider.
                   </p>
                 </section>
                 <section>
@@ -183,7 +184,7 @@
                       <td colspan="2">The bottom padding</td>
                     </tr>
                     <tr>
-                      <td><code>margin&#8209;right:&nbsp;<em>&lt;value&gt;</em>;</code></td>
+                      <td><code>padding&#8209;right:&nbsp;<em>&lt;value&gt;</em>;</code></td>
                       <td colspan="2">The right padding</td>
                     </tr>
                     <tr class="category">
@@ -275,12 +276,6 @@
                       <td colspan="2"><em>The border styles specifies how the borders are drawn</em></td>
                     </tr>
                     <tr>
-                      <td><code>border&#8209;style:&nbsp;<em>&lt;value&gt;</em>;</code></td>
-                      <td colspan="2">
-                        Set a border style for all 4 settings with a single property
-                      </td>
-                    </tr>
-                    <tr>
                       <td><code>border&#8209;top&#8209;style:&nbsp;<em>&lt;value&gt;</em>;</code></td>
                       <td>
                         The top border style
@@ -314,14 +309,36 @@
                       </td>
                     </tr>
                     <tr class="category">
-                      <td>Border Colors</td>
-                      <td colspan="2"><em>The border color can be set individually for each side</em></td>
+                      <td>Border Style Shortcuts</td>
+                      <td colspan="2"><em>Specify all border styles in a single setting</em></td>
                     </tr>
                     <tr>
-                      <td><code>border&#8209;color:&nbsp;<em>&lt;value&gt;</em>;</code></td>
+                      <td><code>border&#8209;style:&nbsp;<em>&lt;top&gt;</em>&nbsp;<em>&lt;right&gt;</em>&nbsp;<em>&lt;bottom&gt;</em>&nbsp;<em>&lt;left&gt;</em>;</code></td>
                       <td colspan="2">
-                        Set a border color for all 4 settings with a single property
+                        Set border styles with a single setting in a clockwise fashion.
                       </td>
+                    </tr>
+                    <tr>
+                      <td><code>border&#8209;style:&nbsp;<em>&lt;top&gt;</em>&nbsp;<em>&lt;right&#8209;and&#8209;left&gt;</em>&nbsp;<em>&lt;bottom&gt;</em>;</code></td>
+                      <td colspan="2">
+                        &quot;
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>border&#8209;style:&nbsp;<em>&lt;top&#8209;and&#8209;bottom&gt;</em>&nbsp;<em>&lt;right&#8209;and&#8209;left&gt;</em>;</code></td>
+                      <td colspan="2">
+                        &quot;
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>border&#8209;style:&nbsp;<em>&lt;value&gt;</em>;</code></td>
+                      <td colspan="2">
+                        &quot;
+                      </td>
+                    </tr>
+                    <tr class="category">
+                      <td>Border Colors</td>
+                      <td colspan="2"><em>The border color can be set individually for each side</em></td>
                     </tr>
                     <tr>
                       <td><code>border&#8209;top&#8209;color:&nbsp;<em>&lt;value&gt;</em>;</code></td>
@@ -348,37 +365,235 @@
                       </td>
                     </tr>
                     <tr class="category">
+                      <td>Border Color Shortcuts</td>
+                      <td colspan="2"><em>Specify all border colors in a single setting</em></td>
+                    </tr>
+                    <tr>
+                      <td><code>border&#8209;color:&nbsp;<em>&lt;top&gt;</em>&nbsp;<em>&lt;right&gt;</em>&nbsp;<em>&lt;bottom&gt;</em>&nbsp;<em>&lt;left&gt;</em>;</code></td>
+                      <td colspan="2">
+                        Set border colors with a single setting in a clockwise fashion.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>border&#8209;color:&nbsp;<em>&lt;top&gt;</em>&nbsp;<em>&lt;right&#8209;and&#8209;left&gt;</em>&nbsp;<em>&lt;bottom&gt;</em>;</code></td>
+                      <td colspan="2">
+                        &quot;
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>border&#8209;color:&nbsp;<em>&lt;top&#8209;and&#8209;bottom&gt;</em>&nbsp;<em>&lt;right&#8209;and&#8209;left&gt;</em>;</code></td>
+                      <td colspan="2">
+                        &quot;
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>border&#8209;color:&nbsp;<em>&lt;value&gt;</em>;</code></td>
+                      <td colspan="2">
+                        &quot;
+                      </td>
+                    </tr>
+                    <tr class="category">
                       <td>Border Radiuses</td>
                       <td colspan="2"><em>Border radius properties allow for rounded corders</em></td>
                     </tr>
                     <tr>
-                      <td><code>border&#8209;radius:&nbsp;<em>&lt;value&gt;</em>;</code></td>
-                      <td colspan="2">
-                        Set all four border radiuses in a single setting. <a href="https://www.w3schools.com/cssref/css3_pr_border-radius.asp" target="_blank">More details</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><code>border&#8209;top&#8209;left&#8209;radius:&nbsp;<em>&lt;value&gt;</em>;</code></td>
+                      <td><code>border&#8209;top&#8209;left&#8209;radius:&nbsp;<em>&lt;horiz&#8209;radius&gt;</em>&nbsp;[&nbsp;&lt;vert&#8209;radius&gt;</em>&nbsp;];</code></td>
                       <td colspan="2">
                         Sets the top-left radius in units or percentages. <a href="https://www.w3schools.com/cssref/css3_pr_border-top-left-radius.asp" target="_blank">More details</a>
                       </td>
                     </tr>
                     <tr>
-                      <td><code>border&#8209;top&#8209;right&#8209;radius:&nbsp;<em>&lt;value&gt;</em>;</code></td>
+                      <td><code>border&#8209;top&#8209;right&#8209;radius:&nbsp;<em>&lt;horiz&#8209;radius&gt;</em>&nbsp;[&nbsp;&lt;vert&#8209;radius&gt;</em>&nbsp;];</code></td>
                       <td colspan="2">
                         Sets the top-right radius in units or percentages. <a href="https://www.w3schools.com/cssref/css3_pr_border-top-right-radius.asp" target="_blank">More details</a>
                       </td>
                     </tr>
                     <tr>
-                      <td><code>border&#8209;bottom&#8209;left&#8209;radius:&nbsp;<em>&lt;value&gt;</em>;</code></td>
+                      <td><code>border&#8209;bottom&#8209;left&#8209;radius:&nbsp;<em>&lt;horiz&#8209;radius&gt;</em>&nbsp;[&nbsp;&lt;vert&#8209;radius&gt;</em>&nbsp;];</code></td>
                       <td colspan="2">
                         Sets the bottom-left radius in units or percentages. <a href="https://www.w3schools.com/cssref/css3_pr_border-bottom-left-radius.asp" target="_blank">More details</a>
                       </td>
                     </tr>
                     <tr>
-                      <td><code>border&#8209;bottom&#8209;right&#8209;radius:&nbsp;<em>&lt;value&gt;</em>;</code></td>
+                      <td><code>border&#8209;bottom&#8209;right&#8209;radius:&nbsp;<em>&lt;horiz&#8209;radius&gt;</em>&nbsp;[&nbsp;&lt;vert&#8209;radius&gt;</em>&nbsp;];</code></td>
                       <td colspan="2">
                         Sets the bottom-right radius in units or percentages. <a href="https://www.w3schools.com/cssref/css3_pr_border-bottom-right-radius.asp" target="_blank">More details</a>
+                      </td>
+                    </tr>
+                    <tr class="category">
+                      <td>Border Radius Shortcuts</td>
+                      <td colspan="2"><em>Specify all border radiuses in a single setting</em></td>
+                    </tr>
+                    <tr>
+                      <td><code>border&#8209;radius:&nbsp;<em>&lt;1&#8209;to&#8209;4&#8209;values&gt;&nbsp;</em>[&nbsp;/&nbsp;<em>&lt;1&#8209;to&#8209;4&#8209;values&gt;</em>&nbsp;];</em></code></td>
+                      <td colspan="2">
+                        <p>
+                          Set border radiuses with a single setting in a clockwise fashion. Similar to all the other shortcuts, except now we are going
+                          by corners instead of sides, starting with the top-left corner. <a href="https://www.w3schools.com/cssref/css3_pr_border-radius.asp" target="_blank">More details<a>
+                        </p>
+                        <p>
+                          Values can be a unit value or a percentage.
+                        </p>
+                        <p>
+                          The specified values define the radii of two quarter elipses. The first value is the horizontal radius. The second value, if specified, is
+                          the vertical radius. If it is omitted, the value is copied from the horizontal radius, and thus the border becomes a quarter-circle.
+                        </p>
+                        <p>
+                          In this shorthand notations, the first group of up to 4 values defines the horizontal radius, which are applied clockwise around
+                          box (sort of). The specify a second set of values (for the vertical radius), insert a slash and then the next set of up to 4 values.
+                        </p>
+                        <p>
+                          Thus, the box borders in their entirety consist of 8 separate values, giving lots of creative flexibility in defining box boundaries.
+                          One can create some fairly strange shapes use border radiuses.
+                        </p>
+                      </td>
+                    </tr>
+                    <tr class="category">
+                      <td>Border Image</td>
+                      <td colspan="2"><em>Instead of a color, you can provide an image to use as the border</em></td>
+                    </tr>
+                    <tr>
+                      <td><code>border&#8209;image&#8209;outset:&nbsp;<em>&lt;1&#8209;to&#8209;4&#8209;values&gt;</em>;</code></td>
+                      <td colspan="2">
+                        <p>
+                          Specifies the amount by which the border image area extends beyond the border box.
+                        </p>
+                        <p>
+                          Value can be a length (with a unit specifier) or a plain number. When specified as a number,
+                          represents a multiple of the corresponding border width.
+                        </p>
+                        <p>
+                          As with all prior shortcut settings above, the settings can be applied individually to each side
+                          by specifying 1 to 4 values that go clockwise around the border.
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>border&#8209;image&#8209;repeat:&nbsp;<em>&lt;1&#8209;to&#8209;4&#8209;values&gt;</em>;</code></td>
+                      <td colspan="2">
+                        <p>
+                          Specifies how the border images are scaled and tiled.
+                        </p>
+                        <p>
+                          Possible values are: <code><em>stretch</em></code>, <code><em>repeat</em></code>, <code><em>round</em></code>,
+                          and <code><em>space</em></code>. <a href="https://www.w3schools.com/cssref/css3_pr_border-image-repeat.asp">More details</a>.
+                        </p>
+                        <p>
+                          As per usual, specify 1 to 4 values in a clockwise fashion.
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>border&#8209;image&#8209;slice:&nbsp;<em>&lt;1&#8209;to&#8209;4&#8209;values&gt;</em>;</code></td>
+                      <td colspan="2">
+                        <p>
+                          Specifies how to slice the image specified by the border image source. The image is sliced into 9 pieces: the
+                          four corners, the four edges, and the middle.
+                        </p>
+                        <p>
+                          <a href="https://www.w3schools.com/cssref/css3_pr_border-image-slice.asp">More details</a>.
+                        </p>
+                        <p>
+                          As per usual, specify 1 to 4 values in a clockwise fashion.
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>border&#8209;image&#8209;source:&nbsp;<em>url(&lt;image&#8209;location&#8209;url&gt;)</em>;</code></td>
+                      <td colspan="2">
+                        <p>
+                          Specifies the source of the border image. Note: Unlike the other image settings, you do not specify up to four
+                          values. You only specify one image. Presumably you're supposed to use the slice property to designate how
+                          to utilize the one image that is provided.
+                        </p>
+                        <p>
+                          <a href="https://www.w3schools.com/cssref/css3_pr_border-image-source.asp">More details</a>.
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>border&#8209;image&#8209;width:&nbsp;<em>&lt;1&#8209;to&#8209;4&#8209;values&gt;</em>;</code></td>
+                      <td colspan="2">
+                        <p>
+                          Specifies the width of the border image.
+                        </p>
+                        <p>
+                          <a href="https://www.w3schools.com/cssref/css3_pr_border-image-width.asp">More details</a>.
+                        </p>
+                        <p>
+                          As per usual, specify 1 to 4 values in a clockwise fashion.
+                        </p>
+                      </td>
+                    </tr>
+                    <tr class="category">
+                      <td>Border Image Shortcut</td>
+                      <td colspan="2"><em>Specify the border image parameters in a single setting</em></td>
+                    </tr>
+                    <tr>
+                      <td><code>border&#8209;image:&nbsp;<em>source</em>&nbsp;[<em>slice</em>]&nbsp;[<em>width</em>]&nbsp;[<em>outset</em>]&nbsp;[<em>repeat</em>];</code></td>
+                      <td colspan="2">
+                        <p>
+                          If you don't mind using the same slice, width, outset, and repeat settings for all four edges, you can use
+                          this shortcut parameter to set them. Otherwise, use the individual image settings to set them for each
+                          edge as-needed.
+                        </p>
+                        <p>
+                          <a href="https://www.w3schools.com/cssref/css3_pr_border-image.asp">More details</a>.
+                        </p>
+                      </td>
+                    </tr>
+                    <tr class="category">
+                      <td>Outlines</td>
+                      <td colspan="2"><em>Outlines are used to highlight a border, but do not take up extra space</em></td>
+                    </tr>
+                    <tr>
+                      <td>About Outlines</td>
+                      <td colspan="2">
+                        <p>
+                          Outlines are an often overlooked aspect of the box model. This could be because outlines do not take
+                          up space or change the dimension of the box (presumably outlines encroach into the box's margin).
+                          Outline are often used to highlight the focus of input elements. For example, the Chrome browser by
+                          default sets a blue outline around form input elements when they have focus.
+                        </p>
+                        <p>
+                          Unlike margins, padding, and border settings, the same outline values must be used for all four
+                          edges of the outline.
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>outline&#8209;color:&nbsp;<em>&lt;value&gt;</em>;</code></td>
+                      <td colspan="2">
+                        Specifies the color of the outline. <a href="https://www.w3schools.com/cssref/pr_outline-color.asp" target="_blank">More details</a>.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>outline&#8209;offset:&nbsp;<em>&lt;value&gt;</em>;</code></td>
+                      <td colspan="2">
+                        The distance between the border and the outline. <a href="https://www.w3schools.com/cssref/css3_pr_outline-offset.asp" target="_blank">More details</a>.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>outline&#8209;style:&nbsp;<em>&lt;value&gt;</em>;</code></td>
+                      <td colspan="2">
+                        The style of the outline. <a href="https://www.w3schools.com/cssref/pr_outline-style.asp" target="_blank">More details</a>.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>outline&#8209;width:&nbsp;<em>&lt;value&gt;</em>;</code></td>
+                      <td colspan="2">
+                        The width of the outline. <a href="https://www.w3schools.com/cssref/pr_outline-width.asp" target="_blank">More details</a>.
+                      </td>
+                    </tr>
+                    <tr class="category">
+                      <td>Outline Shortcut</td>
+                      <td colspan="2"><em>Specify all outline properties in a single setting</em></td>
+                    </tr>
+                    <tr>
+                      <td><code>outline:&nbsp;[<em>&lt;color&gt;</em>]&nbsp;[<em>&lt;style&gt;</em>]&nbsp;[<em>&lt;width&gt;</em>];</code></td>
+                      <td colspan="2">
+                        The color, style, and width of the outline can be set in a single setting with a shortcut. The outline offset
+                        must be set separately. <a href="https://www.w3schools.com/cssref/pr_outline.asp" target="_blank">More details</a>.
                       </td>
                     </tr>
                   </table>
