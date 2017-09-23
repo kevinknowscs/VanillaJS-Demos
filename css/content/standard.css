@@ -48,7 +48,7 @@ summary {
   text-decoration: underline;
 }
 
-.page-content section + section {
+.page-content section:not(.hidden) + section:not(.hidden) {
   border-top: 1px solid lightgray;
   margin-top: 1em;
   padding-top: 1em;

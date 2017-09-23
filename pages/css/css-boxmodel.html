@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script type="text/javascript" src="../../scripts/helpers.js"></script>
+
     <link rel="stylesheet" type="text/css" href="../../css/layout/notebook1.css" />
     <link rel="stylesheet" type="text/css" href="../../css/themes/blue.css" />
     <link rel="stylesheet" type="text/css" href="../../css/content/standard.css" />
@@ -19,7 +21,62 @@
         font-family: monospace;
         font-style: italic;
       }
+
+      section.hidden {
+        display: none;
+      }
+
+      section.noheader h1 {
+        display: none;
+      }
     </style>
+
+    <script type="text/javascript">
+      function myFunction() {
+        alert('Hello');
+      }
+
+      function addClass(el, className) {
+        if (el.classList) {
+          el.classList.add(className);
+        }
+        else if (!hasClass(el, className)) {
+          el.className += ' ' + className;
+        }
+      }
+
+      function removeClass(el, className) {
+        if (el.classList) {
+          el.classList.remove(className);
+        }
+        else {
+          el.className = el.className.replace(new RegExp('\\b'+ className+'\\b', 'g'), '');
+        }
+      }
+
+      onDocumentReady(function () {
+        var cb = document.getElementById('checkboxShowPropsTable');
+        var intro = document.getElementById('introduction');
+        var web = document.getElementById('web-resources');
+        var visual = document.getElementById('visual');
+        var properties = document.getElementById('properties');
+
+        cb.addEventListener('change', function() {
+          if (cb.checked) {
+            addClass(intro, 'hidden');
+            addClass(web, 'hidden');
+            addClass(visual, 'hidden');
+            addClass(properties, 'noheader');
+          }
+          else {
+            removeClass(intro, 'hidden');
+            removeClass(web, 'hidden');
+            removeClass(visual, 'hidden');
+            removeClass(properties, 'noheader');
+          }
+        });
+      });
+    </script>
   </head>
   <body>
     <div class="outer-layout">
@@ -75,14 +132,19 @@
         <div class="south-right-pane">
           <div class="page-area">
             <div class="page-title-area">
-              <div class="page-title">
-                CSS Box Model
+              <div class="page-title" style="width: 100%;">
+                <div style="float: left;">
+                  CSS Box Model
+                </div>
+                <div style="float: right; padding-right: 10px; font-size: 12pt; font-weight: normal;">
+                  <input id="checkboxShowPropsTable" type="checkbox">Show Properties Table Only
+                </div>
               </div>
             </div>
             <div class="page-content-scroller">
               <div class="page-content">
-                <section>
-                <h1>Introduction</h1>
+                <section id="introduction">
+                  <h1>Introduction</h1>
                   <p>
                     The CSS box model consists of margins, borders, padding, and content.
                   </p>
@@ -98,7 +160,7 @@
                     the entire appearance of the box and its content, such as fonts, text styling, colors, transforms, etc.
                   </p>
                 </section>
-                <section>
+                <section id="web-resources">
                   <h1>Web Resources</h1>
                   <p>
                     <ul>
@@ -106,13 +168,13 @@
                     </ul>
                   </p>
                 </section>
-                <section>
+                <section id="visual">
                   <h1>Visual Depiction</h1>
                   <p>
                     <img src="../../images/css-boxmodel.png" style="width: 550px; max-width: 90%;">
                   </p>
                 </section>
-                <section>
+                <section id="properties">
                   <h1>Box Model Properties</h1>
                   <table class="common">
                     <tr>
