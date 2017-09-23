@@ -84,14 +84,18 @@
                 <section>
                 <h1>Introduction</h1>
                   <p>
-                    The CSS box model consists of margins, borders, padding, and content. A sometimes overlooked aspect of the box model
-                    is the outline, which can be used to augment the look of the border. It does not take up extra space or change the
-                    total size of the box (it encroaches into the margin). It is often used to highlight input element focus.
+                    The CSS box model consists of margins, borders, padding, and content.
                   </p>
                   <p>
-                    The most complicated aspect of the box model is the border, which has a wide variety of attributes that
+                    The most intricate aspect of the box model is the border, which has a wide variety of attributes that
                     can be set, including the width, style, color, radius, and image, and all of those settings can be set
-                    individually per edge. This gives a the designer a huge variety of creative options to consider.
+                    individually per edge. Additionally, the border can be further decorated with outlines and shadows. This gives the 
+                    designer a huge variety of creative options to consider.
+                  </p>
+                  <p>
+                    In this article we consider the core CSS properties that affect the box size and visible appearance. It covers margins,
+                    padding, borders, outlines, box shadows, and content sizing. It does not cover other ancillary properties that affect
+                    the entire appearance of the box and its content, such as fonts, text styling, colors, transforms, etc.
                   </p>
                 </section>
                 <section>
@@ -556,7 +560,7 @@
                           default sets a blue outline around form input elements when they have focus.
                         </p>
                         <p>
-                          Unlike margins, padding, and border settings, the same outline values must be used for all four
+                          Unlike margins, padding, and border settings, the same outline values must be used for all
                           edges of the outline.
                         </p>
                       </td>
@@ -597,7 +601,18 @@
                       </td>
                     </tr>
                     <tr class="category">
-                      <td>Content Hieght and Width</td>
+                        <td>Box Shadows</td>
+                        <td colspan="2"><em>Draws one or more shadows to give the box a 3-dimensional look</em></td>
+                      </tr>
+                      <tr>
+                        <td><code>box&#8209;shadow:&nbsp;<em>&lt;settings&gt;</em>;</code></td>
+                        <td colspan="2">
+                          Sets the box shadow properties. Box shadow properties can be quite intricate. 
+                          <a href="https://www.w3schools.com/cssref/css3_pr_box-shadow.asp">More details.</a>
+                        </td>
+                      </tr>  
+                    <tr class="category">
+                      <td>Content Height and Width</td>
                       <td colspan="2"><em>How the box content is sized</em></td>
                     </tr>
                     <tr>
