@@ -473,7 +473,21 @@
                   <details>
                     <summary>Floats</summary>
                     <p>
-                      Narrative here
+                      Originally designed for floating blocks of text around images, the <code>float</code> property became, prior
+                      to Flexbox and Grid layouts, one of the most commonly used tools for creating multiple column layouts on web pages. 
+                      Another common use case is laying out a top navigation bar. You want some content in the navigation bar aligned to 
+                      the left hand side, and other content aligned to the right hand side.
+                    </p>
+                    <p>
+                      Floats are tricky to use, because after using the float to align the desired content, we need to clear
+                      the floats so that the follow-on content goes back normal. This makes the designing clean, well-organized,
+                      independently-formatted content more difficult. Floats are less needed now that we have Flexbox and Grid layouts,
+                      but they can still be useful in some situations.
+                    </p>
+                    <h1>More Information</h1>
+                    <p>
+                      <a href="https://www.w3schools.com/css/css_float.asp" target="_blank">W3Schools - Float and Clear</a><br>
+                      <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Floats" target="_blank">MDN - Floats</a>
                     </p>
                   </details>
                 </section>
@@ -482,7 +496,59 @@
                   <details>
                     <summary>Positioning</summary>
                     <p>
-                      Narrative here
+                      Positioning allows you to take elements out of the normal document layout flow, and make them behave
+                      differently, for example sitting on top of one another, or always remaining in the same place inside
+                      the browser viewport.
+                    </p>
+                    <table>
+                      <tr>
+                        <th>Position Value</th>
+                        <th>Description</th>
+                      </tr>
+                      <tr>
+                        <td><code>position:&nbsp;static;</code></td>
+                        <td>
+                          The default position of every element. It means <q>put the element in it's normal position in the
+                          document layout flow.</q>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><code>position:&nbsp;relative;</code></td>
+                        <td>
+                          Once the positioned element has taken its place in the normal layout flow, you can then
+                          modify its final position (using the CSS properties <code>top</code>, <code>left</code>, <code>bottom</code>,
+                          and <code>right</code>).
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><code>position:&nbsp;absolute;</code></td>
+                        <td>
+                          An absolutely positioned element no longer exists in the normal document layout flow. It sits on it's own layer,
+                          separate from everything else. It's position is anchored by it's closest statically positioned ancestor, and
+                          is controlled with the CSS properties <code>top</code>, <code>left</code>, <code>bottom</code>, and <code>right</code>.
+                          You can also use <code>z-index</code> to control its position in a z axis, which can be affected by the opacity
+                          if it overlaps other elements.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><code>position:&nbsp;fixed;</code></td>
+                        <td>
+                          Similar to <code>absolute</code> positioning, except the element is positioned relative to the browser viewport
+                          itself (as opposed to its closest static ancestor).
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><code>position:&nbsp;sticky;</code></td>
+                        <td>
+                          An experimental position that is not yet widely supported, it is a hybrid of relative and fixed. The element is
+                          relatively positioned until it is scrolled to a certain threshold point, after which it becomes fixed.
+                        </td>
+                      </tr>
+                    </table>
+                    <h1>More Information</h1>
+                    <p>
+                      <a href="https://www.w3schools.com/css/css_positioning.asp" targets="_blank">W3Schools - The position Property</a><br>
+                      <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning" target="_blank">MDN - Positioning</a>
                     </p>
                   </details>
                 </section>
@@ -533,226 +599,6 @@
                     <th>Links</th>
                   </tr>
                   <tr>
-                    <td>Box Display Types</td>
-                    <td>
-                      <p>
-                        You can always use the standard <code>display</code> properties to layout elements using the
-                        standard document flow.
-                      </p>
-                      <table>
-                        <tr>
-                          <th>Display Value</th>
-                          <th>Description</th>
-                          <th>Box Characteristics</th>
-                        </tr>
-                        <tr>
-                          <td><code>display:&nbsp;none;</code></td>
-                          <td>
-                            The box is not rendered and no space is taken up in the document flow. To reserve space in the
-                            document flow, but make the box invisible, use <code>visibility:&nbsp;hidden;</code> instead.
-                          </td>
-                          <td>
-                            <ul>
-                              <li>N/A</li>
-                            </ul>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code>display:&nbsp;block;</code></td>
-                          <td>Displays the element as a block element (like <code>&lt;p&gt;<code>)</td>
-                          <td>
-                            <ul>
-                              <li>Settable width and height</li>
-                              <li>
-                                Normally, line breaks are inserted into the document flow after the element, unless other flow-disrupting
-                                properties are in effect, such as floats, non-static positioning, etc.
-                              </li>
-                            </ul>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code>display:&nbsp;inline;</code></td>
-                          <td>Displays the element as an inline element (like <code>&lt;span&gt;</code>)</td>
-                          <td>
-                            <ul>
-                              <li>Width and height are ignored</li>
-                              <li>No line break inserted into the document flow after the element</li>
-                            </ul>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code>display:&nbsp;inline&#8209;block;</code></td>
-                          <td>
-                            Displays the element as an inline-level block container. The inside of this block is
-                            formatted as a block-level box, and the element itself is formatted as an inline-level box.
-                          </td>
-                          <td>
-                            <ul>
-                              <li>Settable width and height</li>
-                              <li>No line break inserted into the document flow after the element</li>
-                            </ul>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Other Display Values</td>
-                          <td>
-                            <mark>
-                              See other layout alternatives below for more possible display values, such as <code>flex</code>
-                              and <code>grid</code>.
-                            </mark>
-                          </td>
-                          <td>
-                            <ul>
-                              <li>See below</li>
-                            </ul>
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                    <td>
-                      <a href="http://localhost/vanillajs/css-boxdisplay.html">Examples</a>&nbsp;|&nbsp;
-                      <a href="https://www.w3schools.com/cssref/pr_class_display.asp" target="_blank">W3Schools</a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Box Model Properties</td>
-                    <td>
-                      To tweak the flow of your elements, you can use the CSS Box Model properties, namely, margins, borders,
-                      and padding.
-                    </td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>Block Width &amp; Height</td>
-                    <td>
-                      You can get clever with a div's height and width, including, in some cases, using percentage units
-                      to fill the available space. Note that height and width do not apply to inline elements.
-                    </td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>Box Sizing</td>
-                    <td>
-                      <p>
-                        Depending on how we're sizing the box, and how it relates to the content surrounding it, we have
-                        two options for sizing a box. This tells the browser what we mean by &quot;<code>width</code>&quot;
-                        and &quot;<code>height</code>&quot;.
-                      </p>
-                      <table>
-                        <tr>
-                          <th>Sizing Values</th>
-                          <th>Description</th>
-                        </tr>
-                        <tr>
-                          <td><code>content-box</code></td>
-                          <td>
-                            Default. The <code>width</code> and <code>height</code> properties (including their corresponding min/max properties)
-                            includes only the content. Border, padding, and margins are not included in the size of the box.
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code>border-box</code></td>
-                          <td>
-                            The <code>width</code> and <code>height</code> properties (including their corresponding min/max properties) includes
-                            the content, padding, and border, but not the margin.
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>Auto Margins</td>
-                    <td>
-                      When do auto margins work, and how to use them.
-                    </td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>Negative Margins</td>
-                    <td>Some examples of negative margin usages</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>CSS calc()</td>
-                    <td>
-                      Before the advent of Flexbox, the CSS3 calc() function can be handy to use in combination with
-                      percentage-based widths and heights. For example, you can set a top navigation pane to 50px height,
-                      then set the bottom, resizable pane height to &quot;calc(100%-50px)&quot;.
-                    </td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>Media Queries</td>
-                    <td>
-                      Using media queries, we can create CSS rules that are applied depending on the size of the browser.
-                      This allows us to create reactive layouts that can nicely handle different device and screen sizes.
-                    </td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>Floats</td>
-                    <td>
-                      Originally for floating images inside of blocks of text, the <code>float</code> property has become
-                      one of the most commonly used tools for creating multiple column layouts on web pages.
-                    </td>
-                    <td><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Floats" target="_blank">MDN</a></td>
-                  </tr>
-                  <tr>
-                    <td>Positioning</td>
-                    <td>
-                      <p>
-                        Positioning allows you to take elements out of the normal document layout flow, and make them behave
-                        differently, for example sitting on top of one another, or always remaining in the same place inside
-                        the browser viewport.
-                      </p>
-                      <table>
-                        <tr>
-                          <th>Position Value</th>
-                          <th>Description</th>
-                        </tr>
-                        <tr>
-                          <td><code>position:&nbsp;static;</code></td>
-                          <td>
-                            The default position of every element. It means <q>put the element in it's normal position in the
-                            document layout flow.</q>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code>position:&nbsp;relative;</code></td>
-                          <td>
-                            Once the positioned element has taken its place in the normal layout flow, you can then
-                            modify its final position (using the CSS properties <code>top</code>, <code>left</code>, <code>bottom</code>,
-                            and <code>right</code>).
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code>position:&nbsp;absolute;</code></td>
-                          <td>
-                            An absolutely positioned element no longer exists in the normal document layout flow. It sits on it's own layer,
-                            separate from everything else. It's position is anchored by it's closest statically positioned ancestor, and
-                            is controlled with the CSS properties <code>top</code>, <code>left</code>, <code>bottom</code>, and <code>right</code>.
-                            You can also use <code>z-index</code> to control its position in a z axis, which can be affected by the opacity
-                            if it overlaps other elements.
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code>position:&nbsp;fixed;</code></td>
-                          <td>
-                            Similar to <code>absolute</code> positioning, except the element is positioned relative to the browser viewport
-                            itself (as opposed to its closest static ancestor).
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><code>position:&nbsp;sticky;</code></td>
-                          <td>
-                            An experimental position that is not yet widely supported, it is a hybrid of relative and fixed. The element is
-                            relatively positioned until it is scrolled to a certain threshold point, after which it becomes fixed.
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                    <td><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning" target="_blank">MDN</a></td>
                   </tr>
                   <tr>
                     <td>Tables</td>
