@@ -97,7 +97,7 @@
                       design by considering table, list, Flexbox, and Grid layout mechanisms.
                     </p>
                     <p>
-                      That's not to suggest that the workflow is a strictly linear progress. For example, if one knows for 
+                      That's not to suggest that the workflow is a strictly linear progress. For example, if one knows for
                       sure that they want or need a Flexbox or Grid layout, you may want to start there and then work your
                       way back into the CSS Box Model margins and padding. It's an iterative process. The final design will
                       usually involve a hybrid of all of the approaches outlined here.
@@ -390,7 +390,7 @@
                         <td>
                           <p>
                             The introduction of CSS3 gave us the <code>calc()</code> function, which is now supported on all modern browsers,
-                            including IE10 and IE11, and even IE9 supports it with a few minor bugs.    
+                            including IE10 and IE11, and even IE9 supports it with a few minor bugs.
                           </p>
                           <p>
                             The most common use case is to calculate the actual width based on a percentage value and a fixed unit value. For example,
@@ -487,8 +487,8 @@
                     <summary>Floats</summary>
                     <p>
                       Originally designed for floating blocks of text around images, the <code>float</code> property became, prior
-                      to Flexbox and Grid layouts, one of the most commonly used tools for creating multiple column layouts on web pages. 
-                      Another common use case is laying out a top navigation bar. You want some content in the navigation bar aligned to 
+                      to Flexbox and Grid layouts, one of the most commonly used tools for creating multiple column layouts on web pages.
+                      Another common use case is laying out a top navigation bar. You want some content in the navigation bar aligned to
                       the left hand side, and other content aligned to the right hand side.
                     </p>
                     <p>
@@ -579,7 +579,89 @@
                   <details>
                     <summary>Table Layouts</summary>
                     <p>
-                      Narrative here
+                      Using the HTML table tags for layout purposes has always been frowned upon, primarily
+                      <a href="http://phrogz.net/css/WhyTablesAreBadForLayout.html" target="_blank">for these reasons</a>.
+                    </p>
+                    <p>
+                      The dogma always seemed a bit silly to me, especially considering how difficult is was to create certain layouts
+                      without tables, and how easy it was to do with tables. Take for example the so-called
+                      <a href="https://en.wikipedia.org/wiki/Holy_Grail_(web_design)" target="_blank">Holy Grail</a> layout, and various
+                      attempts over the years to create them with tableless CSS rules. It hardly seems fair to give something the mystique
+                      of the <em><strong>Holy Grail</strong></em>, when there's a beautiful, solid gold, jewel-encrusted chalice laid out
+                      directly before you, surrounded by flashing neon lights emblazened with the headline <q>Jesus Drank from this Cup</q>.
+                    </p>
+                    <p>
+                      But, using CSS tables instead of hard-coded HTML elements, we can avoid some of the downsides of tables. With Flexbox
+                      now becoming ubiquitous, there's less reason to consider CSS tables, but even so, it's good to keep CSS table layout
+                      tucked away in your bag of tricks. Any HTML element can be made to act as a table element using the CSS <code>display</code>
+                      property.
+                    </p>
+                    <br>
+                    <table>
+                      <tr>
+                        <th>Display Setting</th>
+                        <th>Element Behavior</th>
+                      </tr>
+                      <tr>
+                        <td><code>display:&nbsp;table;</code></td>
+                        <td>
+                          Let the element behave like a <code>&lt;table&gt;</code> element
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><code>display:&nbsp;table&#8209;caption;</code></td>
+                        <td>
+                          Let the element behave like a <code>&lt;caption&gt;</code> element
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><code>display:&nbsp;table&#8209;column&#8209;group;</code></td>
+                        <td>
+                          Let the element behave like a <code>&lt;colgroup&gt;</code> element
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><code>display:&nbsp;table&#8209;header&#8209;group;</code></td>
+                        <td>
+                          Let the element behave like a <code>&lt;thead&gt;</code> element
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><code>display:&nbsp;table&#8209;footer&#8209;group;</code></td>
+                        <td>
+                          Let the element behave like a <code>&lt;tfooter&gt;</code> element
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><code>display:&nbsp;table&#8209;row&#8209;group;</code></td>
+                        <td>
+                          Let the element behave like a <code>&lt;tbody&gt;</code> element
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><code>display:&nbsp;table&#8209;cell;</code></td>
+                        <td>
+                          Let the element behave like a <code>&lt;td&gt;</code> element
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><code>display:&nbsp;table&#8209;column;</code></td>
+                        <td>
+                          Let the element behave like a <code>&lt;col&gt;</code> element
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><code>display:&nbsp;table&#8209;row;</code></td>
+                        <td>
+                          Let the element behave like a <code>&lt;tr&gt;</code> element
+                        </td>
+                      </tr>
+                    </table>
+                    <h1>More Information</h1>
+                    <p>
+                      <a href="https://colintoh.com/blog/display-table-anti-hero" target="_blank">The Anti-hero of CSS Layout</a><br>
+                      <a href="http://phrogz.net/css/WhyTablesAreBadForLayout.html" target="_blank">Why Tables Are Bad (For Layout)</a><br>
+                      <a href="https://www.w3schools.com/cssref/pr_class_display.asp" target="_blank">W3Schools - The <code>display</code> Property</a>
                     </p>
                   </details>
                 </section>
