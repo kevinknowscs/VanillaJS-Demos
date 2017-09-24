@@ -83,11 +83,24 @@
                   <details>
                     <summary>Introduction</summary>
                     <p>
-                      UNDER CONSTRUCTION
-                    </p>
-                    <p>
                       This page reviews the basic CSS layout strategies that a web developer can employ
                       to layout content on a page.
+                    </p>
+                    <p>
+                      Along the way I present a basic workflow for how one can go about translating a desired design
+                      into a workable page layout. First, we start by creating a sensible DOM layout using standard
+                      HTML tags and/or <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> tags. Next, we work on the
+                      general sizing and spacing of the layout using the CSS Box Model facilities. Before going any further,
+                      we pause to think about how the layout will work with different screen sizes, and think about how we
+                      will use CSS Media Queries to affect a responsive design. We then consider when or where we may need
+                      to use floats or positioning. Finally, we consider which type of layout will be most effective for our
+                      design by considering table, list, Flexbox, and Grid layout mechanisms.
+                    </p>
+                    <p>
+                      That's not to suggest that the workflow is a strictly linear progress. For example, if one knows for 
+                      sure that they want or need a Flexbox or Grid layout, you may want to start there and then work your
+                      way back into the CSS Box Model margins and padding. It's an iterative process. The final design will
+                      usually involve a hybrid of all of the approaches outlined here.
                     </p>
                   </details>
                 </section>
@@ -575,7 +588,16 @@
                   <details>
                     <summary>Flexbox</summary>
                     <p>
-                      Narrative here
+                      A new technology, but with support now fairly widespread across browsers, Flexbox is starting to become ready for
+                      widespread use. It allows for rapid creation of complex, flexible layouts, and features that have historically proved
+                      difficult with CSS.
+                    </p>
+                    <h1>More Information</h1>
+                    <p>
+                      <a href="css-flexbox.html">Flexbox Examples</a><br>
+                      <a href="https://www.w3schools.com/css/css3_flexbox.asp" target="_blank">W3Schools - Flexible Box</a><br>
+                      <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox" target="_blank">MDN - Flexbox</a><br>
+                      <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">CSS-Tricks - A Complete Guide to Flexbox</a>
                     </p>
                   </details>
                 </section>
@@ -584,54 +606,20 @@
                   <details>
                     <summary>Grid Layouts</summary>
                     <p>
-                      Narrative here
-                    </p>
-                  </details>
-                </section>
-
-
-                <table>
-                  <p>
-                  </p>
-                  <tr>
-                    <th>Summary</th>
-                    <th>Description</th>
-                    <th>Links</th>
-                  </tr>
-                  <tr>
-                  </tr>
-                  <tr>
-                    <td>Tables</td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>Lists</td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>Flexbox</td>
-                    <td>
-                      A new technology, but with support now fairly widespread across browsers, Flexbox is starting to become ready for
-                      widespread use. It allows for rapid creation of complex, flexible layouts, and features that have historically proved
-                      difficult with CSS.
-                    </td>
-                    <td>
-                      <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox" target="_blank">MDN</a>&nbsp;|&nbsp;
-                      <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">CSSTricks</a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Grids</td>
-                    <td>
                       A nascent new browser feature that makes implementing a grid design much easier. Grid designs, such as those popularized
                       by Bootstrap and other similar CSS toolkits have traditionally used <code>floats</code> or other layout features, and
                       can sometimes prove tricky to implement.
-                    </td>
-                    <td><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids" target="_blank">MDN</a></td>
-                  </tr>
-                </table>
+                    </p>
+                    <p>
+                      The main difference between Flexbox and Grid is that Flexbox is designed for a one-dimensional layout,
+                      whereas Grid is explicitly designed to create two-dimensional layouts.
+                    </p>
+                    <h1>More Information</h1>
+                    <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids" target="_blank">MDN - Grids</a><br>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout" target="_blank">MDN - CSS Grid Layout</a><br>
+                    <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">CSS-Tricks - A Complete Guide to Grid</a>
+                  </details>
+                </section>
               </div>
             </div>
           </div>
