@@ -13,6 +13,10 @@
       table.templates td:nth-child(2) {
         width: 190px;
       }
+
+      table.table-advanced-box td:nth-child(1) {
+        width: 150px;
+      }
     </style>
   </head>
   <body>
@@ -301,91 +305,20 @@
                 </section>
 
                 <section>
-                  <details open>
+                  <details>
                     <summary>Basic Box Model Layout</summary>
                     <p>
-                      The CSS box model consists of margins, borders, padding, and content. The top, left, bottom, and right
-                      values can be set independently, or they can be set with a single setting using a shortcut specifying
-                      one or more values.
+                      After laying out the page with well-chosen HTML tags, and choosing <code>block</code>, <code>inline</code>,
+                      and <code>inline&#8209;block</code> box types as-needed, the next step in a typical layout workflow would
+                      be to turn our attention to the CSS Box Model styling attributes to size the boxes as we'd like.
                     </p>
                     <p>
-                      When shortcuts are used, the top value is specified first, and then proceeds clockwise around the box; i.e.,
-                      top, then right, then bottom, then left. See below for more details.
+                      The CSS Box Model is a very power and flexible mechanism for controlling the margin, border, and padding of
+                      the boxes.
                     </p>
-                    <h1>The CSS Box Model</h1>
+                    <h1>More Information</h1>
                     <p>
-                      <img src="images/css-boxmodel.png">
-                    </p>
-                    <h1>Box Model Properties</h1>
-                    <table class="common">
-                      <tr>
-                        <th>CSS Property</th>
-                        <th>Description</th>
-                      </tr>
-                      <tr class="category">
-                        <td>Margins</td>
-                        <td><em>Margins are used to push the box border away from the surrounding content</em></td>
-                      </tr>
-                      <tr>
-                        <td><code>margin&#8209;top:&nbsp;&lt;value&gt;;</code></td>
-                        <td>The top margin</td>
-                      </tr>
-                      <tr>
-                        <td><code>margin&#8209;left:&nbsp;&lt;value&gt;;</code></td>
-                        <td>The left margin</td>
-                      </tr>
-                      <tr>
-                        <td><code>margin&#8209;bottom:&nbsp;&lt;value&gt;;</code></td>
-                        <td>The bottom margin</td>
-                      </tr>
-                      <tr>
-                        <td><code>margin&#8209;right:&nbsp;&lt;value&gt;;</code></td>
-                        <td>The right margin</td>
-                      </tr>
-                      <tr class="category">
-                        <td>Margin Shortcuts</td>
-                        <td>Specify all margins in a single setting</td>
-                      </tr>
-                      <tr>
-                        <td><code>margin:&nbsp;20px,&nbsp;15px,&nbsp;10px&nbsp;5px;</code></td>
-                        <td>Top is 20px; Right is 15px; Bottom is 10px; Left is 5px</td>
-                      </tr>
-                      <tr>
-                        <td><code>margin:&nbsp;20px,&nbsp;15px,&nbsp;10px;</code></td>
-                        <td>
-                          Top is 20px; Right is 15px; Bottom is 10px; 15px. Since the left margin value
-                          was omitted, the value of the right margin is used for both left and right.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td><code>margin:&nbsp;20px,&nbsp;15px;</code></td>
-                        <td>
-                          Top is 20px; Right is 15px; Bottom is 20px; Left is 15px. Since only two values
-                          were specified, the first value is used for the top and bottom, and the second
-                          value is used for the left and right.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td><code>margin:&nbsp;20px;</code></td>
-                        <td>
-                          All four margins are set to 20px. Since only one value is specified, the value is
-                          used for all four settings.
-                        </td>
-                      </tr>
-                      <tr class="category">
-                        <td>Borders</td>
-                        <td><em>A box can specify a border that goes around the padding and content.</em></td>
-                      </tr>
-
-                    </table>
-                  </details>
-                </section>
-
-                <section>
-                  <details>
-                    <summary>Box Sizing</summary>
-                    <p>
-                      Narrative here
+                      <a href="css-boxmodel.html">CSS Box Model</a>
                     </p>
                   </details>
                 </section>
@@ -394,8 +327,109 @@
                   <details>
                     <summary>Advanced Box Model Layout</summary>
                     <p>
-                      Narrative here
+                      Beyond the basic box model usage, there are some advanced, trickier, and less known techniques we can consider.
                     </p>
+                    <table class="table-advanced-box">
+                      <tr>
+                        <th>Technique</th>
+                        <th>Notes</th>
+                      </tr>
+                      <tr>
+                        <td>Box Sizing</td>
+                        <td>
+                          <p>
+                           The <code>box&#8209;sizing</code> property is set to <code>content&#8209;box</code> by default. That means
+                           the <code>height</code> and <code>width</code> settings are applied to the size of the box's content only.
+                           The total size of the box is the content size + border + margin + padding.
+                          </p>
+                          <p>
+                            It's often the case, especially when focusing on the outer, overall layout of the page, that this doesn't
+                            give us what we want. If we change the sizing property to <code>border&#8209;box</code>, then the height
+                            and width will apply to the content size + padding + border (but still not the margin).
+                          </p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Negative Margins</td>
+                        <td>
+                          <p>
+                            Although not immediately obvious, negative margins are valid on boxes. While its best not to misuse this
+                            feature, there are legitimate use cases for negative margins. <a href="https://www.smashingmagazine.com/2009/07/the-definitive-guide-to-using-negative-margins/">More Details</a>
+                          </p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Auto Margins</td>
+                        <td>
+                          <p>
+                            The keyword <code>auto</code> can be applied as a setting to the left and right margins. When they are both
+                            set to <code>auto</code>, then content will center itself horizontally with the parent box.
+                          </p>
+                          <p>
+                            Unfortunately, <code>auto</code> margins do not work for the top and bottom margins, and so the same technique
+                            does not work for vertically aligning content within a parent box. Vertical alignment is a classic problem with
+                            HTML and CSS.
+                          </p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>CSS <code>calc()</code> Function</td>
+                        <td>
+                          <p>
+                            The introduction of CSS3 gave us the <code>calc()</code> function, which is now supported on all modern browsers,
+                            including IE10 and IE11, and even IE9 supports it with a few minor bugs.    
+                          </p>
+                          <p>
+                            The most common use case is to calculate the actual width based on a percentage value and a fixed unit value. For example,
+                            suppose my box has left and right margins of 10px each, and I want my width to be 100% of the width of my parent. Without
+                            <code>calc()</code>, I have no way to do this. Even if I set <code>box&#8209;sizing:&nbsp;border&#8209;box</code>, I still
+                            have to account for my margins. Using <code>calc()</code> I can subract off my left and right margins and set
+                            <code>width:&nbsp;calc(100%&nbsp;-&nbsp;20px)</code>.
+                          </p>
+                          <p>
+                            The <code>calc()</code> function works best when I have the box sizing set to <code>border&#8209;box</code>, because then
+                            I only need to worry about my margins. The padding and borders are already accounted for.
+                          </p>
+                          <p>
+                            The <code>calc()</code> function is less needed now that we have the newer Flexbox and Grid layouts. Even so, I find that
+                            this is often the easiest way of accomplishing some otherwise thorny layout problems.
+                          </p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Setting Body Height</td>
+                        <td>
+                          <p>
+                            It doesn't happen to me as much anymore, but when I was new to CSS layout I'd often get burned by this one. I'd have a layout
+                            that I intended to fill the full page of the browser. I was certain everything was correct, but my inner child element wouldn't
+                            expand to fill the full height of the browser. Instead, it would collapse down to the height of its children.
+                          </p>
+                          <p>
+                            The problem is that the html and body tags themselves were not expanding to the full browser height. We can set those easily
+                            enough. I also usually set padding and margin to 0 on those element as well. My CSS generally has a rule it it like:
+                          </p>
+                          <p>
+                            <code>
+                              html, body {<br>
+                              &nbsp;&nbsp;margin:&nbsp;0;<br>
+                              &nbsp;&nbsp;padding:&nbsp;0;<br>
+                              &nbsp;&nbsp;height:&nbsp;100%;<br>
+                              &nbsp;&nbsp;width:&nbsp;100%;<br>
+                              }
+                            </code>
+                          </p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Other Display Types</td>
+                        <td>
+                          In the old days of CSS 2.1, we only had the lowly <code>display:&nbsp;block</code> and <code>display:&nbsp;inline</code> to
+                          work with. But with the introduction of CSS 3, we gained a whole host of new display options. We now have display types
+                          dedicated to list and table displays, and with the new Flexbox and Grid layout modules, we've gained even more flexibility.
+                          The layouts are discussed further down the page.
+                        </td>
+                      </tr>
+                    </table>
                   </details>
                 </section>
 
@@ -403,7 +437,34 @@
                   <details>
                     <summary>Media Queries</summary>
                     <p>
-                      Narrative here
+                      Media queries allow us to design interfaces that are responsive to a wide variety of device capabilities. Our page layouts
+                      should contemplate how the user experience will behave on different screen sizes and different device capabilities.
+                    </p>
+                    <p>
+                      Originally introduced as <em>media types</em> in CSS 2, which provided some limited responsive design constructs, these
+                      capabilities were greatly expanded in CSS 3 with the introduction of <em>media queries</em>. CSS 2 only allowed us to query
+                      the type of the device, but with CSS 3 we can query the <em><strong>capabilities</strong></em> of the device. Does the
+                      device have a mouse? Does it support stylus or touch input? What is its aspect ratio? Etc.
+                    </p>
+                    <p>
+                      Some measure of responsive design can be accomplished without media queries. When we use percentage height and widths in
+                      our CSS rules, telling the browser to stretch out our content to fill the space of the parent box, we're doing responsive
+                      design that can accommodate the user resizing their browser ... but only to a degree. That approach won't accommodate radical
+                      changes in screen size. What happens if the user accesses the site from their smartphone or tablet? It won't look good.
+                      We need more than just stretching our box to fill the space, we need a way to choose between entirely different layout options
+                      based on the capabilities of the device. Our beautiful side navigation pane looks great when the browser is at least 1200px
+                      wide, but for smaller sizes we want a dropdown list at the top of the page that doesn't require as much space. Those are the
+                      kinds of choices we can build into our CSS rules using media queries.
+                    </p>
+                    <h1>More Information</h1>
+                    <p>
+                      <a href="https://www.w3schools.com/css/css_rwd_mediaqueries.asp" target="_blank">W3Schools - Responsive Web Design</a><br>
+                      <a href="https://www.w3schools.com/css/css3_mediaqueries_ex.asp" target="_blank">W3Schools - Media Query Examples</a><br>
+                      <a href="https://www.w3schools.com/css/css3_mediaqueries.asp" target="_blank">W3Schools - Media Queries Overview</a><br>
+                      <a href="https://www.w3schools.com/cssref/css3_pr_mediaquery.asp" target="_blank">W3Schools - The <code>@media</code> CSS Rule</a><br>
+                      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries" target="_blank">MDN - Media Queries Overview</a><br>
+                      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries" target="_blank">MDN - Using Media Queries</a><br>
+                      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media" target="_blank">MDN - <code>@media</code></a>
                     </p>
                   </details>
                 </section>
