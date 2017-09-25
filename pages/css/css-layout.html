@@ -568,9 +568,69 @@
 
                 <section>
                   <details>
-                    <summary>List Layouts</summary>
+                    <summary>List Layouts &amp; Styling</summary>
                     <p>
-                      Narrative here
+                      We tend to think of ordered an unordered lists as inherently being a way to style hierarchically
+                      arranged, bulleted lists. That is the default styling applied to those elements, but semantically
+                      speaking, the <code>&lt;ol&gt;</code> and <code>&lt;ul&gt;</code> are only meant to define a block
+                      that contains a list of items. They may be displayed as bulleted lists, and are by default, but
+                      ultimately it is up to the designer to style them. CSS provides us with mechanisms for doing so.
+                    </p>
+                    <p>
+                      Lists can sometimes be used as a layout mechanism. For example,
+                      <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Practical_positioning_examples" target="_blank">this article</a>
+                      from MDN describes how to use lists as a way of composing a tab control, and
+                      <a href="http://htmlcssjavascript.com/css/a-three-column-css-layout-using-just-an-unordered-list/" target="_blank">this article</a>
+                      describes how to use lists to create multi-column layouts. Lists can also be an effective way to mark up the items in a top
+                      or side navigation pane.
+                    </p>
+                    <br>
+                    <table>
+                      <tr>
+                        <th>CSS Property</th>
+                        <th>Description</th>
+                      </tr>
+                      <tr>
+                        <td><code>display:&nbsp;list&#8209;item;</code></td>
+                        <td>
+                          Let the element behave like a <code>&lt;li&gt;</code> element
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><code>list&#8209;style:&nbsp;[&lt;<em>type</em>&gt;]&nbsp;[&lt;<em>position</em>&gt;]&nbsp;[&lt;<em>image</em>&gt;]</code></td>
+                        <td>
+                          A shortcut property to set all list item properties with a single setting.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><code>list&#8209;style&#8209;image:&nbsp;url(<em>image&#8209;location</em>)</code></td>
+                        <td>
+                          Replaces the default item marker (typically a bullet) with an image.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><code>list&#8209;style&#8209;position:&nbsp;inside;</code></td>
+                        <td>
+                          Indents the marker and the text. The bullets appear inside the content flow.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><code>list&#8209;style&#8209;position:&nbsp;outside;</code></td>
+                        <td>
+                          The default. Keeps the marker to the left of the text.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><code>list&#8209;style&#8209;type:&nbsp;<em>value</em>;</code></td>
+                        <td>
+                          Sets the type of bullet or number. There are over 20 bullet and numbering styles to choose from.
+                          <a href="https://www.w3schools.com/cssref/pr_list-style-type.asp" target="_blank">More details</a>.
+                        </td>
+                      </tr>
+                    </table>
+                    <h1>More Information</h1>
+                    <p>
+                      <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Practical_positioning_examples" target="_blank">MDN - Practical Positioning Examples</a>
                     </p>
                   </details>
                 </section>
@@ -601,6 +661,12 @@
                       <tr>
                         <th>Display Setting</th>
                         <th>Element Behavior</th>
+                      </tr>
+                      <tr>
+                        <td><code>display:&nbsp;inline&#8209;table;</code></td>
+                        <td>
+                          The element is displayed as an inline-level table
+                        </td>
                       </tr>
                       <tr>
                         <td><code>display:&nbsp;table;</code></td>
@@ -680,6 +746,7 @@
                       <a href="https://www.w3schools.com/css/css3_flexbox.asp" target="_blank">W3Schools - Flexible Box</a><br>
                       <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox" target="_blank">MDN - Flexbox</a><br>
                       <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">CSS-Tricks - A Complete Guide to Flexbox</a>
+                      <a href="https://philipwalton.github.io/solved-by-flexbox/" target="_blank">Solved by Flexbox</a>
                     </p>
                   </details>
                 </section>
