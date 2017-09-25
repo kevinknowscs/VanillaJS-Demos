@@ -9,9 +9,9 @@
       .page-area {
         max-width: initial;
       }
-      
+
       table.table-funclist td:nth-child(3) {
-        width: 190px;
+        /* width: 190px; */
       }
     </style>
   </head>
@@ -80,28 +80,31 @@
                     <th>Class Name</th>
                     <th>Static/Instance</th>
                     <th>Property/Function</th>
+                    <th>Returns</th>
                     <th>Signature</th>
                     <th>Description</th>
                     <th>Links</th>
                   </tr>
                   <tr class="category" >
-                    <td colspan="6">String Static Properties &amp; Functions</td>
+                    <td colspan="7">String Static Properties &amp; Functions</td>
                   </tr>
                   <tr class="jsfunc">
                     <td>String</td>
                     <td>Static</td>
                     <td>Function</td>
-                    <td><code>fromCharCode()</code></td>
-                    <td></td>
+                    <td><code>String</code></td>
+                    <td><code>fromCharCode(<var>n1</var>, <var>n2</var>, ...)</code></td>
+                    <td>Converts a series of Unicode values into a string</td>
                     <td></td>
                   </tr>
                   <tr class="category" >
-                    <td colspan="6">String Instance Properties &amp; Functions</td>
+                    <td colspan="7">String Instance Properties &amp; Functions</td>
                   </tr>
                   <tr class="jsprop">
                     <td>String</td>
                     <td>Instance</td>
                     <td>Property</td>
+                    <td><code>Number</code></td>
                     <td><code>length</code></td>
                     <td>Returns the length of the string</td>
                     <td></td>
@@ -110,15 +113,17 @@
                     <td>String</td>
                     <td>Instance</td>
                     <td>Function</td>
-                    <td><code>charAt(<var>pos</var>)</cod></td>
-                    <td>Returns a 1 character string representing the character at the specified position</td>
+                    <td><code>String</code></td>
+                    <td><code>charAt(<var>index</var>)</cod></td>
+                    <td>Returns a 1 character string representing the character at the specified index</td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_charat.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
                     <td>String</td>
                     <td>Instance</td>
                     <td>Function</td>
-                    <td><code>charCodeAt(<var>pos</var>)</code></td>
+                    <td><code>Number</code></td>
+                    <td><code>charCodeAt(<var>index</var>)</code></td>
                     <td>Returns the Unicode of the character at the specified index</td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_charcodeat.asp" target="_blank">w3schools.com</a></td>
                   </tr>
@@ -126,7 +131,8 @@
                     <td>String</td>
                     <td>Instance</td>
                     <td>Function</td>
-                    <td><code>concat()</code></td>
+                    <td><code>String</code></td>
+                    <td><code>concat(<var>string1</var>, <var>string2</var>, ...)</code></td>
                     <td>Joins two or more strings, and returns a new joined string</td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_concat.asp" target="_blank">w3schools.com</a></td>
                   </tr>
@@ -134,7 +140,8 @@
                     <td>String</td>
                     <td>Instance</td>
                     <td>Function</td>
-                    <td><code>endsWith()</code></td>
+                    <td><code>Boolean</code></td>
+                    <td><code>endsWith(<var>str</var>)</code></td>
                     <td>Checks whether a string ends with specified string/characters</td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_endswith.asp" target="_blank">w3schools.com</a></td>
                   </tr>
@@ -142,15 +149,17 @@
                     <td>String</td>
                     <td>Instance</td>
                     <td>Function</td>
-                    <td><code>includes()</code></td>
-                    <td></td>
+                    <td><code>Boolean</code></td>
+                    <td><code>includes(<var>searchValue</var>, [<var>start</var>])</code></td>
+                    <td>Checks wheter a string contains the specified string/characters</td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_includes.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
                     <td>String</td>
                     <td>Instance</td>
                     <td>Function</td>
-                    <td><code>indexOf()</code></td>
+                    <td><code>Number</code></td>
+                    <td><code>indexOf(<var>searchValue</var>, [<var>start</var>])</code></td>
                     <td></td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_indexof.asp" target="_blank">w3schools.com</a></td>
                   </tr>
@@ -158,6 +167,7 @@
                     <td>String</td>
                     <td>Instance</td>
                     <td>Function</td>
+                    <td><code>Number</code></td>
                     <td><code>lastIndexOf()</code></td>
                     <td></td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_lastindexof.asp" target="_blank">w3schools.com</a></td>
@@ -166,6 +176,7 @@
                     <td>String</td>
                     <td>Instance</td>
                     <td>Function</td>
+                    <td><code>Number</code></td>
                     <td><code>localeCompare()</code></td>
                     <td></td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_localecompare.asp" target="_blank">w3schools.com</a></td>
@@ -174,6 +185,7 @@
                     <td>String</td>
                     <td>Instance</td>
                     <td>Function</td>
+                    <td><code>Boolean</code></td>
                     <td><code>match()</code></td>
                     <td></td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_match.asp" target="_blank">w3schools.com</a></td>
@@ -182,6 +194,7 @@
                     <td>String</td>
                     <td>Instance</td>
                     <td>Function</td>
+                    <td><code>String</code></td>
                     <td><code>repeat()</code></td>
                     <td></td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_repeat.asp" target="_blank">w3schools.com</a></td>
@@ -190,6 +203,7 @@
                     <td>String</td>
                     <td>Instance</td>
                     <td>Function</td>
+                    <td><code>String</code></td>
                     <td><code>replace()</code></td>
                     <td></td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_replace.asp" target="_blank">w3schools.com</a></td>
@@ -198,6 +212,7 @@
                     <td>String</td>
                     <td>Instance</td>
                     <td>Function</td>
+                    <td><code>String[]</code></td>
                     <td><code>search()</code></td>
                     <td></td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_search.asp" target="_blank">w3schools.com</a></td>
@@ -206,6 +221,7 @@
                     <td>String</td>
                     <td>Instance</td>
                     <td>Function</td>
+                    <td><code>String</code></td>
                     <td><code>slice()</code></td>
                     <td></td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_slice.asp" target="_blank">w3schools.com</a></td>
@@ -214,6 +230,7 @@
                     <td>String</td>
                     <td>Instance</td>
                     <td>Function</td>
+                    <td><code>String</code></td>
                     <td><code>split()</code></td>
                     <td></td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_split.asp" target="_blank">w3schools.com</a></td>
@@ -222,6 +239,7 @@
                     <td>String</td>
                     <td>Instance</td>
                     <td>Function</td>
+                    <td><code>Boolean</code></td>
                     <td><code>startsWith()</code></td>
                     <td></td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_startswith.asp" target="_blank">w3schools.com</a></td>
@@ -230,6 +248,7 @@
                     <td>String</td>
                     <td>Instance</td>
                     <td>Function</td>
+                    <td><code>String</code></td>
                     <td><code>substr()</code></td>
                     <td></td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_substr.asp" target="_blank">w3schools.com</a></td>
@@ -238,6 +257,7 @@
                     <td>String</td>
                     <td>Instance</td>
                     <td>Function</td>
+                    <td><code>String</code></td>
                     <td><code>substring()</code></td>
                     <td></td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_substring.asp" target="_blank">w3schools.com</a></td>
@@ -246,6 +266,7 @@
                     <td>String</td>
                     <td>Instance</td>
                     <td>Function</td>
+                    <td><code>String</code></td>
                     <td><code>toLocaleLowerCase()</code></td>
                     <td></td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_tolocalelowercase.asp" target="_blank">w3schools.com</a></td>
@@ -254,6 +275,7 @@
                     <td>String</td>
                     <td>Instance</td>
                     <td>Function</td>
+                    <td><code>String</code></td>
                     <td><code>toLocaleUpperCase()</code></td>
                     <td></td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_tolocaleuppercase.asp" target="_blank">w3schools.com</a></td>
@@ -262,6 +284,7 @@
                     <td>String</td>
                     <td>Instance</td>
                     <td>Function</td>
+                    <td><code>String</code></td>
                     <td><code>toLowerCase()</code></td>
                     <td></td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_tolowercase.asp" target="_blank">w3schools.com</a></td>
@@ -270,6 +293,7 @@
                     <td>String</td>
                     <td>Instance</td>
                     <td>Function</td>
+                    <td><code>String</code></td>
                     <td><code>toString()</code></td>
                     <td></td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_tostring.asp" target="_blank">w3schools.com</a></td>
@@ -278,6 +302,7 @@
                     <td>String</td>
                     <td>Instance</td>
                     <td>Function</td>
+                    <td><code>String</code></td>
                     <td><code>toUpperCase()</code></td>
                     <td></td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_touppercase.asp" target="_blank">w3schools.com</a></td>
@@ -286,6 +311,7 @@
                     <td>String</td>
                     <td>Instance</td>
                     <td>Function</td>
+                    <td><code>String</code></td>
                     <td><code>trim()</code></td>
                     <td></td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_trim.asp" target="_blank">w3schools.com</a></td>
@@ -294,6 +320,7 @@
                     <td>String</td>
                     <td>Instance</td>
                     <td>Function</td>
+                    <td><code>String</code></td>
                     <td><code>valueOf()</code></td>
                     <td></td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_valueof.asp" target="_blank">w3schools.com</a></td>
