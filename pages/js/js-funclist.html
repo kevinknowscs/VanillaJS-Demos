@@ -95,7 +95,7 @@
                     <td><code>String</code></td>
                     <td><code>fromCharCode(<var>n1</var>, <var>n2</var>, ...)</code></td>
                     <td>Converts a series of Unicode values into a string</td>
-                    <td></td>
+                    <td><a href="https://www.w3schools.com/jsref/jsref_fromcharcode.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="category" >
                     <td colspan="7">String Instance Properties &amp; Functions</td>
@@ -107,7 +107,7 @@
                     <td><code>Number</code></td>
                     <td><code>length</code></td>
                     <td>Returns the length of the string</td>
-                    <td></td>
+                    <td><a href="https://www.w3schools.com/jsref/jsref_length_string.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
                     <td>String</td>
@@ -132,9 +132,9 @@
                     <td>Instance</td>
                     <td>Function</td>
                     <td><code>String</code></td>
-                    <td><code>concat(<var>string1</var>, <var>string2</var>, ...)</code></td>
+                    <td><code>concat(<var>string1</var>,&nbsp;<var>string2</var>,&nbsp;...)</code></td>
                     <td>Joins two or more strings, and returns a new joined string</td>
-                    <td><a href="https://www.w3schools.com/jsref/jsref_concat.asp" target="_blank">w3schools.com</a></td>
+                    <td><a href="https://www.w3schools.com/jsref/jsref_concat_string.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
                     <td>String</td>
@@ -150,7 +150,7 @@
                     <td>Instance</td>
                     <td>Function</td>
                     <td><code>Boolean</code></td>
-                    <td><code>includes(<var>searchValue</var>, [<var>start</var>])</code></td>
+                    <td><code>includes(<var>searchValue</var>,&nbsp;[<var>start</var>])</code></td>
                     <td>Checks wheter a string contains the specified string/characters</td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_includes.asp" target="_blank">w3schools.com</a></td>
                   </tr>
@@ -159,8 +159,8 @@
                     <td>Instance</td>
                     <td>Function</td>
                     <td><code>Number</code></td>
-                    <td><code>indexOf(<var>searchValue</var>, [<var>start</var>])</code></td>
-                    <td></td>
+                    <td><code>indexOf(<var>searchValue</var>,&nbsp;[<var>start</var>])</code></td>
+                    <td>Teturns the position of the first occurrence of a specified value in a string, or -1 if no match.</td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_indexof.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
@@ -168,8 +168,8 @@
                     <td>Instance</td>
                     <td>Function</td>
                     <td><code>Number</code></td>
-                    <td><code>lastIndexOf()</code></td>
-                    <td></td>
+                    <td><code>lastIndexOf(<var>searchValue</var>,&nbsp;[<var>start</var>])</code></td>
+                    <td>Returns the position of the last occurrence of a specified value in a string, or -1 if no match.</td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_lastindexof.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
@@ -177,17 +177,19 @@
                     <td>Instance</td>
                     <td>Function</td>
                     <td><code>Number</code></td>
-                    <td><code>localeCompare()</code></td>
-                    <td></td>
+                    <td><code>localeCompare(<var>compareString</var>)</code></td>
+                    <td>
+                      -1 if string comes before the <var>compareString</var>, 0 if they are equal, and 1 if it comes after
+                    </td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_localecompare.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
                     <td>String</td>
                     <td>Instance</td>
                     <td>Function</td>
-                    <td><code>Boolean</code></td>
-                    <td><code>match()</code></td>
-                    <td></td>
+                    <td><code>Array</code></td>
+                    <td><code>match(<var>regexOrString</var>)</code></td>
+                    <td>An array of matches, 1 item for each match, or null if no match is found</td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_match.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
@@ -195,8 +197,8 @@
                     <td>Instance</td>
                     <td>Function</td>
                     <td><code>String</code></td>
-                    <td><code>repeat()</code></td>
-                    <td></td>
+                    <td><code>repeat(<var>count</var>)</code></td>
+                    <td>A new string containing <var>count</var> copies of the original string</td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_repeat.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
@@ -204,17 +206,20 @@
                     <td>Instance</td>
                     <td>Function</td>
                     <td><code>String</code></td>
-                    <td><code>replace()</code></td>
-                    <td></td>
+                    <td><code>replace(<var>regexOrString</var>,&nbsp;<var>newValue</var>)</code></td>
+                    <td>
+                      A new string where the specified value(s) has been replaced by the new value (use /g to replace all,
+                      otherwise only the first occurrence is replaced)
+                    </td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_replace.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
                     <td>String</td>
                     <td>Instance</td>
                     <td>Function</td>
-                    <td><code>String[]</code></td>
-                    <td><code>search()</code></td>
-                    <td></td>
+                    <td><code>Number</code></td>
+                    <td><code>search(<var>regexOrString</var>)</code></td>
+                    <td>The position of the first occurrence of the match, or -1 if no match found</td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_search.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
@@ -222,17 +227,23 @@
                     <td>Instance</td>
                     <td>Function</td>
                     <td><code>String</code></td>
-                    <td><code>slice()</code></td>
-                    <td></td>
-                    <td><a href="https://www.w3schools.com/jsref/jsref_slice.asp" target="_blank">w3schools.com</a></td>
+                    <td><code>slice(<var>start</var>,&nbsp;[<var>end</var>])</code></td>
+                    <td>
+                      Extracts part of a string from <var>start</var> position up to but <strong><em>not including</em></strong>
+                      the <var>end</var> position (or to the end of string if <var>end</var> is omitted), and returns a new string</td>
+                    <td><a href="https://www.w3schools.com/jsref/jsref_slice_string.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
                     <td>String</td>
                     <td>Instance</td>
                     <td>Function</td>
-                    <td><code>String</code></td>
-                    <td><code>split()</code></td>
-                    <td></td>
+                    <td><code>String[]</code></td>
+                    <td><code>split([<var>separator</var>],&nbsp;[<var>limit</var>])</code></td>
+                    <td>
+                      An array of strings. The <var>separator</var> can be a string or a regex. If <var>separator</var> is omitted,
+                      an array of 1 item containing the entire string is returned. If <var>limit</var> is specified, it will indicate
+                      the maximum number of items to return.
+                    </td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_split.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
@@ -240,8 +251,11 @@
                     <td>Instance</td>
                     <td>Function</td>
                     <td><code>Boolean</code></td>
-                    <td><code>startsWith()</code></td>
-                    <td></td>
+                    <td><code>startsWith(<var>searchValue</var>,&nbsp;[<var>start</var>])</code></td>
+                    <td>
+                      Returns true of the string starts with <var>searchValue</var>. If <var>start</var> is specified, it indicates
+                      the position in the string from which to start the search.
+                    </td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_startswith.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
@@ -249,8 +263,12 @@
                     <td>Instance</td>
                     <td>Function</td>
                     <td><code>String</code></td>
-                    <td><code>substr()</code></td>
-                    <td></td>
+                    <td><code>substr(<var>start</var>,&nbsp;[<var>length</var>])</code></td>
+                    <td>
+                      Returns a new string by extracting part of the original string, from the <var>start</var> position.
+                      If <var>length</var> is specified, it designates the number of desired characters. If omitted, the
+                      rest of the string is returned.
+                    </td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_substr.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
@@ -258,8 +276,12 @@
                     <td>Instance</td>
                     <td>Function</td>
                     <td><code>String</code></td>
-                    <td><code>substring()</code></td>
-                    <td></td>
+                    <td><code>substring(<var>start</var>,&nbsp;[<var>end</var>])</code></td>
+                    <td>
+                      Almost identical to slice(), with some subtle differences.
+                      See <a href="https://stackoverflow.com/questions/2243824/what-is-the-difference-between-string-slice-and-string-substring" target="_blank">here</a>
+                      for more details.
+                    </td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_substring.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
@@ -268,7 +290,7 @@
                     <td>Function</td>
                     <td><code>String</code></td>
                     <td><code>toLocaleLowerCase()</code></td>
-                    <td></td>
+                    <td>Converts a string to lowercase, according to the host's locale</td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_tolocalelowercase.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
@@ -277,7 +299,7 @@
                     <td>Function</td>
                     <td><code>String</code></td>
                     <td><code>toLocaleUpperCase()</code></td>
-                    <td></td>
+                    <td>Converts a string to uppercase, according to the host's locale</td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_tolocaleuppercase.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
@@ -286,7 +308,7 @@
                     <td>Function</td>
                     <td><code>String</code></td>
                     <td><code>toLowerCase()</code></td>
-                    <td></td>
+                    <td>Converts a string to lowercase</td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_tolowercase.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
@@ -295,8 +317,8 @@
                     <td>Function</td>
                     <td><code>String</code></td>
                     <td><code>toString()</code></td>
-                    <td></td>
-                    <td><a href="https://www.w3schools.com/jsref/jsref_tostring.asp" target="_blank">w3schools.com</a></td>
+                    <td>Returns the value of a String object</td>
+                    <td><a href="https://www.w3schools.com/jsref/jsref_tostring_string.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
                     <td>String</td>
@@ -304,7 +326,7 @@
                     <td>Function</td>
                     <td><code>String</code></td>
                     <td><code>toUpperCase()</code></td>
-                    <td></td>
+                    <td>Converts a string to uppercase</td>
                     <td><a href="https://www.w3schools.com/jsref/jsref_touppercase.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
@@ -313,8 +335,8 @@
                     <td>Function</td>
                     <td><code>String</code></td>
                     <td><code>trim()</code></td>
-                    <td></td>
-                    <td><a href="https://www.w3schools.com/jsref/jsref_trim.asp" target="_blank">w3schools.com</a></td>
+                    <td>Returns a new string by removing all whitespace from both ends</td>
+                    <td><a href="https://www.w3schools.com/jsref/jsref_trim_string.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <tr class="jsfunc">
                     <td>String</td>
@@ -322,8 +344,11 @@
                     <td>Function</td>
                     <td><code>String</code></td>
                     <td><code>valueOf()</code></td>
-                    <td></td>
-                    <td><a href="https://www.w3schools.com/jsref/jsref_valueof.asp" target="_blank">w3schools.com</a></td>
+                    <td>
+                      Returns the primitive value of a String object (generally this function is only used internally
+                      by the JavaScript engine)
+                    </td>
+                    <td><a href="https://www.w3schools.com/jsref/jsref_valueof_string.asp" target="_blank">w3schools.com</a></td>
                   </tr>
                   <!--
                   <tr class="category" >
