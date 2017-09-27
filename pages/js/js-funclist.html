@@ -102,15 +102,17 @@
               <div class="page-content">
                 <table class="common table-funclist">
                   <tr>
+                    <th>Version</th>
                     <th>Returns</th>
                     <th>Signature</th>
                     <th>Description</th>
                     <th>Links</th>
                   </tr>
                   <tr class="category" >
-                    <td colspan="4">String Static Properties &amp; Functions</td>
+                    <td colspan="5">String Static Properties &amp; Functions</td>
                   </tr>
                   <tr class="jsfunc">
+                    <td>ES1</td>
                     <td><code>String</code></td>
                     <td><code>fromCharCode(<var>n1</var>, <var>n2</var>, ...)</code></td>
                     <td>Converts a series of Unicode values into a string</td>
@@ -120,9 +122,10 @@
                     </td>
                   </tr>
                   <tr class="category" >
-                    <td colspan="4">String Instance Properties &amp; Functions</td>
+                    <td colspan="5">String Instance Properties &amp; Functions</td>
                   </tr>
                   <tr class="jsprop">
+                    <td>ES1</td>
                     <td><code>Number</code></td>
                     <td><code>length</code></td>
                     <td>Returns the length of the string</td>
@@ -132,6 +135,7 @@
                     </td>
                   </tr>
                   <tr class="jsfunc">
+                    <td>ES1</td>
                     <td><code>String</code></td>
                     <td><code>charAt(<var>index</var>)</cod></td>
                     <td>Returns a 1 character string representing the character at the specified index</td>
@@ -141,6 +145,7 @@
                     </td>
                   </tr>
                   <tr class="jsfunc">
+                    <td>ES1</td>
                     <td><code>Number</code></td>
                     <td><code>charCodeAt(<var>index</var>)</code></td>
                     <td>Returns the Unicode of the character at the specified index</td>
@@ -150,6 +155,7 @@
                     </td>
                   </tr>
                   <tr class="jsfunc">
+                    <td>ES3</td>
                     <td><code>String</code></td>
                     <td><code>concat(<var>string1</var>,&nbsp;<var>string2</var>,&nbsp;...)</code></td>
                     <td>Joins two or more strings, and returns a new joined string</td>
@@ -159,6 +165,7 @@
                     </td>
                   </tr>
                   <tr class="jsfunc">
+                    <td>ES6</td>
                     <td><code>Boolean</code></td>
                     <td><code>endsWith(<var>str</var>)</code></td>
                     <td>Checks whether a string ends with specified string/characters</td>
@@ -168,6 +175,7 @@
                     </td>
                   </tr>
                   <tr class="jsfunc">
+                    <td>ES6</td>
                     <td><code>Boolean</code></td>
                     <td><code>includes(<var>searchValue</var>,&nbsp;[<var>start</var>])</code></td>
                     <td>Checks wheter a string contains the specified string/characters</td>
@@ -177,6 +185,7 @@
                     </td>
                   </tr>
                   <tr class="jsfunc">
+                    <td>ES1</td>
                     <td><code>Number</code></td>
                     <td><code>indexOf(<var>searchValue</var>,&nbsp;[<var>start</var>])</code></td>
                     <td>Returns the position of the first occurrence of a specified value in a string, or -1 if no match.</td>
@@ -186,6 +195,7 @@
                     </td>
                   </tr>
                   <tr class="jsfunc">
+                    <td>ES1</td>
                     <td><code>Number</code></td>
                     <td><code>lastIndexOf(<var>searchValue</var>,&nbsp;[<var>start</var>])</code></td>
                     <td>Returns the position of the last occurrence of a specified value in a string, or -1 if no match.</td>
@@ -195,6 +205,7 @@
                     </td>
                   </tr>
                   <tr class="jsfunc">
+                    <td>ES3</td>
                     <td><code>Number</code></td>
                     <td><code>localeCompare(<var>compareString</var>)</code></td>
                     <td>
@@ -206,6 +217,7 @@
                     </td>
                   </tr>
                   <tr class="jsfunc">
+                    <td>ES3</td>
                     <td><code>Array</code></td>
                     <td><code>match(<var>regexOrString</var>)</code></td>
                     <td>An array of matches, 1 item for each match, or null if no match is found</td>
@@ -215,6 +227,7 @@
                     </td>
                   </tr>
                   <tr class="jsfunc">
+                    <td>ES6</td>
                     <td><code>String</code></td>
                     <td><code>repeat(<var>count</var>)</code></td>
                     <td>A new string containing <var>count</var> copies of the original string</td>
@@ -224,6 +237,7 @@
                     </td>
                   </tr>
                   <tr class="jsfunc">
+                    <td>ES3</td>
                     <td><code>String</code></td>
                     <td><code>replace(<var>regexOrString</var>,&nbsp;<var>newValue</var>)</code></td>
                     <td>
@@ -236,6 +250,7 @@
                     </td>
                   </tr>
                   <tr class="jsfunc">
+                    <td>ES3</td>
                     <td><code>Number</code></td>
                     <td><code>search(<var>regexOrString</var>)</code></td>
                     <td>The position of the first occurrence of the match, or -1 if no match found</td>
@@ -245,6 +260,7 @@
                     </td>
                   </tr>
                   <tr class="jsfunc">
+                    <td>ES3</td>
                     <td><code>String</code></td>
                     <td><code>slice(<var>start</var>,&nbsp;[<var>end</var>])</code></td>
                     <td>
@@ -256,6 +272,7 @@
                     </td>
                   </tr>
                   <tr class="jsfunc">
+                    <td>ES3</td>
                     <td><code>String[]</code></td>
                     <td><code>split([<var>separator</var>],&nbsp;[<var>limit</var>])</code></td>
                     <td>
@@ -269,6 +286,7 @@
                     </td>
                   </tr>
                   <tr class="jsfunc">
+                    <td>ES6</td>
                     <td><code>Boolean</code></td>
                     <td><code>startsWith(<var>searchValue</var>,&nbsp;[<var>start</var>])</code></td>
                     <td>
@@ -281,6 +299,7 @@
                     </td>
                   </tr>
                   <tr class="jsfunc">
+                    <td>ES3</td>
                     <td><code>String</code></td>
                     <td><code>substr(<var>start</var>,&nbsp;[<var>length</var>])</code></td>
                     <td>
@@ -294,6 +313,7 @@
                     </td>
                   </tr>
                   <tr class="jsfunc">
+                    <td>ES1</td>
                     <td><code>String</code></td>
                     <td><code>substring(<var>start</var>,&nbsp;[<var>end</var>])</code></td>
                     <td>
@@ -307,6 +327,7 @@
                     </td>
                   </tr>
                   <tr class="jsfunc">
+                    <td>ES3</td>
                     <td><code>String</code></td>
                     <td><code>toLocaleLowerCase()</code></td>
                     <td>Converts a string to lowercase, according to the host's locale</td>
@@ -316,6 +337,7 @@
                     </td>
                   </tr>
                   <tr class="jsfunc">
+                    <td>ES3</td>
                     <td><code>String</code></td>
                     <td><code>toLocaleUpperCase()</code></td>
                     <td>Converts a string to uppercase, according to the host's locale</td>
@@ -325,6 +347,7 @@
                     </td>
                   </tr>
                   <tr class="jsfunc">
+                    <td>ES1</td>
                     <td><code>String</code></td>
                     <td><code>toLowerCase()</code></td>
                     <td>Converts a string to lowercase</td>
@@ -334,6 +357,7 @@
                     </td>
                   </tr>
                   <tr class="jsfunc">
+                    <td>ES3</td>
                     <td><code>String</code></td>
                     <td><code>toString()</code></td>
                     <td>Returns the value of a String object</td>
@@ -343,6 +367,7 @@
                     </td>
                   </tr>
                   <tr class="jsfunc">
+                    <td>ES1</td>
                     <td><code>String</code></td>
                     <td><code>toUpperCase()</code></td>
                     <td>Converts a string to uppercase</td>
@@ -352,6 +377,7 @@
                     </td>
                   </tr>
                   <tr class="jsfunc">
+                    <td>ES5.1</td>
                     <td><code>String</code></td>
                     <td><code>trim()</code></td>
                     <td>Returns a new string by removing all whitespace from both ends</td>
@@ -361,6 +387,7 @@
                     </td>
                   </tr>
                   <tr class="jsfunc">
+                    <td>ES1</td>
                     <td><code>String</code></td>
                     <td><code>valueOf()</code></td>
                     <td>
