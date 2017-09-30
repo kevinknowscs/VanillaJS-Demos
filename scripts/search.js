@@ -1,8 +1,8 @@
 onDocumentReady(function() {
-  var searchTextBox = document.getElementById('searchTextBox');
-  var pageTitle = document.getElementById('page-title-id');
-  var pageContentScroller = document.getElementById('page-content-scroller-id');
-  var originalPageContent = document.getElementById('page-content-id');
+  var searchTextBox = dom.id('searchTextBox');
+  var pageTitle = dom.id('page-title-id');
+  var pageContentScroller = dom.id('page-content-scroller-id');
+  var originalPageContent = dom.id('page-content-id');
   var originalPageTitle = pageTitle.innerHTML;
   var htmlTags;
 
