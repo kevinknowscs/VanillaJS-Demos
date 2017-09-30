@@ -6,7 +6,9 @@ onDocumentReady(function() {
   var originalPageTitle = pageTitle.innerHTML;
   var htmlTags;
 
-  getAjax('html-tags.json', function (data) {
+  var htmlTagsUrl = globals.baseUrl + '/html-tags.json';
+
+  getAjax(htmlTagsUrl, function (data) {
     htmlTags = JSON.parse(data);
   });
 
@@ -23,7 +25,7 @@ onDocumentReady(function() {
 
     for (x=0; x < htmlTags.length; x++) {
       if (target === htmlTags[x].name) {
-        return [ { type: 'HTML Tag', title: htmlTags[x].name, desc: htmlTags[x].desc } ];
+        return [ { type: 'HTML Tag', title: htmlTags[x].name, desc: htmlTags[x].desc, links: htmlTags[x].links } ];
       }
     }
   }
@@ -34,10 +36,15 @@ onDocumentReady(function() {
       pageContentScroller.appendChild(originalPageContent);
   }
 
-  function appendSearchRow(table, cellType, type, title, desc) {
+  function appendSearchRow(table, cellType, index, type, title, desc) {
     var cell, node, tr;
 
     tr = document.createElement('tr');
+
+    cell = document.createElement(cellType);
+    node = document.createTextNode(index);
+    cell.appendChild(node);
+    tr.appendChild(cell);
 
     cell = document.createElement(cellType);
     node = document.createTextNode(type);
@@ -57,12 +64,70 @@ onDocumentReady(function() {
     table.appendChild(tr);
   }
 
-  function appendSearchHeader(table) {
-    appendSearchRow(table, 'th', 'Result Type', 'Synopsis', 'Description');
+  function appendLinks(table, parentCell, match) {
+    var x, el, ul, li, section, h1, a;
+
+    if (!match || !match.links) {
+      return;
+    }
+
+    section = document.createElement('section');
+    h1 = document.createElement('h1');
+    h1.innerHTML = 'Links';
+    section.appendChild(h1);
+
+    ul = document.createElement('ul');
+
+    if (match.links.mdn) {
+      li = document.createElement('li');
+      a = document.createElement('a');
+      a.href = match.links.mdn;
+      a.target = '_blank';
+      a.innerHTML = 'Mozilla Developer Network'
+      li.appendChild(a);
+
+      ul.appendChild(li);
+    }
+
+    if (match.links.w3schools) {
+      li = document.createElement('li');
+      a = document.createElement('a');
+      a.href = match.links.w3schools;
+      a.target = '_blank';
+      a.innerHTML = 'w3schools.com'
+      li.appendChild(a);
+
+      ul.appendChild(li);
+    }
+
+    section.appendChild(ul);
+    parentCell.appendChild(section);
   }
 
-  function appendSearchResult(table, type, title, desc) {
-    appendSearchRow(table, 'td', type, title, desc);
+  function appendSearchDetailsRow(table, match) {
+    var cell, node, tr;
+
+    tr = document.createElement('tr');
+
+    cell = document.createElement('td');
+    node = document.createTextNode('');
+    cell.appendChild(node);
+    tr.appendChild(cell);
+
+    cell = document.createElement('td');
+    cell.colSpan = 3;
+    appendLinks(table, cell, match);
+    tr.appendChild(cell);
+
+    table.appendChild(tr);
+  }
+
+  function appendSearchHeader(table) {
+    appendSearchRow(table, 'th', '#', 'Result Type', 'Synopsis', 'Description');
+  }
+
+  function appendSearchResult(table, index, type, title, desc) {
+    appendSearchRow(table, 'td', index, type, title, desc);
   }
 
   function displaySearchResults(results) {
@@ -77,8 +142,9 @@ onDocumentReady(function() {
 
     appendSearchHeader(table);
 
-    results.forEach(function (val) {
-      appendSearchResult(table, val.type, val.title, val.desc);
+    results.forEach(function (val, index) {
+      appendSearchResult(table, (index + 1).toString(), val.type, val.title, val.desc);
+      appendSearchDetailsRow(table, val);
     });
 
     pageContent.appendChild(table);

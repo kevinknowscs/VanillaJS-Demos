@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script type="text/javascript">
+      var globals = { baseUrl: '../..' };
+    </script>
+    <script type="text/javascript" src="../../scripts/helpers.js"></script>
+    <script type="text/javascript" src="../../scripts/search.js"></script>
+
     <link rel="stylesheet" type="text/css" href="../../css/layout/notebook1.css" />
     <link rel="stylesheet" type="text/css" href="../../css/themes/blue.css" />
     <link rel="stylesheet" type="text/css" href="../../css/content/standard.css" />
@@ -94,12 +100,12 @@
         <div class="south-right-pane">
           <div class="page-area">
             <div class="page-title-area">
-              <div class="page-title">
+              <div id="page-title-id" class="page-title">
                 JavaScript Built-In Functions
               </div>
             </div>
-            <div class="page-content-scroller">
-              <div class="page-content">
+            <div id="page-content-scroller-id" class="page-content-scroller">
+              <div id="page-content-id" class="page-content">
                 <table class="common table-funclist">
                   <tr>
                     <th>Version</th>
