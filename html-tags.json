@@ -68,5 +68,85 @@
       "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio",
       "w3schools": "https://www.w3schools.com/tags/tag_audio.asp"
     }
+  }, {
+      "name": "b",
+      "desc": "Defines bold text",
+      "html5": "",
+      "links": {
+        "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/b",
+        "w3schools": "https://www.w3schools.com/tags/tag_b.asp"
+      }
+    }, {
+    "name": "base",
+    "desc": "Specifies the base URL/target for all relative URLs in a document",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base",
+      "w3schools": "https://www.w3schools.com/tags/tag_base.asp"
+    }
+  }, {
+    "name": "basefont",
+    "desc": "Specifies a default color, size, and font for all text in a document",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/basefont",
+      "w3schools": "https://www.w3schools.com/tags/tag_basefont.asp"
+    }
+  }, {
+    "name": "bdi",
+    "desc": "Isolates a part of text that might be formatted in a different direction from other text outside it",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/bdi",
+      "w3schools": "https://www.w3schools.com/tags/tag_bdi.asp"
+    }
+  }, {
+    "name": "bdo",
+    "desc": "Overrides the current text direction",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/bdo",
+      "w3schools": "https://www.w3schools.com/tags/tag_bdo.asp"
+    }
+  }, {
+    "name": "big",
+    "desc": "Defines big text",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/big",
+      "w3schools": "https://www.w3schools.com/tags/tag_big.asp"
+    }
+  }, {
+    "name": "blockquote",
+    "desc": "Defines a section that is quoted from another source",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote",
+      "w3schools": "https://www.w3schools.com/tags/tag_blockquote.asp"
+    }
+  }, {
+    "name": "body",
+    "desc": "Defines the document's body",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body",
+      "w3schools": "https://www.w3schools.com/tags/tag_body.asp"
+    }
+  }, {
+    "name": "br",
+    "desc": "Defines a single line break",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br",
+      "w3schools": "https://www.w3schools.com/tags/tag_br.asp"
+    }
+  }, {
+    "name": "button",
+    "desc": "Defines a clickable button",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button",
+      "w3schools": "https://www.w3schools.com/tags/tag_button.asp"
+    }
   }
 ]
