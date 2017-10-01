@@ -90,7 +90,7 @@ onDocumentReady(function() {
       a = document.createElement('a');
       a.href = match.links.mdn;
       a.target = '_blank';
-      a.innerHTML = 'Mozilla Developer Network'
+      a.innerHTML = 'Mozilla Developer Network';
       li.appendChild(a);
 
       ul.appendChild(li);
@@ -101,7 +101,7 @@ onDocumentReady(function() {
       a = document.createElement('a');
       a.href = match.links.w3schools;
       a.target = '_blank';
-      a.innerHTML = 'w3schools.com'
+      a.innerHTML = 'w3schools.com';
       li.appendChild(a);
 
       ul.appendChild(li);
@@ -158,7 +158,7 @@ onDocumentReady(function() {
     pageContentScroller.appendChild(pageContent);
   }
 
-  searchTextBox.addEventListener('keyup', function (ev) {
+  searchTextBox.addEventListener('keyup', function (/*ev*/) {
     if (searchTextBox.value.endsWith('=')) {
       // alert('Display ' + searchTextBox.value.slice(0, searchTextBox.value.length - 1));
       var target = searchTextBox.value.slice(0, searchTextBox.value.length - 1);

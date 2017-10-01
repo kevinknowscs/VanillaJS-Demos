@@ -12,20 +12,20 @@ body > header {
 }
 
 header div.page-title {
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   font-size: 1.5em;
   font-weight: bold;
 }
 
 section h1 {
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   font-size: 1.25em;
   font-weight: bold;
   text-decoration: underline;
 }
 
 summary {
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   font-size: 1.25em;
   font-weight: bold;
   text-decoration: underline;
@@ -35,14 +35,14 @@ summary {
   outline: none;
 }
 
-table.common {
-  min-width: 1200px;
-  max-width: 1200px;
-}
+/*table.common {*/
+  /*min-width: 1200px;*/
+  /*max-width: 1200px;*/
+/*}*/
 
 table.common tr.category {
   background-color: lightgray;
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   font-size: 11pt;
   font-weight: bold;
 }
@@ -83,22 +83,22 @@ a:visited, a:link {
 }
 
 h1 {
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   font-size: 1.5em;
   font-weight: bold;
   margin-top: 5px;
-  margin-left: 0px;
+  margin-left: 0;
 }
 
 h2, main h1, section h1 {
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   font-size: 1.05em;
   font-weight: bold;
   text-decoration: underline;
 }
 
 h3, main h2, section h2 {
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   font-size: 0.9em;
   font-weight: normal;
   text-decoration: underline;

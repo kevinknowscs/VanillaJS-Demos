@@ -1,3 +1,4 @@
+// noinspection JSUnusedGlobalSymbols
 
 dom = {
   find: function(selector, context)  {
@@ -19,4 +20,4 @@ dom = {
   tag: function(tagName) {
     return document.getElementsByTagName(tagName);
   }
-}
+};

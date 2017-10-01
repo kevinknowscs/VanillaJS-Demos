@@ -31,22 +31,22 @@ if (!String.prototype.includes) {
 if (!String.prototype.repeat) {
   String.prototype.repeat = function(count) {
     'use strict';
-    if (this == null) {
+    if (this === null) {
       throw new TypeError('can\'t convert ' + this + ' to object');
     }
     var str = '' + this;
     count = +count;
-    if (count != count) {
+    if (count !== count) {
       count = 0;
     }
     if (count < 0) {
       throw new RangeError('repeat count must be non-negative');
     }
-    if (count == Infinity) {
+    if (count === Infinity) {
       throw new RangeError('repeat count must be less than infinity');
     }
     count = Math.floor(count);
-    if (str.length == 0 || count == 0) {
+    if (str.length === 0 || count === 0) {
       return '';
     }
     // Ensuring count is a 31-bit integer allows us to heavily optimize the
@@ -75,13 +75,24 @@ if (!String.prototype.trim) {
   };
 }
 
-if (!Number.isFinite) {
-  Number.isFinite = function(value) {
-    return typeof value === 'number' && isFinite(value);
-  }
+if (typeof Number.isFinite !== 'function') {
+  // noinspection JSPrimitiveTypeWrapperUsage
+  Number.isFinite = function isFinite(value) {
+    // 1. If Type(number) is not Number, return false.
+    if (typeof value !== 'number') {
+      return false;
+    }
+    // 2. If number is NaN, +∞, or −∞, return false.
+    if (value !== value || value === Infinity || value === -Infinity) {
+      return false;
+    }
+    // 3. Otherwise, return true.
+    return true;
+  };
 }
 
 if (!Number.isInteger) {
+  // noinspection JSPrimitiveTypeWrapperUsage
   Number.isInteger = function(value) {
     return typeof value === 'number' &&
       isFinite(value) &&
@@ -90,13 +101,16 @@ if (!Number.isInteger) {
 }
 
 if (!Number.isNaN) {
+  // noinspection JSPrimitiveTypeWrapperUsage
   Number.isNaN = function(value) {
     return value !== value;
   }
 }
 
 if (!Number.isSafeInteger) {
+  // noinspection JSPrimitiveTypeWrapperUsage
   Number.isSafeInteger = function (value) {
+    // noinspection Annotator
     return Number.isInteger(value) && Math.abs(value) <= Number.MAX_SAFE_INTEGER;
   }
 }
