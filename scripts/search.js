@@ -64,8 +64,15 @@ onDocumentReady(function() {
     table.appendChild(tr);
   }
 
-  function appendLinks(table, parentCell, match) {
-    var x, el, ul, li, section, h1, a;
+  /**
+   * @param parentCell
+   * @param match: Object
+   * @param match.links: Object
+   * @param match.links.mdn: string
+   * @param match.links.w3schools: string
+   */
+  function appendLinks(parentCell, match) {
+    var ul, li, section, h1, a;
 
     if (!match || !match.links) {
       return;
@@ -116,7 +123,7 @@ onDocumentReady(function() {
 
     cell = document.createElement('td');
     cell.colSpan = 3;
-    appendLinks(table, cell, match);
+    appendLinks(cell, match);
     tr.appendChild(cell);
 
     table.appendChild(tr);
