@@ -115,8 +115,8 @@ main section:not(:first-child) {
 }
 
 main section details > p:nth-child(2) {
-  padding: none;
-  margin: none;
+  padding: 0;
+  margin: 0;
   -webkit-margin-before: 0;
 }
 
