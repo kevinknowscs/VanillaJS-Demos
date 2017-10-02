@@ -69,14 +69,14 @@
       "w3schools": "https://www.w3schools.com/tags/tag_audio.asp"
     }
   }, {
-      "name": "b",
-      "desc": "Defines bold text",
-      "html5": "",
-      "links": {
-        "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/b",
-        "w3schools": "https://www.w3schools.com/tags/tag_b.asp"
-      }
-    }, {
+    "name": "b",
+    "desc": "Defines bold text",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/b",
+      "w3schools": "https://www.w3schools.com/tags/tag_b.asp"
+    }
+  }, {
     "name": "base",
     "desc": "Specifies the base URL/target for all relative URLs in a document",
     "html5": "",
@@ -147,6 +147,126 @@
     "links": {
       "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button",
       "w3schools": "https://www.w3schools.com/tags/tag_button.asp"
+    }
+  }, {
+    "name": "canvas",
+    "desc": "Used to draw graphics, on the fly, via scripting (usually JavaScript)",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas",
+      "w3schools": "https://www.w3schools.com/tags/tag_canvas.asp"
+    }
+  }, {
+    "name": "caption",
+    "desc": "Defines a table caption",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/caption",
+      "w3schools": "https://www.w3schools.com/tags/tag_caption.asp"
+    }
+  }, {
+    "name": "center",
+    "desc": "Defines centered text",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/center",
+      "w3schools": "https://www.w3schools.com/tags/tag_center.asp"
+    }
+  }, {
+    "name": "cite",
+    "desc": "Defines the title of a work",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite",
+      "w3schools": "https://www.w3schools.com/tags/tag_cite.asp"
+    }
+  }, {
+    "name": "code",
+    "desc": "Defines a piece of computer code",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code",
+      "w3schools": "https://www.w3schools.com/tags/tag_code.asp"
+    }
+  }, {
+    "name": "col",
+    "desc": "Specifies column properties for each column within a <colgroup> element",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/col",
+      "w3schools": "https://www.w3schools.com/tags/tag_col.asp"
+    }
+  }, {
+    "name": "colgroup",
+    "desc": "Specifies a group of one or more columns in a table for formatting",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/colgroup",
+      "w3schools": "https://www.w3schools.com/tags/tag_colgroup.asp"
+    }
+  }, {
+    "name": "datalist",
+    "desc": "Specifies a list of pre-defined options for input controls",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist",
+      "w3schools": "https://www.w3schools.com/tags/tag_datalist.asp"
+    }
+  }, {
+    "name": "dd",
+    "desc": "",
+    "html5": "",
+    "links": {
+      "mdn": "",
+      "w3schools": ""
+    }
+  }, {
+    "name": "del",
+    "desc": "",
+    "html5": "",
+    "links": {
+      "mdn": "",
+      "w3schools": ""
+    }
+  }, {
+    "name": "details",
+    "desc": "",
+    "html5": "",
+    "links": {
+      "mdn": "",
+      "w3schools": ""
+    }
+  }, {
+    "name": "",
+    "desc": "",
+    "html5": "",
+    "links": {
+      "mdn": "",
+      "w3schools": ""
+    }
+  }, {
+    "name": "",
+    "desc": "",
+    "html5": "",
+    "links": {
+      "mdn": "",
+      "w3schools": ""
+    }
+  }, {
+    "name": "",
+    "desc": "",
+    "html5": "",
+    "links": {
+      "mdn": "",
+      "w3schools": ""
+    }
+  }, {
+    "name": "",
+    "desc": "",
+    "html5": "",
+    "links": {
+      "mdn": "",
+      "w3schools": ""
     }
   }
 ]
