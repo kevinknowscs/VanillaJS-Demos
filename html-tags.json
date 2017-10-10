@@ -214,14 +214,158 @@
     }
   }, {
     "name": "dd",
-    "desc": "",
+    "desc": "Defines a decription/value of a term in description lis",
     "html5": "",
     "links": {
-      "mdn": "",
-      "w3schools": ""
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dd",
+      "w3schools": "https://www.w3schools.com/tags/tag_dd.asp"
     }
   }, {
     "name": "del",
+    "desc": "Defines text that has been deleted from a document",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del",
+      "w3schools": "https://www.w3schools.com/tags/tag_del.asp"
+    }
+  }, {
+    "name": "details",
+    "desc": "Defines additional details the the user can view or hide",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details",
+      "w3schools": "https://www.w3schools.com/tags/tag_details.asp"
+    }
+  }, {
+    "name": "dfn",
+    "desc": "Refresents the defining instance of a term.",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dfn",
+      "w3schools": "https://www.w3schools.com/tags/tag_dfn.asp"
+    }
+  }, {
+    "name": "dialog",
+    "desc": "Defines a dialog box or window",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog",
+      "w3schools": "https://www.w3schools.com/tags/tag_dialog.asp"
+    }
+  }, {
+    "name": "dir",
+    "desc": "Defines a directory list",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dir",
+      "w3schools": "https://www.w3schools.com/tags/tag_dir.asp"
+    }
+  }, {
+    "name": "div",
+    "desc": "Defines a section in a document",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div",
+      "w3schools": "https://www.w3schools.com/tags/tag_div.asp"
+    }
+  }, {
+    "name": "dl",
+    "desc": "Defines a description list",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl",
+      "w3schools": "https://www.w3schools.com/tags/tag_dl.asp"
+    }
+  }, {
+    "name": "dt",
+    "desc": "Defines a term/name in a description list",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dt",
+      "w3schools": "https://www.w3schools.com/tags/tag_dt.asp"
+    }
+  }, {
+    "name": "em",
+    "desc": "Defines emphasized text",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em",
+      "w3schools": "https://www.w3schools.com/tags/tag_em.asp"
+    }
+  }, {
+    "name": "embed",
+    "desc": "Defines a container for an external (non-HTML) application",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em",
+      "w3schools": "https://www.w3schools.com/tags/tag_em.asp"
+    }
+  }, {
+    "name": "fieldset",
+    "desc": "Groups related elements in a form",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset",
+      "w3schools": "https://www.w3schools.com/tags/tag_fieldset.asp"
+    }
+  }, {
+    "name": "figcaption",
+    "desc": "Defines a capture for a &lt;figure&gt; element",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption",
+      "w3schools": "https://www.w3schools.com/tags/tag_figcaption.asp"
+    }
+  }, {
+    "name": "figure",
+    "desc": "Specifies self-contained content",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure",
+      "w3schools": "https://www.w3schools.com/tags/tag_figure.asp"
+    }
+  }, {
+    "name": "font",
+    "desc": "Defines font, color, and size for text",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/font",
+      "w3schools": "https://www.w3schools.com/tags/tag_font.asp"
+    }
+  }, {
+    "name": "footer",
+    "desc": "Defines a footer for a document or section",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer",
+      "w3schools": "https://www.w3schools.com/tags/tag_footer.asp"
+    }
+  }, {
+    "name": "form",
+    "desc": "Defines an HTML for for user input",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form",
+      "w3schools": "https://www.w3schools.com/tags/tag_form.asp"
+    }
+  }, {
+    "name": "frame",
+    "desc": "Defines a window (a frame) in a frameset",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/frame",
+      "w3schools": "https://www.w3schools.com/tags/tag_frame.asp"
+    }
+  }, {
+    "name": "frameset",
+    "desc": "Defines a set of frames",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/frameset",
+      "w3schools": "https://www.w3schools.com/tags/tag_frameset.asp"
+    }
+  }, {
+    "name": "h1 to h6",
     "desc": "",
     "html5": "",
     "links": {
@@ -229,7 +373,103 @@
       "w3schools": ""
     }
   }, {
-    "name": "details",
+    "name": "head",
+    "desc": "Defines information about the document",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head",
+      "w3schools": "https://www.w3schools.com/tags/tag_head.asp"
+    }
+  }, {
+    "name": "header",
+    "desc": "Defines a header for a document or section",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header",
+      "w3schools": "https://www.w3schools.com/tags/tag_header.asp"
+    }
+  }, {
+    "name": "hr",
+    "desc": "Defines a thematic change in the content",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr",
+      "w3schools": "https://www.w3schools.com/tags/tag_hr.asp"
+    }
+  }, {
+    "name": "html",
+    "desc": "Defines the root of an HTML document",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html",
+      "w3schools": "https://www.w3schools.com/tags/tag_html.asp"
+    }
+  }, {
+    "name": "i",
+    "desc": "Defines a part of text in an alternate voice or mood",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/i",
+      "w3schools": "https://www.w3schools.com/tags/tag_i.asp"
+    }
+  }, {
+    "name": "iframe",
+    "desc": "Defines an inline frame",
+    "html5": "",
+    "links": {
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe",
+      "w3schools": "https://www.w3schools.com/tags/tag_iframe.asp"
+    }
+  }, {
+    "name": "img",
+    "desc": "",
+    "html5": "",
+    "links": {
+      "mdn": "",
+      "w3schools": ""
+    }
+  }, {
+    "name": "input",
+    "desc": "",
+    "html5": "",
+    "links": {
+      "mdn": "",
+      "w3schools": ""
+    }
+  }, {
+    "name": "ins",
+    "desc": "",
+    "html5": "",
+    "links": {
+      "mdn": "",
+      "w3schools": ""
+    }
+  }, {
+    "name": "",
+    "desc": "",
+    "html5": "",
+    "links": {
+      "mdn": "",
+      "w3schools": ""
+    }
+  }, {
+    "name": "",
+    "desc": "",
+    "html5": "",
+    "links": {
+      "mdn": "",
+      "w3schools": ""
+    }
+  }, {
+    "name": "",
+    "desc": "",
+    "html5": "",
+    "links": {
+      "mdn": "",
+      "w3schools": ""
+    }
+  }, {
+    "name": "",
     "desc": "",
     "html5": "",
     "links": {
