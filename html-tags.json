@@ -422,70 +422,70 @@
     }
   }, {
     "name": "img",
-    "desc": "",
+    "desc": "Defines an image",
     "html5": "",
     "links": {
-      "mdn": "",
-      "w3schools": ""
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img",
+      "w3schools": "https://www.w3schools.com/tags/tag_img.asp"
     }
   }, {
     "name": "input",
-    "desc": "",
+    "desc": "Defines an input control",
     "html5": "",
     "links": {
-      "mdn": "",
-      "w3schools": ""
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input",
+      "w3schools": "https://www.w3schools.com/tags/tag_input.asp"
     }
   }, {
     "name": "ins",
-    "desc": "",
+    "desc": "Defines a text that has been inserted into a document",
     "html5": "",
     "links": {
-      "mdn": "",
-      "w3schools": ""
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ins",
+      "w3schools": "https://www.w3schools.com/tags/tag_ins.asp"
     }
   }, {
-    "name": "",
-    "desc": "",
+    "name": "kbd",
+    "desc": "Defines keyboard input",
     "html5": "",
     "links": {
-      "mdn": "",
-      "w3schools": ""
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd",
+      "w3schools": "https://www.w3schools.com/tags/tag_kbd.asp"
     }
   }, {
-    "name": "",
-    "desc": "",
+    "name": "keygen",
+    "desc": "Defines a key-pair generator field (for forms)",
     "html5": "",
     "links": {
-      "mdn": "",
-      "w3schools": ""
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/keygen",
+      "w3schools": "https://www.w3schools.com/tags/tag_keygen.asp"
     }
   }, {
-    "name": "",
-    "desc": "",
+    "name": "label",
+    "desc": "Defines a label for an &lt;input&gt; element",
     "html5": "",
     "links": {
-      "mdn": "",
-      "w3schools": ""
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label",
+      "w3schools": "https://www.w3schools.com/tags/tag_label.asp"
     }
   }, {
-    "name": "",
-    "desc": "",
+    "name": "legend",
+    "desc": "Defines a caption for a &lt;fieldset&gt; element",
     "html5": "",
     "links": {
-      "mdn": "",
-      "w3schools": ""
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend",
+      "w3schools": "https://www.w3schools.com/tags/tag_legend.asp"
     }
   }, {
-    "name": "",
-    "desc": "",
+    "name": "li",
+    "desc": "Defines a list item<",
     "html5": "",
     "links": {
-      "mdn": "",
-      "w3schools": ""
+      "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li",
+      "w3schools": "https://www.w3schools.com/tags/tag_li.asp"
     }
   }, {
-    "name": "",
+    "name": "link",
     "desc": "",
     "html5": "",
     "links": {
