@@ -478,7 +478,7 @@
     }
   }, {
     "name": "li",
-    "desc": "Defines a list item<",
+    "desc": "Defines a list item",
     "html5": "",
     "links": {
       "mdn": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li",
