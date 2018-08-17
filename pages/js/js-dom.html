@@ -9,6 +9,7 @@
     <script type="text/javascript" src="../../scripts/helpers.js"></script>
     <script type="text/javascript" src="../../scripts/dom.js"></script>
     <script type="text/javascript" src="../../scripts/search.js"></script>
+    <script type="text/javascript" src="../../scripts/toc.js"></script>
 
     <link rel="stylesheet" type="text/css" href="../../css/layout/notebook1.css" />
     <link rel="stylesheet" type="text/css" href="../../css/themes/blue.css" />
@@ -29,9 +30,8 @@
 
       div.pane {
         /* Note: When using border-box, the size of the box includes the border and the
-           padding, but not the margin, so we have to subtract off the margins */
+             padding, but not the margin, so we have to subtract off the margins */
         height: 50%;
-
         border-collapse: collapse;
         box-sizing: border-box;
         padding: 5px;
@@ -39,21 +39,19 @@
 
       div.pane-top {
         /*
-         * If you don't want a 50/50 arrangement, remove the height setting from div.pane
-         * and set each pane independently. Subtract off the margins in both panes.
-         */
+           * If you don't want a 50/50 arrangement, remove the height setting from div.pane
+           * and set each pane independently. Subtract off the margins in both panes.
+           */
         /* height: calc(30% - 10px); */
-
         border: 1px solid black;
       }
 
       div.pane-bottom {
         /*
-         * If you don't want a 50/50 arrangement, remove the height setting from div.pane
-         * and set each pane independently. Subtract off the margins in both panes.
-         */
+           * If you don't want a 50/50 arrangement, remove the height setting from div.pane
+           * and set each pane independently. Subtract off the margins in both panes.
+           */
         /* height: calc(70% - 10px); */
-
         /* I tried using border-collapse: collapse; but that seems to only work for tables */
         border: 1px solid black;
         border-top-width: 0;
@@ -79,36 +77,6 @@
       <div class="south-pane">
         <div class="south-left-pane">
           <div class="sidebar-area">
-            <section>
-              <a href="../../index.html">Home</a>
-            </section>
-            <section>
-              <h1>HTML</h1>
-              <a href="../html/html-tags.html">List of HTML Tags</a>
-            </section>
-            <section>
-              <h1>CSS</h1>
-              <a href="../css/css-boxmodel.html">CSS Box Model</a><br>
-              <a href="../css/css-layout.html">Layout Strategies</a><br>
-              <a href="../css/css-boxdisplay.html">Block vs. Inline</a><br>
-              <a href="../css/css-flexbox.html">Flexbox Examples</a><br>
-            </section>
-            <section>
-              <h1>JavaScript</h1>
-              <a href="js-videos.html">JavaScript Videos</a><br>
-              <a href="js-dom.html">DOM Manipulation</a><br>
-              <a href="js-funclist.html">JavaScript Functions</a><br>
-            </section>
-            <section>
-              <h1>Quick Links</h1>
-              <a href="http://caniuse.com" target="_blank">CanIUse</a><br>
-              <a href="https://developer.mozilla.org" target="_blank">MDN</a><br>
-              <a href="https://w3schools.com" target="_blank">W3Schools</a>
-            </section>
-            <section>
-              <h1>More</h1>
-              <a href="https://github.com/kevinknowscs/VanillaJS-Demos" target="_blank">GitHub Source</a>
-            </section>
           </div>
         </div>
         <div class="south-right-pane">

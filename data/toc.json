@@ -1,0 +1,117 @@
+{
+  "sections": [
+    {
+      "items": [
+        {
+          "label": "Home",
+          "href": "index.html"
+        }
+      ]
+    },
+    {
+      "label": "HTML",
+      "items": [
+        {
+          "label": "List of HTML Tags",
+          "href": "pages/html/html-tags.html"
+        }
+      ]
+    },
+    {
+      "label": "CSS",
+      "items": [
+        {
+          "label": "CSS Box Model",
+          "href": "pages/css/css-boxmodel.html"
+        },
+        {
+          "label": "Layout Strategies",
+          "href": "pages/css/css-layout.html"
+        },
+        {
+          "label": "Block vs. Inline",
+          "href": "pages/css/css-boxdisplay.html"
+        },
+        {
+          "label": "Flexbox Examples",
+          "href": "pages/css/css-flexbox.html"
+        }
+      ]
+    },
+    {
+      "label": "JavaScript",
+      "items": [
+        {
+          "label": "JavaScript Videos",
+          "href": "pages/js/js-videos.html"
+        },
+        {
+          "label": "DOM Manipulation",
+          "href": "pages/js/js-dom.html"
+        },
+        {
+          "label": "JavaScript Functions",
+          "href": "pages/js/js-funclist.html"
+        }
+      ]
+    },
+    {
+      "label": "Other Notebooks",
+      "items": [
+        {
+          "label": "C# / .NET Developer",
+          "href": "https://kevinknowscs.github.io/DotNetNotebook"
+        },
+        {
+          "label": "DevOps",
+          "href": "https://kevinknowscs.github.io/DevOpsNotebook"
+        },
+        {
+          "label": "Software Architecture",
+          "href": "https://kevinknowscs.github.io/ArchitectNotebook"
+        }
+      ]
+    },
+    {
+      "label": "Quick Links",
+      "items": [
+        {
+          "label": "CanIUse",
+          "href": "http://caniuse.com",
+          "target": "_blank"
+        },
+        {
+          "label": "MDN",
+          "href": "https://developer.mozilla.org",
+          "target": "_blank"
+        },
+        {
+          "label": "W3Schools",
+          "href": "https://w3schools.com",
+          "target": "_blank"
+        }
+      ]
+    },
+    {
+      "label": "More",
+      "items": [
+        {
+          "label": "About Me",
+          "href": "pages/more/aboutme.html"
+        },
+        {
+          "label": "More Learning Content",
+          "href": "pages/more/morecontent.html"
+        },
+        {
+          "separator": true
+        },
+        {
+          "label": "GitHub Source",
+          "href": "https://github.com/kevinknowscs/VanillaJS-Demos",
+          "target": "_blank"
+        }
+      ]
+    }
+  ]
+}
