@@ -25,7 +25,10 @@
       width: 190px;
     }
 
-    table.work-experience, table.work-experience tr, table.work-experience td, table.work-experience td * {
+    table.work-experience, table.work-experience tr, table.work-experience td, table.work-experience td *,
+    table.education, table.eduction tr, table.education td, table.education td *,
+    table.work-experience tr:last-child, table.work-experience tr:last-child td,
+    table.education tr:last-child, table.education tr:last-child td {
       background-color: white;
       border: none;
     }
@@ -115,21 +118,21 @@
                   </td>
                 </tr>
                 <tr>
-                  <td class="work-title">Software Engineer/Architect, NetScout, Colorado Springs, CO</td>
+                  <td class="work-title">Software Engineerning Manager / Scrum Master, NetScout, Colorado Springs, CO</td>
                   <td class="work-dates">2015-2016</td>
                 </tr>
                 <tr>
                   <td colspan="2">
                     <p>
-                      Scrum master and enginerring manager of TruView, the market leader in application-aware network performance 
-                      monitoring system. I managed a team of engineers both in the US and internationally and collaborated with the 
-                      product owner in scrum of scrums to ensure the teams were solving the right problems. I facilitated the team to 
-                      maximize customer impact to achieve our quality, performance and scalability targets while also adhering to the 
+                      Scrum master and enginerring manager of TruView, the market leader in application-aware network performance
+                      monitoring system. I managed a team of engineers both in the US and internationally and collaborated with the
+                      product owner in scrum of scrums to ensure the teams were solving the right problems. I facilitated the team to
+                      maximize customer impact to achieve our quality, performance and scalability targets while also adhering to the
                       products budget constraints.
                     </p>
                     <p>
-                      I translated and prioritized the customer requirements into implementable user stories. Under my direction my 
-                      team was able to meet its commitments to consistently deliver customer value each sprint, using continuous 
+                      I translated and prioritized the customer requirements into implementable user stories. Under my direction my
+                      team was able to meet its commitments to consistently deliver customer value each sprint, using continuous
                       integration and automated testing.
                     </p>
                   </td>
@@ -141,17 +144,17 @@
                 <tr>
                   <td colspan="2">
                     <p>
-                      Created <strong>BuildBeat</strong>, a pioneering continuous integration system (pre-dated Jenkins and Bamboo) that used a multi-agent 
-                      architecture to distribute build jobs onto different servers to execute tasks in parallel for best performance. The 
-                      architecture utilized proper design patterns and best practices, including an asynchronous messaging library for 
-                      communication among build agents, a service bus that coordinated worker classes, and an object/relational mapping system 
-                      for database access. The front-end was written in HTML/CSS/JavaScript with ASP.NET Web Forms, the back-end in C#, 
+                      Created <strong>BuildBeat</strong>, a pioneering continuous integration system (pre-dated Jenkins and Bamboo) that used a multi-agent
+                      architecture to distribute build jobs onto different servers to execute tasks in parallel for best performance. The
+                      architecture utilized proper design patterns and best practices, including an asynchronous messaging library for
+                      communication among build agents, a service bus that coordinated worker classes, and an object/relational mapping system
+                      for database access. The front-end was written in HTML/CSS/JavaScript with ASP.NET Web Forms, the back-end in C#,
                       with SQL Server and MySQL databases for persistence.
                     </p>
                     <p>
-                      Designed and implemented <strong>MergeMagician</strong>, a system for managing the workflow of automated, server-side merges in a 
+                      Designed and implemented <strong>MergeMagician</strong>, a system for managing the workflow of automated, server-side merges in a
                       heavily-branched version control system. It is somewhat analogous to GitHub pull requests, but more advanced as it would cascade
-                      merges up and down the branch hierarchy using a publish/subscribe configuration model to perform merges automatically. It utilized 
+                      merges up and down the branch hierarchy using a publish/subscribe configuration model to perform merges automatically. It utilized
                       a pluggable component architecture for supporting multiple version control systems.
                     </p>
                     <p>
@@ -161,13 +164,13 @@
                       system is scalable, using MongoDb for document storage, ElasticSearch for indexed searching, and is hosted on Microsoft Azure.
                     </p>
                     <p>
-                      Developed a graphical reporting package for JDSU’s automated testing system that allowed managers to make informed decisions 
-                      regarding product readiness. The Web UI used Raphael to render various chart types such as bar and spider charts, while the server 
+                      Developed a graphical reporting package for JDSU’s automated testing system that allowed managers to make informed decisions
+                      regarding product readiness. The Web UI used Raphael to render various chart types such as bar and spider charts, while the server
                       side was C# with Entity Framework accessing a MS SQL Server.
                     </p>
                     <p>
-                      Designed and developed a mapper component for an enterprise application integration (EAI) product, a critical component used 
-                      to visually correlate input fields to output fields. The component allowed customers to easily create ETL pipelines without 
+                      Designed and developed a mapper component for an enterprise application integration (EAI) product, a critical component used
+                      to visually correlate input fields to output fields. The component allowed customers to easily create ETL pipelines without
                       resorting to complex scripting. Development utilized JavaScript, SVG, jQuery, jQuery UI, and Backbone with a focus on UX/UI
                       and collaborated with back-end engineers to refine the Web API.
                     </p>
@@ -180,36 +183,45 @@
                 <tr>
                   <td colspan="2">
                     <p>
-                      Designed and architected <strong>TeamTrack</strong>, one of the first web-based issue tracking systems on the market. The system built upon my 
-                      prior defect tracking experience, adding support for multiple projects, cross-project reporting, state-based workflow, 
-                      application-specific user privileges, an integrated scripting language, and graphical trend reports for management insights. 
-                      The system was written in C++, ran on Microsoft IIS using the ISAPI interface, and supported multiple database systems such 
+                      Designed and architected <strong>TeamTrack</strong>, one of the first web-based issue tracking systems on the market. The system built upon my
+                      prior defect tracking experience, adding support for multiple projects, cross-project reporting, state-based workflow,
+                      application-specific user privileges, an integrated scripting language, and graphical trend reports for management insights.
+                      The system was written in C++, ran on Microsoft IIS using the ISAPI interface, and supported multiple database systems such
                       as Oracle, SQL Server, and Microsoft Access.
                     </p>
                     <p>
-                      As the founder, I designed the initial architecture and oversaw the hiring of sales, marketing, and engineering managers 
+                      As the founder, I designed the initial architecture and oversaw the hiring of sales, marketing, and engineering managers
                       as the company grew to a team of 125 people, culminating in the sale of the company to Serena Software.
                     </p>
                   </td>
                 </tr>
                 <tr>
                   <td class="work-title">Co-founder &amp; Team Lead, Software Edge, Colorado Springs, CO</td>
-                  <td class="work-dates">1002-1995</td>
+                  <td class="work-dates">1992-1995</td>
                 </tr>
                 <tr>
                   <td colspan="2">
                     <p>
-                      Software Edge, makers of <strong>Defect Control System</strong>, later known as PVCS Tracker, was an early pioneer in the 
-                      field of defect tracking, creating the first ever defect tracking system to run on the Microsoft Windows.
+                      Software Edge, makers of <strong>Defect Control System</strong>, later known as PVCS Tracker, was an early pioneer in the
+                      field of defect tracking, creating the first ever defect tracking system to run on the Microsoft Windows platform.
                     </p>
                     <p>
-                      As a co-founder of the company, I established the technical direction of the product and test strategies, 
-                      as well as coordinated technical writers and support engineers.  In addition, I was actively involved in 
-                      implementation, creating a customizable content rendering system, and leading the project team to port 
-                      the system to run on SQL Server and Oracle. The company experienced rapid adoption and received numerous 
+                      As a co-founder of the company, I established the technical direction of the product and test strategies,
+                      as well as coordinated technical writers and support engineers.  In addition, I was actively involved in
+                      implementation, creating a customizable content rendering system, and leading the project team to port
+                      the system to run on SQL Server and Oracle. The company experienced rapid adoption and received numerous
                       industry awards.  It was aquired by INTERSOLV where the product became part of the PVCS suite.
                     </p>
                   </td>
+                </tr>
+              </table>
+              <h1>Education</h1>
+              <table class="education">
+                <tr>
+                  <td>MSCS, Michigan Technological University, Houghton, MI</td>
+                </tr>
+                <tr>
+                  <td>BSEE, Michigan Technological University, Houghton, MI</td>
                 </tr>
               </table>
             </div>
